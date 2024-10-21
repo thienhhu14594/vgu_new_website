@@ -1,11 +1,37 @@
 <div class="testframe_1082-1513">
-  <app-event
-    [property]="'Default'"
-    [event]="'e5'"
-    [title]="'Karlsruhe Concert Duo Performed'"
-    [subContent1]="'04/10/2024'"
-    [subContent2]="'00:00'"
-    [content]="'Last Friday, The Vietnamese-German University (VGU) has been...'"
-    [imageSrc]="'http://localhost:8055/assets/f6b78b3a-2341-48de-b776-eaaa82a03fda'"
-  />
+  <div class="something"
+    (mouseenter)="setNavNewsDefault()"
+  >something else</div>
+  <div class="newsnavbarstickyframe_782-2931">
+    Something
+    <div class="newsnavbar_736-1132">
+      <div class="frame-66_736-1745">
+        <app-nav-news
+          [property]="propertyN"
+          function="News" (click)="setPropertyN('Selected'); scroll(st2)"
+        />
+        <app-nav-news
+          [property]="propertyA"
+          function="Admission" (click)="setPropertyA()"
+        />
+        <app-nav-news
+          [property]="propertyR"
+          function="Reserach news" (click)="setPropertyR()"
+        />
+        <app-nav-news
+          [property]="propertyU"
+          function="Upcoming events" (click)="setPropertyU()"
+        />
+        <app-nav-news
+          [property]="propertyP" 
+          function="University Partner" (click)="setPropertyP()"
+        />
+      </div>
+    </div>
+  </div>
+  <div #st2 class="st2">something 2</div>
+  <div #st3 class="st3">something 3</div>
+  <div #st4 class="st4">something 4</div>
+  <div #st5 class="st5">something 5</div>
+  <div #stl class="stl">something last</div>
 </div>
