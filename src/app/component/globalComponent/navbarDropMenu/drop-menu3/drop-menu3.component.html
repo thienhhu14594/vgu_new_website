@@ -1,0 +1,68 @@
+<div
+  class="root"
+  [ngClass]="{
+    root_propertyDefault: property === 'default',
+    root_somethingSelected: property !== 'default',
+  }"
+>
+  <span *ngIf="property === 'services'" class="head">Services</span>
+  <app-drop-button
+    *ngIf="property === 'services'"
+    [function]="'Overview'"
+  ></app-drop-button>
+  <app-drop-button
+    *ngIf="property === 'services'"
+    [function]="'Bus'"
+  ></app-drop-button>
+  <app-drop-button
+    *ngIf="property === 'services'"
+    [function]="'Dormitory'"
+  ></app-drop-button>
+  <app-drop-button
+    *ngIf="property === 'services'"
+    [function]="'Library'"
+  ></app-drop-button>
+  <span *ngIf="property === 'master'" class="head">Master</span>
+  <app-drop-button
+    *ngIf="property === 'master'"
+    [function]="'Study programs'"
+  ></app-drop-button>
+  <app-drop-button
+    *ngIf="property === 'master'"
+    [function]="'Scholarship'"
+  ></app-drop-button>
+  <app-drop-button
+    *ngIf="property === 'master'"
+    [function]="'Exchange information'"
+  ></app-drop-button>
+  <app-drop-button
+    *ngIf="property === 'master'"
+    [function]="'Faculty'"
+  ></app-drop-button>
+  <span *ngIf="property === 'bachelor'" class="head">Bachelor</span>
+  <app-drop-button
+    *ngIf="property === 'bachelor'"
+    [function]="'Study programs'"
+  ></app-drop-button>
+  <app-drop-button
+    *ngIf="property === 'bachelor'"
+    [function]="'Scholarship'"
+  ></app-drop-button>
+  <app-drop-button
+    *ngIf="property === 'bachelor'"
+    [function]="'Exchange information'"
+  ></app-drop-button>
+  <app-drop-button
+    *ngIf="property === 'bachelor'"
+    [function]="'Faculty'"
+  ></app-drop-button>
+  <span *ngIf="property === 'faculty'" class="head">Faculty</span>
+  <app-drop-button
+    *ngIf="property === 'faculty'"
+    [function]="'Faculty of Engineering Office'"
+  ></app-drop-button>
+  <app-drop-button
+    *ngIf="property === 'faculty'"
+    [function]="'Faculty of Economic and Management Office'"
+  ></app-drop-button>
+</div>

@@ -1,0 +1,39 @@
+.root {
+  padding: 10px 0px 10px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  gap: 0px;
+  box-sizing: border-box;
+  overflow: hidden;
+  width: -webkit-fill-available;
+}
+
+.root_propertyDefault {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  background: #d9d9d9;
+}
+
+.root_somethingSelected {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: #f5f5f5;
+  flex: 1;
+}
+.head {
+  display: flex;
+  box-sizing: content-box;
+  color: #000000;
+  font-size: 24px;
+  font-family: IBM Plex Sans;
+  letter-spacing: 0%;
+  text-decoration: none;
+  font-style: italic;
+  font-weight: 200;
+  text-align: left;
+  text-wrap: wrap;
+  width: -webkit-fill-available;
+}

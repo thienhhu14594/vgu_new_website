@@ -1,0 +1,101 @@
+.testframe_1082-1513 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  gap: 0px;
+  box-sizing: border-box;
+  overflow: visible;
+  background: pink;
+  width: 1300px;
+  height: 7000px;
+}
+
+app-event {
+  width: 560px;
+}
+
+.something {
+  width: 1300px;
+  height: 1000px;
+  background: purple;
+  order: 0;
+}
+
+.st2 {
+  width: 1300px;
+  height: 1000px;
+  background: red;
+  order: 2;
+}
+
+.st3 {
+  width: 1300px;
+  height: 1000px;
+  background: yellow;
+  order: 3;
+}
+
+.st4 {
+  width: 1300px;
+  height: 1000px;
+  background: blue;
+  order: 4;
+}
+
+.st5 {
+  width: 1300px;
+  height: 1000px;
+  background: black;
+  order: 5;
+}
+
+.stl {
+  width: 1300px;
+  height: 1000px;
+  background: white;
+  order: 6;
+}
+
+.newsnavbarstickyframe_782-2931 {
+  position: sticky;
+  top: 0px;
+  width: 100%;
+  height: 131px;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  z-index: 8;
+}
+.newsnavbar_736-1132 {
+  top: 70px;
+  left: 0px;
+  position: absolute;
+  display: flex;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: #ffffff;
+  width: 1300px;
+  height: 61px;
+}
+.frame-66_736-1745 {
+  top: 12px;
+  left: 60px;
+  position: absolute;
+  display: flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 4px;
+  box-sizing: border-box;
+  width: 1180px;
+}
+app-nav-news {
+  width: 100%;
+}

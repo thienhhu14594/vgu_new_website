@@ -1,0 +1,52 @@
+.root {
+    position: relative;
+    padding: 4px 0px 4px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+    height: fit-content;
+    border: 4px solid white;
+  }
+  
+  .root_propertyDefaultPropertyHover {
+    background: #666666;
+  }
+  
+  .root_propertySelected {
+    border-color: #666666;
+    border-style: solid;
+    border-width: undefinedpx;
+    background: #ffffff;
+  }
+  
+  .root_propertyHover {
+    border-color: #bababa;
+  }
+  .events {
+    position: relative;
+    display: flex;
+    box-sizing: content-box;
+    font-size: 19px;
+    font-family: IBM Plex Sans;
+    letter-spacing: 0%;
+    text-decoration: none;
+    font-weight: 400;
+    text-align: center;
+    justify-content: center;
+    text-wrap: wrap;
+    width: -webkit-fill-available;
+  }
+  
+  .events_propertyDefaultPropertyHover {
+    color: #ffffff;
+  }
+  
+  .events_functionUpeventPropertySelected {
+    color: #666666;
+  }
+  

@@ -1,0 +1,35 @@
+<div
+  class="root"
+  [ngClass]="{
+    root_propertyDefault: property === 'Default',
+    root_propertyDisappear: property === 'disappear',
+  }"
+>
+  <div *ngIf="property === 'Default'" class="subNavbar">
+    <app-subnav
+      [property]="propertyquickAccess"
+      [function]="'quickAccess'"
+      (mouseenter)="setPropertyquickAccess('hover')"
+      (mouseleave)="setPropertyquickAccess('Default')"
+    ></app-subnav>
+    <app-subnav
+      [property]="propertylanguage"
+      [function]="'language'"
+      (mouseenter)="setPropertylanguage('hover')"
+      (mouseleave)="setPropertylanguage('Default')"
+    ></app-subnav>
+    <app-subnav
+      [property]="propertysearch"
+      [function]="'search'"
+      (mouseenter)="setPropertysearch('hover')"
+      (mouseleave)="setPropertysearch('Default')"
+    ></app-subnav>
+    <app-subnav
+      [property]="propertylogin"
+      [function]="'login'"
+      (mouseenter)="setPropertylogin('hover')"
+      (mouseleave)="setPropertylogin('Default')"
+    ></app-subnav>
+  </div>
+  <div *ngIf="property === 'disappear'" class="blank"></div>
+</div>

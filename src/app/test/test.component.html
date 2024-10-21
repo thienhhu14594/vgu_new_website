@@ -1,0 +1,8 @@
+<ngb-carousel>
+  <ng-template ngbSlide *ngFor="let post of posts">
+    <div class="heroSection">
+      <img [src]="this.directusSrv.getImageUrl(post.image)"
+      alt="{{post.title}}">
+    </div>
+  </ng-template>
+</ngb-carousel>

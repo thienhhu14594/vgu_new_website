@@ -1,0 +1,19 @@
+<ngb-carousel
+  class="root"
+  [interval]="4000"
+  [pauseOnHover]="false"
+>
+  <ng-template ngbSlide *ngFor="let section of heroSection">
+    <div class="heroSection">
+      <img [src]="this.directusSrv.getImageUrl(section.image)"
+      alt="{{section.title}}">
+    </div>
+    <div class="titleFrame">
+      <span class="titleContent">{{section.title}}</span>
+      <app-buttons
+        [button]="'orange'"
+        [content]="'Learn more'"
+      />
+    </div>
+  </ng-template>
+</ngb-carousel>

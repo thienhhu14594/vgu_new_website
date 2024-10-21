@@ -1,0 +1,105 @@
+.root {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  align-items: center;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.root_propertyDefaultButtonOrangeBlue {
+  background: #f58221;
+}
+
+.root_buttonWhiteButtonOrange {
+  position: relative;
+  gap: 0px;
+  width: 123px;
+}
+
+.root_propertyHoverButtonOrangeBlue {
+  background: #0b2240;
+}
+
+.root_buttonOrangeBlue {
+  padding: 7px;
+  gap: 10px;
+  width: 130px;
+}
+.moreVguNews {
+  position: relative;
+  display: flex;
+  box-sizing: content-box;
+  letter-spacing: 0%;
+  font-weight: 400;
+  text-wrap: wrap;
+  width: -webkit-fill-available;
+
+  flex: none;
+  order: 1;
+  flex-grow: 1;
+}
+
+.moreVguNews_buttonOrangeBlueButtonWhite {
+  color: #ffffff;
+}
+
+.moreVguNews_buttonOrange {
+  color: #f58221;
+}
+
+.moreVguNews_buttonOrangeBlue {
+  font-size: 14px;
+  font-family: IBM Plex Sans;
+  text-align: center;
+}
+
+.moreVguNews_buttonWhiteButtonOrange {
+  font-size: 14px;
+  font-family: IBM Plex Sans;
+  font-style: italic;
+  text-align: left;
+}
+
+.moreVguNews_propertyDefaultButtonOrangeBlue {
+  text-decoration: none;
+}
+
+.moreVguNews_propertyHoverButtonWhiteButtonOrange {
+  text-decoration: underline;
+}
+
+.makiArrow {
+  position: relative;
+  overflow: hidden;
+  width: 18px;
+  height: 18px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.vector {
+  top: 2px;
+  left: 1px;
+  position: absolute;
+  display: flex;
+  box-sizing: content-box;
+}
+
+.vector_buttonWhite {
+  display: flex;
+}
+
+.vector_buttonWhite svg path {
+  fill:#ffffff;
+}
+
+.vector_buttonOrange {
+  display: flex;
+}
+
+.vector_buttonOrange svg path {
+  fill:#F58221;
+}

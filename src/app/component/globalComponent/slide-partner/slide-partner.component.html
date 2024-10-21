@@ -1,0 +1,21 @@
+<!-- <ngb-carousel
+  class="root"
+  [interval]="1"
+>
+  <ng-template ngbSlide *ngFor="let partner of partners">
+    <div class="slide">
+      <img [src]="this.directusSrv.getImageUrl(partner.logo)"
+      alt="{{partner.slug}}">
+    </div>
+  </ng-template>
+</ngb-carousel> -->
+
+<div class="root">
+  <div
+    *ngFor="let partner of partners"
+    class="carousel-slide"
+  >
+    <img [src]="this.directusSrv.getImageUrl(partner.logo)"
+    alt="{{partner.slug}}">
+  </div>
+</div>

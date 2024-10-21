@@ -1,0 +1,51 @@
+<div
+  class="root"
+  [ngClass]="{
+    root_propertyDefault: property === 'default',
+    root_somethingSelected: property !== 'default',
+  }"
+>
+  <span *ngIf="property === 'organization'" class="head"
+    >Organization</span
+  >
+  <app-drop-button
+    *ngIf="property === 'organization'"
+    [function]="'Overview'"
+  ></app-drop-button>
+  <app-drop-button
+    *ngIf="property === 'organization'"
+    [function]="'University council'"
+  ></app-drop-button>
+  <app-drop-button
+    *ngIf="property === 'organization'"
+    [function]="'Presidential board'"
+  ></app-drop-button>
+  <app-drop-button
+    *ngIf="property === 'organization'"
+    [function]="'Faculty information >'"
+    (click) = "notifyClickedToNavbar('faculty')"
+  ></app-drop-button>
+  <span *ngIf="property === 'level'" class="head"
+    >Education level</span
+  >
+  <app-drop-button
+    *ngIf="property === 'level'"
+    [function]="'Bachelor programs >'"
+    (click) = "notifyClickedToNavbar('bachelor')"
+  ></app-drop-button>
+  <app-drop-button
+    *ngIf="property === 'level'"
+    [function]="'Master programs >'"
+    (click) = "notifyClickedToNavbar('master')"
+  ></app-drop-button>
+  <span *ngIf="property === 'student'" class="head">Students</span>
+  <app-drop-button
+    *ngIf="property === 'student'"
+    [function]="'Services >'"
+    (click) = "notifyClickedToNavbar('services')"
+  ></app-drop-button>
+  <app-drop-button
+    *ngIf="property === 'student'"
+    [function]="'VGU Student Association'"
+  ></app-drop-button>
+</div>

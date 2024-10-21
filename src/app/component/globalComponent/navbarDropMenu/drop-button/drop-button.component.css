@@ -1,0 +1,34 @@
+.root {
+    padding: 8px 0px 8px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+    width: fit-content;
+  }
+  
+  .root_propertyDefault {
+    background: #d9d9d900;
+  }
+  
+  .root_propertyHover {
+    text-decoration: underline;
+  }
+
+  .content {
+    display: flex;
+    box-sizing: content-box;
+    color: #0b2240;
+    font-size: 24px;
+    font-family: IBM Plex Sans;
+    letter-spacing: 0%;
+    text-decoration: none;
+    font-weight: 400;
+    text-align: left;
+    text-wrap: wrap;
+    width: -webkit-fill-available;
+  }
