@@ -1,130 +1,66 @@
-/* Property=Default, event=e7 */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: center;
-padding: 0px 0px 32px;
-gap: 32px;
-
-position: absolute;
-height: 612px;
-left: 3.99%;
-right: 52.19%;
-top: 2547px;
-
-background: #F5F5F5;
-
-
-/* CS 1 (Locked Aspect Ratio) */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-isolation: isolate;
-
-width: 560px;
-height: 420.06px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* CS 1 */
-
-position: absolute;
-left: 0px;
-right: 0px;
-top: 0px;
-bottom: 0px;
-
-background: url(rnews1.jpg);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-z-index: 0;
-
-
-/* - */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-
-width: 560px;
-height: 395.91px;
-
-transform: rotate(-2.51deg);
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-z-index: 1;
-
-
-/* - */
+/* Frame 100 */
 
 /* Auto layout */
 display: flex;
 flex-direction: row;
+justify-content: center;
 align-items: flex-start;
-padding: 0px;
+padding: 10px 321px 10px 113px;
+gap: 24px;
 
-width: 560px;
-height: 0px;
+position: absolute;
+width: 1180px;
+height: 381px;
+left: 60px;
+top: 843px;
 
-transform: rotate(-47.5deg);
+background: #FFFFFF;
+
+
+/* article2 2 */
+
+width: 361px;
+height: 361px;
+
+background: url(article2.jpg);
+border-radius: 180.5px;
 
 /* Inside auto layout */
 flex: none;
 order: 0;
-align-self: stretch;
 flex-grow: 0;
 
 
-/* Frame 126 */
+/* Frame 101 */
 
 /* Auto layout */
 display: flex;
 flex-direction: column;
 align-items: flex-start;
-padding: 0px 32px;
-gap: 15px;
+padding: 10px;
+gap: 10px;
 
-width: 560px;
-height: 128px;
+width: 361px;
+height: 357px;
 
+background: #FFFFFF;
 
 /* Inside auto layout */
 flex: none;
 order: 1;
-align-self: stretch;
 flex-grow: 0;
 
 
-/* Karlsruhe Concert Duo Performed */
+/* Extended Application Deadline for VGU Master's Programs AY */
 
-width: 496px;
-height: 34px;
+width: 341px;
+height: 102px;
 
 font-family: 'IBM Plex Serif';
 font-style: normal;
 font-weight: 500;
 font-size: 26px;
 line-height: 34px;
-/* identical to box height */
 
 color: #000000;
 
@@ -136,38 +72,31 @@ align-self: stretch;
 flex-grow: 0;
 
 
-/* Last Friday, The Vietnamese-German University (VGU) has been... */
+/* Rectangle 5 */
 
-width: 496px;
-height: 44px;
+width: 72px;
+height: 12px;
 
-font-family: 'IBM Plex Serif';
-font-style: normal;
-font-weight: 400;
-font-size: 17px;
-line-height: 22px;
-
-color: #000000;
-
+background: #F28130;
 
 /* Inside auto layout */
 flex: none;
 order: 1;
-align-self: stretch;
 flex-grow: 0;
 
 
-/* Frame 114 */
+/* We are delighted to announce that the Vietnamese-German University (VGU) has extended the final round of applications for our esteemed Master's programs for the Academic Year 2024-2025... */
 
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 0px;
-gap: 10px;
+width: 341px;
+height: 203px;
 
-width: 496px;
-height: 20px;
+font-family: 'IBM Plex Serif';
+font-style: normal;
+font-weight: 300;
+font-size: 22px;
+line-height: 29px;
+
+color: #000000;
 
 
 /* Inside auto layout */
@@ -175,39 +104,3 @@ flex: none;
 order: 2;
 align-self: stretch;
 flex-grow: 0;
-
-
-/* Arrow 4 */
-
-box-sizing: border-box;
-
-width: 20px;
-height: 0px;
-
-border: 2px solid #F28130;
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Learnmore */
-
-width: 466px;
-height: 20px;
-
-font-family: 'IBM Plex Serif';
-font-style: normal;
-font-weight: 500;
-font-size: 15px;
-line-height: 20px;
-/* identical to box height */
-
-color: #F28130;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 1;

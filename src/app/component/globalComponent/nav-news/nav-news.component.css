@@ -1,4 +1,4 @@
-.root {
+.root_navnews {
     position: relative;
     padding: 4px 0px 4px 0px;
     display: flex;
@@ -10,7 +10,7 @@
     box-sizing: border-box;
     overflow: hidden;
     height: fit-content;
-    border: 4px solid white;
+    border: 1px solid white;
   }
   
   .root_propertyDefaultPropertyHover {

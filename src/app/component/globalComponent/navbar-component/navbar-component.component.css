@@ -1,7 +1,6 @@
 .root {
   position: relative;
   box-sizing: border-box;
-  overflow: hidden;
 }
 
 .root_collapseClose {
@@ -10,6 +9,7 @@ width: 1300px;
 height: 76px;
 
 background: #FFFFFF;
+border-bottom: 1px solid #d5d5d5;
 
 /* Inside auto layout */
 flex: none;
