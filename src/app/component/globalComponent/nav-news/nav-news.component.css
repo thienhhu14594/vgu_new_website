@@ -10,7 +10,7 @@
     box-sizing: border-box;
     overflow: hidden;
     height: fit-content;
-    border: 1px solid white;
+    border: 2px solid white;
   }
   
   .root_propertyDefaultPropertyHover {

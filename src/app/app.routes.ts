@@ -8,6 +8,7 @@ import { TestframeComponent } from './testframe/testframe.component';
 import { LandingPageDesktopComponent } from './component/landing-page-desktop/landing-page-desktop.component';
 
 export const routes: Routes = [
+  {path: 'landing-desktop', component: LandingPageDesktopComponent},
   // {path: '', component: GlobalComponent},
   {path: 'blog', component: PostsComponent},
   // {path: ':slug', component: PageComponent},
