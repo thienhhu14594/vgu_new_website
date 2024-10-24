@@ -134,19 +134,51 @@ export class TestframeComponent implements AfterViewInit {
         });
       }, {
         root: null,
-        rootMargin: '-50px 0px -50px 0px',
-        threshold: [0.23, 0.78]
+        rootMargin: '0px 0px 0px 0px',
+        threshold: 0.23
       }
     );
 
-    // Start observing all elements
-    this.elements.forEach((el) => {
-      observer.observe(el.nativeElement);
-    });
-  } else {
-    console.error('IntersectionObserver not supported or not in browser');
+      // Start observing all elements
+      this.elements.forEach((el) => {
+        observer.observe(el.nativeElement);
+      });
+
+      let lastScrollY = window.scrollY;
+      const handleScroll = () => {
+        const currentScrollY = window.scrollY; // Get the current scroll position
+      
+        // Check if the scroll direction has changed
+        if (currentScrollY > lastScrollY) {
+          // Scrolling down
+          console.log('Scrolling down');
+        } else if (currentScrollY < lastScrollY) {
+          // Scrolling up
+          console.log('Scrolling up');
+        }
+      
+        // If the direction changes, reset the observer
+        if (currentScrollY !== lastScrollY) {
+          resetObserverOnDirectionChange();
+          lastScrollY = currentScrollY; // Update last scroll position
+        }
+      };
+      
+      const resetObserverOnDirectionChange = () => {
+        this.elements.forEach(el => {
+          observer.unobserve(el.nativeElement);
+          observer.observe(el.nativeElement); // Re-observe elements on direction change
+        });
+      };
+      
+      window.addEventListener('scroll', handleScroll);
+
+    } else {
+      console.error('IntersectionObserver not supported or not in browser');
+    }
   }
-  }
+
+  
 
   scroll(el: HTMLElement) {
       el.scrollIntoView({ behavior: "smooth" });
