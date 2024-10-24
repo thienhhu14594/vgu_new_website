@@ -134,8 +134,8 @@ export class TestframeComponent implements AfterViewInit {
         });
       }, {
         root: null,
-        rootMargin: '0px',
-        threshold: [0.33, 0.5, 0.75, 1]
+        rootMargin: '-50px 0px -50px 0px',
+        threshold: [0.23, 0.78]
       }
     );
 
