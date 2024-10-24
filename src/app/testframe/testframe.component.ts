@@ -99,7 +99,7 @@ export class TestframeComponent implements AfterViewInit {
     @Inject(PLATFORM_ID) private platformId: any,
     private cdr: ChangeDetectorRef
   ) { }
-  @ViewChildren('intro, news, admission, st4, st5, stl') elements!: QueryList<ElementRef>; // Reference to all elements
+  @ViewChildren('intro, news, admission, research, upevent, partner') elements!: QueryList<ElementRef>; // Reference to all elements
 
   ngAfterViewInit() {
     if (isPlatformBrowser(this.platformId) && 'IntersectionObserver' in window) {
@@ -115,13 +115,13 @@ export class TestframeComponent implements AfterViewInit {
               case 'admission':
                 this.propertyA = 'Selected';
                 break;
-              case 'st4':
+              case 'research':
                 this.propertyR = 'Selected';
                 break;
-              case 'st5':
+              case 'upevent':
                 this.propertyU = 'Selected';
                 break;
-              case 'stl':
+              case 'partner':
                 this.propertyP = 'Selected';
                 break;
               default: this.setNavNewsDefault(); break;
@@ -139,10 +139,10 @@ export class TestframeComponent implements AfterViewInit {
       }
     );
 
-      // Start observing all elements
-      this.elements.forEach((el) => {
-        observer.observe(el.nativeElement);
-      });
+    // Start observing all elements
+    this.elements.forEach((el) => {
+      observer.observe(el.nativeElement);
+    });
   } else {
     console.error('IntersectionObserver not supported or not in browser');
   }

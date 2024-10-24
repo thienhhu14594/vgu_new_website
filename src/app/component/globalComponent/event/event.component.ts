@@ -11,9 +11,9 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 })
 export class EventComponent {
   @Input() imageSrc: string;
-  @Input() subContent1: string = 'Please add Sub content 1 from Directus!(date/time/place/p.s)';
+  @Input() subContent1: string = 'null';
   @Input() content: string = 'Please add Content from Directus!';
-  @Input() subContent2: string = 'Please add Sub content 2 from Directus!(date/time/place/p.s)';
+  @Input() subContent2: string = 'null';
   @Input() title: string = 'Please add Title from Directus!';
   @Input() property: "Default" | "hover" = "Default";
   @Input() event: "e1" | "e2" | "e3" | "e4" | "e5" | "e6" | "e7" = "e1";

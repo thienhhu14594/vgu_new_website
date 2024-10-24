@@ -34,19 +34,19 @@
           />
         <app-nav-news
           [property]="propertyR"
-          function="Reserach news" (click)="setPropertyR('Selected'); scroll(st4)"
+          function="Reserach news" (click)="setPropertyR('Selected'); scroll(research)"
           (mouseenter)="setPropertyR('Hover')"
           (mouseleave)="setPropertyR('Default')"
           />
         <app-nav-news
           [property]="propertyU"
-          function="Upcoming events" (click)="setPropertyU('Selected'); scroll(st5)"
+          function="Upcoming events" (click)="setPropertyU('Selected'); scroll(upevent)"
           (mouseenter)="setPropertyU('Hover')"
           (mouseleave)="setPropertyU('Default')"
           />
         <app-nav-news
           [property]="propertyP" 
-          function="University Partner" (click)="setPropertyP('Selected'); scroll(stl)"
+          function="University Partner" (click)="setPropertyP('Selected'); scroll(partner)"
           (mouseenter)="setPropertyP('Hover')"
           (mouseleave)="setPropertyP('Default')"
           />
@@ -137,10 +137,116 @@
         [button]="'orangeBlue'"
         [content]="'More Admission News'"
       />
+      <div class="displayadmission2">
+        <app-event [event]="'e3'"/>
+        <app-event [event]="'e3'"/>
+        <app-event [event]="'e3'"/>
+        <app-event [event]="'e3'"/>
+      </div>
+      <app-buttons
+        [button]="'orangeBlue'"
+        [content]="'Learn more'"
+      />
     </div>
-    <div #st4 class="st4">something 4</div>
-    <div #st5 class="st5">something 5</div>
-    <div #stl class="stl">something last</div>
+    <div #research class="research">
+      <span class="researchtitle">RESEARCH NEWS</span>
+      <app-slide/>
+    </div>
+    <div #upevent class="upevent">
+      <div class="displayevent1">
+        <app-event
+          [event]="'e4'"
+          [title]="'Information'"
+          [imageSrc]="'http://localhost:8055/assets/f6b78b3a-2341-48de-b776-eaaa82a03fda'"
+        />
+        <app-event
+          [event]="'e4'"
+          [title]="'Information'"
+          [imageSrc]="'http://localhost:8055/assets/f6b78b3a-2341-48de-b776-eaaa82a03fda'"
+        />
+        <app-event
+          [event]="'e4'"
+          [title]="'Information'"
+          [imageSrc]="'http://localhost:8055/assets/f6b78b3a-2341-48de-b776-eaaa82a03fda'"
+        />
+        <app-event
+          [event]="'e4'"
+          [title]="'Information'"
+          [imageSrc]="'http://localhost:8055/assets/f6b78b3a-2341-48de-b776-eaaa82a03fda'"
+        />
+        <app-event
+          [event]="'e4'"
+          [title]="'Information'"
+          [imageSrc]="'http://localhost:8055/assets/f6b78b3a-2341-48de-b776-eaaa82a03fda'"
+        />
+        <app-event
+          [event]="'e4'"
+          [title]="'Information'"
+          [imageSrc]="'http://localhost:8055/assets/f6b78b3a-2341-48de-b776-eaaa82a03fda'"
+        />
+      </div>
+      <div class="displayevent2">
+        <app-event
+        [event]="'e5'"
+        [imageSrc]="'http://localhost:8055/assets/399ce2db-1b79-46ae-bae6-2253698d705c'"
+        [title]="'Upcoming event title'"
+        [content]="'Some content that I try to make it looks long enough but it is not that long enough so I have to try again'"
+        />
+        <app-event
+        [event]="'e5'"
+        [imageSrc]="'http://localhost:8055/assets/399ce2db-1b79-46ae-bae6-2253698d705c'"
+        [title]="'Upcoming event title'"
+        [content]="'Some content that I try to make it looks long enough but it is not that long enough so I have to try again'"
+        />
+      </div>
+      <div class="displayevent3">
+        <img [src]="'http://localhost:8055/assets/399ce2db-1b79-46ae-bae6-2253698d705c'"/>
+        <div class="event3info">
+          <span
+            class="event3head"
+            >Academic Programs</span
+          >
+          <div>
+            <svg
+              width="72"
+              height="12"
+              viewBox="0 0 72 12"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect width="72" height="12" fill="#F28130" />
+            </svg>
+          </div>
+          <span
+            class="event3body"
+            >Many degree programs in engineering - VGU offers a wide range of courses...</span
+          >
+          <app-buttons
+            [button]="'orange'"
+            [content]="'Learn more'"
+          />
+        </div>
+      </div>
+      <span class="learnmoreinfo">Learn more about VGU</span>
+      <div class="displayevent4">
+        <app-event
+          [event]="'e6'"
+        />
+        <app-event
+          [event]="'e6'"
+        />
+        <app-event
+          [event]="'e6'"
+        />
+        <!-- <app-event
+          [event]="'e6'"
+        /> -->
+      </div>
+    </div>
+    <div #partner class="partner">
+      <span class="partnertitle">UNIVERSITY PARTNER</span>
+      <app-slide-partner/>
+    </div>
   </div>
   <app-footer/>
 </div>

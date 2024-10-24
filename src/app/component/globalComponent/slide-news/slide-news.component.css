@@ -8,6 +8,24 @@
   box-sizing: border-box;
   overflow: visible;
   width: -webkit-fill-available;
+  .carousel-indicators {
+    position: relative;
+    width: -webkit-fill-available;
+    top: 670px;
+  }
+  
+  .carousel-indicators .active {
+    background-color: #707372;
+  }
+  
+  .carousel-indicators button {
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 2px solid #000000 !important;
+    margin: 0 4px !important;
+  }
 }
 
 .titleFrame {
@@ -66,25 +84,6 @@ app-button {
   display: flex;
   height: 627px;
   width: 1300px;
-}
-
-.carousel-indicators {
-  position: relative;
-  width: -webkit-fill-available;
-  top: 670px;
-}
-
-.carousel-indicators .active {
-  background-color: #707372;
-}
-
-.carousel-indicators button {
-  width: 10px !important;
-  height: 10px !important;
-  border-radius: 50%;
-  background-color: #ffffff;
-  border: 2px solid #000000 !important;
-  margin: 0 4px !important;
 }
 
 .carousel-item {

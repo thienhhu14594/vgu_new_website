@@ -10,7 +10,7 @@
   overflow: visible;
   background: white;
   width: 1300px;
-  height: 7000px;
+  height: fit-content;
   margin: auto;
 }
 /* Header, Footer */
@@ -151,6 +151,10 @@ app-slide-news {
   height: 61.67%;
   display: flex;
   flex-direction: row;
+}
+
+app-nav-news {
+  width: 100%;
 }
 /* VGU general news */
 .news {
@@ -297,77 +301,198 @@ app-slide-news {
     width: 353px;
   }
 }
-/*draft///////////////////////////////////////////////////////*/
 
-.something {
-  width: 1300px;
-  height: 1000px;
-  background: purple;
-  order: 0;
+.displayadmission2 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
-
-
-
-
-
-.st4 {
+/* Research news */
+.research {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 140px 60px 120px 60px;
+  gap: 40px;
   width: 1300px;
-  height: 1000px;
-  background: blue;
+  height: fit-content;
+  background: #ffffff;
   order: 4;
+  app-slide {
+    width: 663px;
+  }
 }
 
-.st5 {
-  width: 1300px;
-  height: 1000px;
-  background: black;
+.researchtitle {
+  position: relative;
+  width: 100%;
+  height: fit-content;
+  font-family: 'IBM Plex Serif';
+  font-style: normal;
+  font-weight: 750;
+  font-size: 40px;
+  line-height: 52px;
+  text-align: start;
+  color: #000000;
+}
+/* Upcoming event */
+.upevent {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 140px 60px 40px 60px;
+  gap: 40px;
+  width: 100%;
+  height: fit-content;
+  background: #f5f5f5;
   order: 5;
 }
 
-.stl {
-  width: 1300px;
-  height: 1000px;
-  background: white;
-  order: 6;
+.learnmoreinfo {
+  position: relative;
+  width: 100%;
+  height: fit-content;
+  font-family: 'IBM Plex Serif';
+  font-style: normal;
+  font-weight: 750;
+  font-size: 40px;
+  line-height: 52px;
+  text-align: start;
+  color: #000000;
 }
 
-.newsnavbarstickyframe_782-2931 {
-  position: sticky;
-  top: 0px;
+.displayevent1 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+  padding: 0px 0px 0px 0px;
+  gap: 60px;
+  position: relative;
   width: 100%;
-  height: 131px;
-  
-  /* Inside auto layout */
+  height: fit-content;
+}
+
+.displayevent2 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 60px;
+  position: relative;
+  width: 100%;
+  height: fit-content;
+}
+
+.displayevent3 {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 10px 321px 10px 113px;
+  gap: 24px;
+  width: 100%;
+  height: fit-content;
+  img {
+    position: relative;
+    width: 361px;
+    height: 361px;
+    border-radius: 180px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+}
+
+.event3info {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+  gap: 10px;
+  width: 361px;
+  height: fit-content;
   flex: none;
   order: 1;
   flex-grow: 0;
-  z-index: 8;
+  app-buttons {
+    order: 3;
+  }
 }
-.newsnavbar_736-1132 {
-  top: 70px;
-  left: 0px;
-  position: absolute;
-  display: flex;
-  box-sizing: border-box;
-  overflow: hidden;
-  background: #ffffff;
-  width: 1300px;
-  height: 61px;
+
+.event3head {
+  font-family: 'IBM Plex Serif';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 34px;
+  color: #000000;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
 }
-.frame-66_736-1745 {
-  top: 12px;
-  left: 60px;
-  position: absolute;
-  display: flex;
+
+.event3body {
+  font-family: 'IBM Plex Serif';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 29px;
+  color: #000000;
+  flex: none;
+  order: 2;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.displayevent4 {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  flex-wrap: nowrap;
-  align-items: center;
-  gap: 4px;
-  box-sizing: border-box;
-  width: 1180px;
-}
-app-nav-news {
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+  padding: 0px;
+  gap: 24px 60px;
   width: 100%;
+  position: relative;
+  app-event {
+    width: 353px;
+  }
 }
+/* University partner */
+.partner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 140px 60px 120px 60px;
+  gap: 95px;
+  width: 1300px;
+  height: fit-content;
+  background: #ffffff;
+  order: 6;
+  app-slide-partner {
+    width: 100%;
+  }
+}
+
+.partnertitle {
+  position: relative;
+  width: 100%;
+  height: fit-content;
+  font-family: 'IBM Plex Serif';
+  font-style: normal;
+  font-weight: 750;
+  font-size: 40px;
+  line-height: 52px;
+  text-align: center;
+  color: #000000;
+}
+/*draft///////////////////////////////////////////////////////*/

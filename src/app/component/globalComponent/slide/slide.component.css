@@ -1,4 +1,4 @@
-.root {
+.root_slide {
   position: relative;
   display: flex;
   flex-direction: row;
@@ -13,6 +13,24 @@
   border-width: 0px;
   border-bottom-width: 2px;
   height: 385px;
+  .carousel-indicators {
+    position: relative;
+    width: -webkit-fill-available;
+    top: 420px;
+  }
+  
+  .carousel-indicators .active {
+    background-color: #707372;
+  }
+  
+  .carousel-indicators button {
+    width: 7px !important;
+    height: 7px !important;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 2px solid #000000 !important;
+    margin: 0 4px !important;
+  }
 }
 
 .frame109 {
@@ -135,23 +153,4 @@
   font-weight: 400;
   text-align: left;
   text-wrap: nowrap;
-}
-
-.carousel-indicators {
-  position: relative;
-  width: -webkit-fill-available;
-  top: 420px;
-}
-
-.carousel-indicators .active {
-  background-color: #707372;
-}
-
-.carousel-indicators button {
-  width: 7px !important;
-  height: 7px !important;
-  border-radius: 50%;
-  background-color: #ffffff;
-  border: 2px solid #000000 !important;
-  margin: 0 4px !important;
 }
