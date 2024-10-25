@@ -9,7 +9,6 @@
     box-sizing: border-box;
     overflow: visible;
     background: white;
-    width: -webkit-fill-available;
     max-width: 1300px;
     min-width: 1025px;
     height: fit-content;
@@ -27,7 +26,6 @@
   /* Main content */
   .body {
     flex-grow: 1;
-    position: relative;
     width: 100%;
   }
   /* Hero section */
