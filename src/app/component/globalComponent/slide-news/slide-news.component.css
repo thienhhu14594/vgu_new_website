@@ -7,11 +7,11 @@
   gap: 10px;
   box-sizing: border-box;
   overflow: visible;
-  width: -webkit-fill-available;
+  width: 100%;
   .carousel-indicators {
-    position: relative;
+    position: absolute;
     width: -webkit-fill-available;
-    top: 670px;
+    bottom: -40px;
   }
   
   .carousel-indicators .active {
@@ -29,9 +29,9 @@
 }
 
 .titleFrame {
-  padding: 20px 70px 20px 70px;
-  top: 479px;
-  left: 267px;
+  padding: 20px 50px 20px 90px;
+  bottom: 0px;
+  right: 60px;
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -42,7 +42,7 @@
   box-sizing: border-box;
   overflow: hidden;
   background: #d9d9d9;
-  width: 973px;
+  width: 74.85%;
   height: 148px;
 
 }
@@ -82,8 +82,9 @@ app-button {
 .heroSection img {
   position: relative;
   display: flex;
-  height: 627px;
-  width: 1300px;
+  height: auto;
+  width: 100%;
+  aspect-ratio: 1300 / 627;
 }
 
 .carousel-item {

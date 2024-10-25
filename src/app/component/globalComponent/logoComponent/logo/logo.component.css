@@ -16,7 +16,7 @@
     align-items: flex-start;
     gap: 0px;
     box-sizing: border-box;
-    width: -webkit-fill-available;
+    width: 100%;
   }
   .logo {
     top: 0px;
@@ -26,19 +26,20 @@
     box-sizing: border-box;
     overflow: hidden;
     background: #e7e7e7;
-    width: 250px;
-    height: 150px;
+    width: 19.23%;
+    height: auto;
+    aspect-ratio: 5 / 3;
   }
   .imageLogo {
-    top: 52px;
-    left: 45px;
-    position: absolute;
+    margin: auto;
+    position: relative;
     display: flex;
     box-sizing: border-box;
     overflow: hidden;
     /* background:; */
-    width: 160px;
-    height: 46px;
+    width: 64%;
+    height: auto;
+
   }
   
   .a {

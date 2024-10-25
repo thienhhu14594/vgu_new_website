@@ -5,7 +5,7 @@
 
 .root_collapseClose {
   /* collapse=close */
-width: 1300px;
+width: 100%;
 height: 76px;
 
 background: #FFFFFF;
@@ -19,12 +19,9 @@ flex-grow: 0;
 
 .root_collapseOpen {
   /* collapse=open */
-
-width: 1300px;
-height: 1080px;
-
-background: rgba(186, 186, 186, 0.25);
-
+width: 100%;
+height: 97.5vh;
+backdrop-filter: blur(5px);
 /* Inside auto layout */
 flex: none;
 align-self: stretch;
@@ -61,16 +58,16 @@ flex-grow: 0;
 
 .frame6 {
   top: 23px;
-  left: 496px;
+  left: 40.31%;
   position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: nowrap;
   align-items: flex-start;
-  gap: 64px;
+  gap: auto;
   box-sizing: border-box;
-  width: 716px;
+  width: 55.08%;
   height: 45px;
 }
 app-nav-button {
@@ -104,7 +101,7 @@ app-nav-button {
 .frame89 {
   padding: 10px 10px 0px 10px;
   top: 76px;
-  left: 314px;
+  left: 24.15%;
   position: relative;
   display: flex;
   flex-direction: row;
@@ -115,7 +112,7 @@ app-nav-button {
   box-sizing: border-box;
   overflow: hidden;
   background: #d9d9d9;
-  width: 897px;
+  width: 71.15%;
 }
 app-drop-menu1 {
   padding: 10px 0px 10px 0px;
@@ -149,7 +146,7 @@ app-drop-menu3 {
   display: flex;
   box-sizing: border-box;
   background: #ffffff;
-  width: 1300px;
+  width: 100%;
   height: 76px;
 }
 .group7 {
@@ -176,16 +173,16 @@ border-width: 0px;
 
 .frame6 {
   top: 23px;
-  left: 496px;
+  left: 40.31%;
   position: absolute;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: nowrap;
   align-items: flex-start;
-  gap: 64px;
+  gap: auto;
   box-sizing: border-box;
-  width: 716px;
+  width: 55.08%;
   height: 45px;
 }
 .nav {

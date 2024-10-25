@@ -11,7 +11,7 @@ import { EventComponent } from '../globalComponent/event/event.component';
 import { HeaderComponent } from '../globalComponent/header/header.component';
 
 @Component({
-  selector: 'app-testframe',
+  selector: 'app-landing-desktop',
   standalone: true,
   imports: [
     CommonModule,

@@ -36,18 +36,18 @@ flex-grow: 0;
 .subNavbar {
   padding: 0px 160px 0px 0px;
   top: 0px;
-  left: 496px;
+  left: 40.31%;
   position: absolute;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: nowrap;
   align-items: center;
-  gap: 75px;
+  gap: auto;
   box-sizing: border-box;
   overflow: hidden;
   background: #ffffff00;
-  width: 739px;
+  width: 56.85%;
 }
 .subNav {
   display: flex;

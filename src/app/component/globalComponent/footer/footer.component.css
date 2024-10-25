@@ -9,12 +9,10 @@
 
 .root_propertyDesktop {
   padding: 0px 0px 0px 30px;
-  position: absolute;
+  position: relative;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   flex-wrap: nowrap;
-  gap: 204px;
-  width: 1300px;
 }
 
 .root_propertyMobile {

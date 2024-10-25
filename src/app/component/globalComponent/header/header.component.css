@@ -36,7 +36,8 @@ app-navbar-component {
 }
 
 app-logo {
-    position: absolute;
+    position: relative;
+    aspect-ratio: 5 / 3;
     left: 60px;
     top: 0px;
     z-index: 99;
