@@ -1,17 +1,19 @@
 .root_partner {
-    display: flex;
-    align-items: center;
-    overflow: hidden; /* Hide images that overflow outside the frame */
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  overflow: hidden; /* Hide images that overflow outside the frame */
 }
   
-  .carousel-slide {
+.root_partner .carousel-slide {
     display: flex;
     width: max-content; /* Ensure container expands for all images */
     height: fit-content;
     animation: slide 10s linear infinite; /* Infinite sliding animation */
 }
   
-.carousel-slide img {
+.root_partner .carousel-slide img {
     position: relative;
     width: 480px;
     max-height: 256px;

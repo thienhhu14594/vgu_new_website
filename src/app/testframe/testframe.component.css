@@ -103,7 +103,7 @@ app-mobile-hero {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0px 10px 0px 10px;
+  padding: 30px 10px 30px 10px;
   gap: 22px;
 }
 
@@ -118,6 +118,38 @@ app-mobile-hero {
   flex: none;
   order: 0;
   flex-grow: 1;
+}
+
+.displaynews {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.displaynews_content {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.displaynews_content .title {
+  font-family: 'IBM Plex Serif';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 34px;
+  align-self: stretch;
+  color: #000000;
+}
+
+.displaynews_content .content {
+  font-family: 'IBM Plex Serif';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 29px;
+  color: #000000;
+  align-self: stretch;
 }
 
 .displaynews img {
@@ -150,7 +182,7 @@ app-mobile-hero {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 30px 10px 30px 10px;
+  padding: 30px 10px 50px 10px;
   gap: 10px;
 }
 
@@ -168,6 +200,125 @@ app-mobile-hero {
 }
 
 .researchNews app-slide {
-  width: 370px;
+  width: 100%;
+}
+/* Upcoming Event */
+.upevent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 10px 30px 10px;
+  gap: 15px;
+  background: #F5F5F5;
+}
+
+.displayevent1 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 0px;
+  gap: 15px;
+}
+
+.displayevent1 app-event {
+  width: 100%;
+}
+
+.displayevent2 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  gap: 15px;
+}
+
+.displayevent2 app-event {
+  width: 100%;
+}
+
+.displayevent3 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.displayevent3_content {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.displayevent3_content .title {
+  font-family: 'IBM Plex Serif';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 34px;
+  align-self: stretch;
+  color: #000000;
+}
+
+.displayevent3_content .content {
+  font-family: 'IBM Plex Serif';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 29px;
+  color: #000000;
+  align-self: stretch;
+}
+
+.displayevent3 img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 180px;
+}
+
+.upevent .title {
+  width: 100%;
+  font-family: 'IBM Plex Serif';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 31px;
+  color: #000000;
+  align-self: stretch;
+}
+
+.displayevent4 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 0px;
+  gap: 15px;
+}
+/* Parrtner */
+.partner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  padding: 30px 10px 30px 10px;
+  width: 100%;
+  height: fit-content;
+  background: #ffffff;
+
+  app-slide-partner {
+    width: calc(100vw - 20px);
+  }
+}
+
+.partner .title {
+  width: 100%;
+  font-family: 'IBM Plex Serif';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 31px;
+  color: #000000;
+  flex-grow: 1;
 }
 /*//////////////////////////////////////////////////*/

@@ -16,7 +16,7 @@
       <app-mobile-event [sections]=generalNews/>
       <div class="displaynews">
         <img [src]="'http://localhost:8055/assets/399ce2db-1b79-46ae-bae6-2253698d705c'"/>
-        <div class="content">
+        <div class="displaynews_content">
           <span
             class="title"
             >Extended Application Deadline for VGU Master's Programs AY</span
@@ -63,8 +63,102 @@
     </div>
     <div class="researchNews">
       <span class="title">RESEARCH NEWS</span>
+      <app-slide/>
     </div>
-    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet ante porta, sollicitudin diam in, mattis nisi. Integer lobortis non felis ut fringilla. Sed commodo neque sed elit fermentum accumsan. Maecenas mollis, ex sit amet volutpat interdum, urna enim feugiat quam, et euismod libero eros non massa. Proin ut nisi condimentum, semper eros in, volutpat velit. Maecenas ac semper ipsum. Curabitur placerat odio quis urna varius, at luctus augue luctus. Duis dignissim pharetra mauris. Vivamus tincidunt diam vel velit dictum, lobortis finibus neque porta. Maecenas efficitur interdum velit maximus iaculis. In libero turpis, tristique in lacus quis, tempor maximus odio. Praesent arcu orci, porttitor lacinia rhoncus vel, bibendum et ex. Nunc in dui ut sapien dapibus ullamcorper. Curabitur hendrerit magna justo, at ullamcorper lectus maximus ac.</span>
+    <div class="upevent">
+      <div class="displayevent1">
+        <app-event
+          [event]="'e4'"
+          [title]="'Information'"
+          [imageSrc]="'http://localhost:8055/assets/f6b78b3a-2341-48de-b776-eaaa82a03fda'"
+        />
+        <app-event
+          [event]="'e4'"
+          [title]="'Information'"
+          [imageSrc]="'http://localhost:8055/assets/f6b78b3a-2341-48de-b776-eaaa82a03fda'"
+        />
+        <app-event
+          [event]="'e4'"
+          [title]="'Information'"
+          [imageSrc]="'http://localhost:8055/assets/f6b78b3a-2341-48de-b776-eaaa82a03fda'"
+        />
+        <app-event
+          [event]="'e4'"
+          [title]="'Information'"
+          [imageSrc]="'http://localhost:8055/assets/f6b78b3a-2341-48de-b776-eaaa82a03fda'"
+        />
+        <app-event
+          [event]="'e4'"
+          [title]="'Information'"
+          [imageSrc]="'http://localhost:8055/assets/f6b78b3a-2341-48de-b776-eaaa82a03fda'"
+        />
+        <app-event
+          [event]="'e4'"
+          [title]="'Information'"
+          [imageSrc]="'http://localhost:8055/assets/f6b78b3a-2341-48de-b776-eaaa82a03fda'"
+        />
+      </div>
+      <div class="displayevent2">
+        <app-event
+        [event]="'e5'"
+        [imageSrc]="'http://localhost:8055/assets/399ce2db-1b79-46ae-bae6-2253698d705c'"
+        [title]="'Upcoming event title'"
+        [content]="'Some content that I try to make it looks long enough but it is not that long enough so I have to try again'"
+        />
+        <app-event
+        [event]="'e5'"
+        [imageSrc]="'http://localhost:8055/assets/399ce2db-1b79-46ae-bae6-2253698d705c'"
+        [title]="'Upcoming event title'"
+        [content]="'Some content that I try to make it looks long enough but it is not that long enough so I have to try again'"
+        />
+      </div>
+      <div class="displayevent3">
+        <img [src]="'http://localhost:8055/assets/399ce2db-1b79-46ae-bae6-2253698d705c'"/>
+        <div class="displayevent3_content">
+          <span
+            class="title"
+            >Extended Application Deadline for VGU Master's Programs AY</span
+          >
+          <div>
+            <svg
+              width="72"
+              height="12"
+              viewBox="0 0 72 12"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect width="72" height="12" fill="#F28130" />
+            </svg>
+          </div>
+          <span
+            class="content"
+            >We are delighted to announce that the Vietnamese-German University (VGU)
+            has extended the final round of applications for our esteemed Master's
+            programs for the Academic Year 2024-2025...</span
+          >
+          <app-buttons [button]="'orange'" [content]="'Learn more'"/>
+        </div>
+      </div>
+      <span class="title">LEARN MORE ABOUT VGU</span>
+      <div class="displayevent4">
+        <app-event
+          [event]="'e6'"
+        />
+        <app-event
+          [event]="'e6'"
+        />
+        <app-event
+          [event]="'e6'"
+        />
+        <app-event
+          [event]="'e6'"
+        />
+      </div>
+    </div>
+    <div class="partner">
+      <span class="title">UNIVERSITY PARTNER</span>
+      <app-slide-partner/>
+    </div>
   </div>
   <app-footer [property]="'mobile'"/>
 </div>
