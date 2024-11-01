@@ -23,6 +23,12 @@ import { NavigationEnd, Router } from '@angular/router';
 import { isPlatformBrowser } from '@angular/common';
 import { EventComponent } from '../component/globalComponent/event/event.component';
 import { HeaderComponent } from '../component/globalComponent/header/header.component';
+import { HamburgerComponentComponent } from '../component/globalComponent/mobile/hamburger-component/hamburger-component.component';
+import { MobileHeaderComponent } from "../component/globalComponent/mobile/mobile-header/mobile-header.component";
+import { SearchBarComponent } from '../component/globalComponent/search-bar/search-bar.component';
+import { MobileHeroComponent } from "../component/globalComponent/mobile/mobile-hero/mobile-hero.component";
+import { MobileEventComponent } from "../component/globalComponent/mobile/mobile-event/mobile-event.component";
+import { DirectusService } from '../../../directus.service';
 
 @Component({
   selector: 'app-testframe',
@@ -49,8 +55,13 @@ import { HeaderComponent } from '../component/globalComponent/header/header.comp
     SlidePartnerComponent,
     NavNewsComponent,
     EventComponent,
-    HeaderComponent
-   ],
+    HeaderComponent,
+    HamburgerComponentComponent,
+    MobileHeaderComponent,
+    SearchBarComponent,
+    MobileHeroComponent,
+    MobileEventComponent
+],
   templateUrl: './testframe.component.html',
   styleUrl: './testframe.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -97,10 +108,22 @@ export class TestframeComponent implements AfterViewInit {
 
   constructor(
     @Inject(PLATFORM_ID) private platformId: any,
-    private cdr: ChangeDetectorRef
+    private cdr: ChangeDetectorRef,
+    public directusSrv: DirectusService
   ) { }
   @ViewChildren('intro, news, admission, research, upevent, partner') elements!: QueryList<ElementRef>; // Reference to all elements
-
+///////////////////////////////////////////////////////////////////////////
+  admissionNews: any[] = [];
+  generalNews: any[] = [];
+  ngOnInit(): void {
+    this.directusSrv.getGeneralNews().subscribe(data => {
+      this.generalNews = data.data;
+    });
+    this.directusSrv.getAdmission().subscribe(data => {
+      this.admissionNews = data.data;
+    });
+  }
+////////////////////////////////////////////////////////////////////////////
   ngAfterViewInit() {
     if (isPlatformBrowser(this.platformId) && 'IntersectionObserver' in window) {
       const observer = new IntersectionObserver((entries) => {

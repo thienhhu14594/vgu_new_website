@@ -9,6 +9,7 @@ import { SlidePartnerComponent } from '../globalComponent/slide-partner/slide-pa
 import { NavNewsComponent } from '../globalComponent/nav-news/nav-news.component';
 import { EventComponent } from '../globalComponent/event/event.component';
 import { HeaderComponent } from '../globalComponent/header/header.component';
+import { DirectusService } from '../../../../directus.service';
 
 @Component({
   selector: 'app-landing-desktop',
@@ -69,11 +70,31 @@ export class LandingPageDesktopComponent implements AfterViewInit {
     this.propertyP = status;
   }
 
+  // heroSection: any[] = [];
+  // constructor (public directusSrv: DirectusService){}
+  // ngOnInit(): void {
+  //   this.directusSrv.getHeroSection().subscribe(data => {
+  //     this.heroSection = data.data;
+  //   });
+  // }
+
   constructor(
     @Inject(PLATFORM_ID) private platformId: any,
-    private cdr: ChangeDetectorRef
+    private cdr: ChangeDetectorRef,
+    public directusSrv: DirectusService
   ) { }
   @ViewChildren('intro, news, admission, research, upevent, partner') elements!: QueryList<ElementRef>; // Reference to all elements
+
+  admissionNews: any[] = [];
+  generalNews: any[] = [];
+  ngOnInit(): void {
+    this.directusSrv.getGeneralNews().subscribe(data => {
+      this.generalNews = data.data;
+    });
+    this.directusSrv.getAdmission().subscribe(data => {
+      this.admissionNews = data.data;
+    });
+  }
 
   ngAfterViewInit() {
     if (isPlatformBrowser(this.platformId) && 'IntersectionObserver' in window) {
@@ -109,7 +130,7 @@ export class LandingPageDesktopComponent implements AfterViewInit {
       }, {
         root: null,
         rootMargin: '0px 0px 0px 0px',
-        threshold: 0.23
+        threshold: 0.21
       }
     );
 

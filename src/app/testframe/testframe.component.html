@@ -1,87 +1,24 @@
 <div class="testframe_1082-1513">
-  <app-header/>
+  <app-mobile-header [menu]="'close'"/>
   <div class="body">
-    <app-slide-news #herosection class="herosection"/>
-    <div class="teaserbox">
+    <app-mobile-hero/>
+    <div class="teaser_box">
       <span class="teaser_title">NEW MODEL UNIVERSITY</span>
-      <span class="teaser_content">
-        Established as a research-oriented university in 2008 within the Excellent University Project of the Government of Vietnam, the Vietnam-German University aims to become a leading research university in Vietnam and the Southeast Asia.
-      </span>
-      <app-buttons
-        class="teaser_button"
-        [property]="'Default'"
-        [content]="'Learn more'"
-        [button]="'white'"
-      />
+      <span class="teaser_content">Established as a research-oriented university in 2008 within the Excellent University Project of the Government of Vietnam, the Vietnam-German University aims to become a leading research university in Vietnam and the Southeast Asia.</span>
+      <app-buttons [button]="'white'" [content]="'Learn more'"/>
     </div>
-    <div #intro class="intro">
-      <span class="introtitle">ABOUT VGU</span>
-      <span class="introcontent">Introduction about VGU</span>
+    <div class="intro">
+      <span class="intro_title">About VGU</span>
+      <span class="intro_content">Introduction about VGU</span>
     </div>
-    <div class="stickybar">
-      <div class="newsnavbar">
-        <app-nav-news
-          [property]="propertyN"
-          function="News" (click)="setPropertyN('Selected'); scroll(news)"
-          (mouseenter)="setPropertyN('Hover')"
-          (mouseleave)="setPropertyN('Default')"
-        />
-        <app-nav-news
-          [property]="propertyA"
-          function="Admission" (click)="setPropertyA('Selected'); scroll(admission)"
-          (mouseenter)="setPropertyA('Hover')"
-          (mouseleave)="setPropertyA('Default')"
-          />
-        <app-nav-news
-          [property]="propertyR"
-          function="Reserach news" (click)="setPropertyR('Selected'); scroll(research)"
-          (mouseenter)="setPropertyR('Hover')"
-          (mouseleave)="setPropertyR('Default')"
-          />
-        <app-nav-news
-          [property]="propertyU"
-          function="Upcoming events" (click)="setPropertyU('Selected'); scroll(upevent)"
-          (mouseenter)="setPropertyU('Hover')"
-          (mouseleave)="setPropertyU('Default')"
-          />
-        <app-nav-news
-          [property]="propertyP" 
-          function="University Partner" (click)="setPropertyP('Selected'); scroll(partner)"
-          (mouseenter)="setPropertyP('Hover')"
-          (mouseleave)="setPropertyP('Default')"
-          />
-      </div>
-    </div>
-    <div #news class="news">
-      <span class="newstitle">VGU GENERAL NEWS</span>
-      <div class="displaynews1">
-        <app-event
-          [subContent1]="'23/10'"
-          [event]="'e1'"
-          [title]="'News title'"
-          [content]="'Some content that I try to make it looks long enough but it is not that long enough so I have to try again'"
-          [imageSrc]="'http://localhost:8055/assets/399ce2db-1b79-46ae-bae6-2253698d705c'"
-        />
-        <app-event
-          [subContent1]="'23/10'"
-          [event]="'e1'"
-          [title]="'News title'"
-          [content]="'News content'"
-          [imageSrc]="'http://localhost:8055/assets/399ce2db-1b79-46ae-bae6-2253698d705c'"
-        />
-        <app-event
-          [subContent1]="'23/10'"
-          [event]="'e1'"
-          [title]="'News title'"
-          [content]="'News content'"
-          [imageSrc]="'http://localhost:8055/assets/399ce2db-1b79-46ae-bae6-2253698d705c'"
-        />
-      </div>
-      <div class="displaynews2">
+    <div class="generalNews">
+      <span class="title">VGU General News</span>
+      <app-mobile-event [sections]=generalNews/>
+      <div class="displaynews">
         <img [src]="'http://localhost:8055/assets/399ce2db-1b79-46ae-bae6-2253698d705c'"/>
-        <div class="news2info">
+        <div class="content">
           <span
-            class="news2head"
+            class="title"
             >Extended Application Deadline for VGU Master's Programs AY</span
           >
           <div>
@@ -96,7 +33,7 @@
             </svg>
           </div>
           <span
-            class="news2body"
+            class="content"
             >We are delighted to announce that the Vietnamese-German University (VGU)
             has extended the final round of applications for our esteemed Master's
             programs for the Academic Year 2024-2025...</span
@@ -108,145 +45,26 @@
         [content]="'More VGU News'"
       />
     </div>
-    <div #admission class="admission">
-      <span class="admissiontitle">ADMISSION 2024</span>
-      <div class="displayadmission1">
-        <app-event
-          [subContent1]="'23/10'"
-          [event]="'e1'"
-          [title]="'News title'"
-          [content]="'Some content that I try to make it looks long enough but it is not that long enough so I have to try again'"
-          [imageSrc]="'http://localhost:8055/assets/399ce2db-1b79-46ae-bae6-2253698d705c'"
-        />
-        <app-event
-          [subContent1]="'23/10'"
-          [event]="'e1'"
-          [title]="'News title'"
-          [content]="'News content'"
-          [imageSrc]="'http://localhost:8055/assets/399ce2db-1b79-46ae-bae6-2253698d705c'"
-        />
-        <app-event
-          [subContent1]="'23/10'"
-          [event]="'e1'"
-          [title]="'News title'"
-          [content]="'News content'"
-          [imageSrc]="'http://localhost:8055/assets/399ce2db-1b79-46ae-bae6-2253698d705c'"
-        />
-      </div>
+    <div class="admissionNews">
+      <span class="title">ADMISSION</span>
+      <app-mobile-event [sections]=admissionNews/>
       <app-buttons
         [button]="'orangeBlue'"
         [content]="'More Admission News'"
       />
-      <div class="displayadmission2">
-        <app-event [event]="'e3'"/>
-        <app-event [event]="'e3'"/>
-        <app-event [event]="'e3'"/>
-        <app-event [event]="'e3'"/>
-      </div>
+      <app-event [event]="'e3'"/>
+      <app-event [event]="'e3'"/>
+      <app-event [event]="'e3'"/>
+      <app-event [event]="'e3'"/>
       <app-buttons
         [button]="'orangeBlue'"
-        [content]="'Learn more'"
+        [content]="'More Admission News'"
       />
     </div>
-    <div #research class="research">
-      <span class="researchtitle">RESEARCH NEWS</span>
-      <app-slide/>
+    <div class="researchNews">
+      <span class="title">RESEARCH NEWS</span>
     </div>
-    <div #upevent class="upevent">
-      <div class="displayevent1">
-        <app-event
-          [event]="'e4'"
-          [title]="'Information'"
-          [imageSrc]="'http://localhost:8055/assets/f6b78b3a-2341-48de-b776-eaaa82a03fda'"
-        />
-        <app-event
-          [event]="'e4'"
-          [title]="'Information'"
-          [imageSrc]="'http://localhost:8055/assets/f6b78b3a-2341-48de-b776-eaaa82a03fda'"
-        />
-        <app-event
-          [event]="'e4'"
-          [title]="'Information'"
-          [imageSrc]="'http://localhost:8055/assets/f6b78b3a-2341-48de-b776-eaaa82a03fda'"
-        />
-        <app-event
-          [event]="'e4'"
-          [title]="'Information'"
-          [imageSrc]="'http://localhost:8055/assets/f6b78b3a-2341-48de-b776-eaaa82a03fda'"
-        />
-        <app-event
-          [event]="'e4'"
-          [title]="'Information'"
-          [imageSrc]="'http://localhost:8055/assets/f6b78b3a-2341-48de-b776-eaaa82a03fda'"
-        />
-        <app-event
-          [event]="'e4'"
-          [title]="'Information'"
-          [imageSrc]="'http://localhost:8055/assets/f6b78b3a-2341-48de-b776-eaaa82a03fda'"
-        />
-      </div>
-      <div class="displayevent2">
-        <app-event
-        [event]="'e5'"
-        [imageSrc]="'http://localhost:8055/assets/399ce2db-1b79-46ae-bae6-2253698d705c'"
-        [title]="'Upcoming event title'"
-        [content]="'Some content that I try to make it looks long enough but it is not that long enough so I have to try again'"
-        />
-        <app-event
-        [event]="'e5'"
-        [imageSrc]="'http://localhost:8055/assets/399ce2db-1b79-46ae-bae6-2253698d705c'"
-        [title]="'Upcoming event title'"
-        [content]="'Some content that I try to make it looks long enough but it is not that long enough so I have to try again'"
-        />
-      </div>
-      <div class="displayevent3">
-        <img [src]="'http://localhost:8055/assets/399ce2db-1b79-46ae-bae6-2253698d705c'"/>
-        <div class="event3info">
-          <span
-            class="event3head"
-            >Academic Programs</span
-          >
-          <div>
-            <svg
-              width="72"
-              height="12"
-              viewBox="0 0 72 12"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect width="72" height="12" fill="#F28130" />
-            </svg>
-          </div>
-          <span
-            class="event3body"
-            >Many degree programs in engineering - VGU offers a wide range of courses...</span
-          >
-          <app-buttons
-            [button]="'orange'"
-            [content]="'Learn more'"
-          />
-        </div>
-      </div>
-      <span class="learnmoreinfo">Learn more about VGU</span>
-      <div class="displayevent4">
-        <app-event
-          [event]="'e6'"
-        />
-        <app-event
-          [event]="'e6'"
-        />
-        <app-event
-          [event]="'e6'"
-        />
-        <app-event
-          [event]="'e6'"
-        />
-      </div>
-    </div>
-    <div #partner class="partner">
-      <span class="partnertitle">UNIVERSITY PARTNER</span>
-      <app-slide-partner/>
-    </div>
+    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet ante porta, sollicitudin diam in, mattis nisi. Integer lobortis non felis ut fringilla. Sed commodo neque sed elit fermentum accumsan. Maecenas mollis, ex sit amet volutpat interdum, urna enim feugiat quam, et euismod libero eros non massa. Proin ut nisi condimentum, semper eros in, volutpat velit. Maecenas ac semper ipsum. Curabitur placerat odio quis urna varius, at luctus augue luctus. Duis dignissim pharetra mauris. Vivamus tincidunt diam vel velit dictum, lobortis finibus neque porta. Maecenas efficitur interdum velit maximus iaculis. In libero turpis, tristique in lacus quis, tempor maximus odio. Praesent arcu orci, porttitor lacinia rhoncus vel, bibendum et ex. Nunc in dui ut sapien dapibus ullamcorper. Curabitur hendrerit magna justo, at ullamcorper lectus maximus ac.</span>
   </div>
-  <app-footer/>
+  <app-footer [property]="'mobile'"/>
 </div>

@@ -15,7 +15,7 @@
   height: 385px;
   .carousel-indicators {
     position: relative;
-    width: -webkit-fill-available;
+    width: 100%;
     top: 420px;
   }
   
@@ -45,7 +45,7 @@
   box-sizing: border-box;
   overflow: hidden;
   height: 385px;
-  width: -webkit-fill-available;
+  width: 100%;
 }
 
 .frame109::before {
@@ -69,7 +69,7 @@
   gap: 24px;
   box-sizing: border-box;
   overflow: hidden;
-  width: -webkit-fill-available;
+  width: 100%;
 }
 .gameIconsGraduateCap {
   /* game-icons:graduate-cap */
@@ -101,7 +101,7 @@
   box-sizing: border-box;
   overflow: hidden;
   height: 80px;
-  width: -webkit-fill-available;
+  width: 100%;
 }
 .title {
   display: flex;
@@ -114,7 +114,7 @@
   font-weight: 500;
   text-align: left;
   text-wrap: wrap;
-  width: -webkit-fill-available;
+  width: 100%;
 }
 
 .frame112 {
@@ -125,7 +125,7 @@
   align-items: flex-start;
   gap: 61px;
   box-sizing: border-box;
-  width: -webkit-fill-available;
+  width: 100%;
 }
 .content {
   display: flex;
@@ -138,7 +138,7 @@
   font-weight: 400;
   text-align: left;
   text-wrap: wrap;
-  width: -webkit-fill-available;
+  width: 100%;
 }
 
 .subContent {

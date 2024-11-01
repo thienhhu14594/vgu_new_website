@@ -1,4 +1,7 @@
-<div class="root">
+<div class="root"
+  (mouseenter)="property='hover'"
+  (mouseleave)="property='Default'"
+>
     <span
       *ngIf="function === 'quickAccess'"
       class="quickAccess"

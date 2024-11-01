@@ -385,6 +385,9 @@
     position: relative;
     width: 90.77%;
     height: fit-content;
+    app-event{
+      width: 250px;
+    }
   }
   
   .displayevent2 {

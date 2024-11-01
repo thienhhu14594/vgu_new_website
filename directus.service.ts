@@ -47,6 +47,14 @@ export class DirectusService {
     return this.http.get(`${apiUrl}/items/universityPartner`)
   }
 
+  getGeneralNews(): Observable<any> {
+    return this.http.get(`${apiUrl}/items/generalNews`)
+  }
+
+  getAdmission(): Observable<any> {
+    return this.http.get(`${apiUrl}/items/admission`)
+  }
+
   getImageUrl(img: string) {
     return apiUrl+'/assets/'+img;
   }

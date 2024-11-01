@@ -17,14 +17,12 @@
 
 .root_propertyMobile {
   padding: 27px 9px 27px 9px;
-  top: 179px;
-  left: 39px;
-  position: absolute;
+  position: relative;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 15px;
-  width: 390px;
+  width: 100%;
 }
 .vguWhiteLogo1 {
   display: flex;

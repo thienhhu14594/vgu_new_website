@@ -1,0 +1,65 @@
+.root {
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    pointer-events: none;
+}
+
+app-logo{
+    position: relative;
+    aspect-ratio: 5 / 3;
+    left: 43px;
+    top: 0px;
+    z-index: 99;
+}
+
+.hamburgerInside {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-top: 90px;
+    gap: 60px;
+    height: calc(100vh - 65px);
+    overflow-y: scroll;
+    overscroll-behavior: none;
+}
+
+.hamburgerBar {
+    position: sticky;
+    top:8px;
+    border-top: 2px solid #000000;
+    background: #FFFFFF;
+    z-index: 98;
+    pointer-events: auto;
+}
+
+.hamburgerBar::before {
+    content: '';
+    position: absolute;
+    top: -11px;
+    left: 0px;
+    right: 0px;
+    border: 5px solid #F28130;
+    z-index: 0;
+  }
+
+.hamburgerButton {
+    position: relative;
+    width: fit-content;
+    left: calc(100% - 46px)
+}
+
+app-hamburger-component {
+    position: relative;
+}
+
+.subNav {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px 20px 123px 20px;
+    gap: 25px;
+}

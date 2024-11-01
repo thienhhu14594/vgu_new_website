@@ -1,0 +1,3 @@
+.root_mobileEvent .carousel-control-prev, .carousel-control-next {
+    height: calc((100vw - 20px) / 353 * 265);
+}

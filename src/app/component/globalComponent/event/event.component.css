@@ -8,7 +8,7 @@
   flex-direction: column;
   align-items: center;
   padding: 0px;
-  gap: 24px;
+  gap: 12px;
   position: relative;
   height: 517px;
   border-bottom: 5px solid #F28130;
@@ -17,7 +17,7 @@
 .image1 {
   position: relative;
   width: 100%;
-  height: 265px;
+  aspect-ratio: 353 / 265;
   flex: none;
   order: 0;
   align-self: stretch;
@@ -29,7 +29,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 12px;
+  gap: 0px;
   padding: 0px 12px;
   width: 100%;
   height: 228.01px;
@@ -54,7 +54,7 @@
 }
 
 .e1title {
-  width: 305px;
+  width: 100%;
   height: 68px;
   font-family: 'IBM Plex Serif';
   font-style: normal;
@@ -68,7 +68,7 @@
 }
 
 .e1subcontent1 {
-  width: 94px;
+  width: fit-content;
   height: 22px;
 
   font-family: 'IBM Plex Serif';
@@ -82,7 +82,7 @@
 }
 
 .e1content {
-  width: 305px;
+  width: 100%;
   height: 44px;
 
   font-family: 'IBM Plex Serif';
@@ -132,6 +132,7 @@
   padding: 0px;
   row-gap: 0px;
   position: relative;
+  height: fit-content;
 }
 
 .root_e3default {
@@ -172,7 +173,7 @@
   align-items: flex-start;
   padding: 20px 10px 20px 12px;
   width: 13.9%;
-  height: 100px;
+  height: fit-content;
   flex: none;
   order: 0;
   flex-grow: 0;
@@ -185,7 +186,7 @@
   align-items: flex-start;
   padding: 20px 10px 20px 12px;
   width: 86.1%;
-  height: 100px;
+  height: fit-content;
   flex: none;
   order: 1;
   flex-grow: 1;
@@ -221,8 +222,8 @@
 }
 
 .e3title{
-  width: 994px;
-  height: 30px;
+  width: 100%;
+  height: fit-content;
   font-family: 'IBM Plex Serif';
   font-style: normal;
   font-weight: 1000;
@@ -235,8 +236,8 @@
 }
 
 .e3content {
-  width: 994px;
-  height: 30px;
+  width: 100%;
+  height: fit-content;
   font-family: 'IBM Plex Serif';
   font-style: normal;
   font-weight: 300;
@@ -250,7 +251,6 @@
 
 .e3arrow {
   position: absolute;
-  left: 96.61%;
   right: 0.85%;
   top: 33.33%;
   bottom: 50%;
@@ -267,7 +267,7 @@
   padding: 0px;
   gap: 12px;
   position: relative;
-  height: 314px;
+  height: fit-content;
 }
 
 .root_e4default {
@@ -284,8 +284,8 @@
 
 .image4 {
   position: relative;
-  width: 250px;
-  height: 250px;
+  width: 100%;
+  aspect-ratio: 1 / 1;
   flex: none;
   order: 0;
   align-self: stretch;
@@ -294,7 +294,7 @@
 }
 
 .e4title {
-  width: 250px;
+  width: 100%;
   height: 52px;
 
   font-family: 'IBM Plex Serif';
@@ -316,7 +316,7 @@
   padding: 0px;
   gap: 12px;
   position: relative;
-  height: 473px;
+  height: 493px;
 }
 
 .root_e5default {
@@ -334,7 +334,7 @@
 .image5 {
   position: relative;
   width: 100%;
-  height: 315px;
+  aspect-ratio: 112 / 63;
   flex: none;
   order: 0;
   align-self: stretch;

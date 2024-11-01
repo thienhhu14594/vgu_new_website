@@ -55,11 +55,18 @@
     <div #news class="news">
       <span class="newstitle">VGU GENERAL NEWS</span>
       <div class="displaynews1">
-        <app-event
+        <app-event *ngFor="let gNews of generalNews"
+          [subContent1]=gNews.date
+          [event]="'e1'"
+          [title]=gNews.title
+          [content]=gNews.shortDescription
+          [imageSrc]="this.directusSrv.getImageUrl(gNews.frontImg)"
+        />
+        <!-- <app-event
           [subContent1]="'23/10'"
           [event]="'e1'"
           [title]="'News title'"
-          [content]="'Some content that I try to make it looks long enough but it is not that long enough so I have to try again'"
+          [content]="'News content'"
           [imageSrc]="'http://localhost:8055/assets/399ce2db-1b79-46ae-bae6-2253698d705c'"
         />
         <app-event
@@ -68,14 +75,7 @@
           [title]="'News title'"
           [content]="'News content'"
           [imageSrc]="'http://localhost:8055/assets/399ce2db-1b79-46ae-bae6-2253698d705c'"
-        />
-        <app-event
-          [subContent1]="'23/10'"
-          [event]="'e1'"
-          [title]="'News title'"
-          [content]="'News content'"
-          [imageSrc]="'http://localhost:8055/assets/399ce2db-1b79-46ae-bae6-2253698d705c'"
-        />
+        /> -->
       </div>
       <div class="displaynews2">
         <img [src]="'http://localhost:8055/assets/399ce2db-1b79-46ae-bae6-2253698d705c'"/>
@@ -111,11 +111,18 @@
     <div #admission class="admission">
       <span class="admissiontitle">ADMISSION 2024</span>
       <div class="displayadmission1">
-        <app-event
+        <app-event *ngFor="let aNews of admissionNews"
+          [subContent1]=aNews.date
+          [event]="'e1'"
+          [title]=aNews.title
+          [content]=aNews.shortDescription
+          [imageSrc]="this.directusSrv.getImageUrl(aNews.frontImg)"
+        />
+        <!-- <app-event
           [subContent1]="'23/10'"
           [event]="'e1'"
           [title]="'News title'"
-          [content]="'Some content that I try to make it looks long enough but it is not that long enough so I have to try again'"
+          [content]="'News content'"
           [imageSrc]="'http://localhost:8055/assets/399ce2db-1b79-46ae-bae6-2253698d705c'"
         />
         <app-event
@@ -124,14 +131,7 @@
           [title]="'News title'"
           [content]="'News content'"
           [imageSrc]="'http://localhost:8055/assets/399ce2db-1b79-46ae-bae6-2253698d705c'"
-        />
-        <app-event
-          [subContent1]="'23/10'"
-          [event]="'e1'"
-          [title]="'News title'"
-          [content]="'News content'"
-          [imageSrc]="'http://localhost:8055/assets/399ce2db-1b79-46ae-bae6-2253698d705c'"
-        />
+        /> -->
       </div>
       <app-buttons
         [button]="'orangeBlue'"
