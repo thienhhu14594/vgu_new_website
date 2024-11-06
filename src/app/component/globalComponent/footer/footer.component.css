@@ -9,14 +9,15 @@
 
 .root_propertyDesktop {
   padding: 0px 0px 0px 30px;
+  justify-content: space-between;
   position: relative;
   display: flex;
-  justify-content: space-between;
   flex-wrap: nowrap;
 }
 
 .root_propertyMobile {
-  padding: 27px 9px 27px 9px;
+  margin: auto;
+  padding: 27px 0px 27px 0px;
   position: relative;
   display: flex;
   justify-content: center;
@@ -40,12 +41,12 @@
 .frame60 {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  flex-wrap: nowrap;
+  justify-content: center;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 28px;
+  gap: 10px;
   box-sizing: border-box;
-  width: 372px;
+  width: fit-content;
 }
 app-icon {
   position: relative;
@@ -86,13 +87,12 @@ app-icon {
 .frame9 {
   position: relative;
   box-sizing: border-box;
-  width: 246px;
+  width: fit-content;
   height: 113px;
 }
 .vguCampus84027422209908402742220980 {
-  top: 10px;
-  left: 6px;
-  position: absolute;
+  margin: auto;
+  position: relative;
   display: flex;
   box-sizing: content-box;
   color: #ffffff;
