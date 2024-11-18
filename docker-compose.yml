@@ -9,6 +9,7 @@ services:
       - ./uploads:/directus/uploads
       - ./extensions:/directus/extensions
     environment:
+      PUBLIC_URL: "http://0.0.0.0:8055"
       SECRET: "replace-with-secure-random-value"
       ADMIN_EMAIL: "admin@example.com"
       ADMIN_PASSWORD: "d1r3ctu5"
