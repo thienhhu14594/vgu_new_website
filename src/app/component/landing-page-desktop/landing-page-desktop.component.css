@@ -46,7 +46,7 @@
     width: 19.23%;
     left: 60px;
     top: min(32vw, 412px);
-    background: #F28130;
+    background: var(--vgu_orange);
     z-index: 97;
   }
   

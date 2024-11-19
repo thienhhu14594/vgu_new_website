@@ -8,8 +8,8 @@
       <img [src]="this.directusSrv.getImageUrl(section.image)"
       alt="{{section.title}}">
     </div>
-    <div class="titleFrame">
-      <span class="titleContent">{{section.title}}</span>
+    <div *ngIf="section.carouselInfo" class="titleFrame">
+      <span class="titleContent">{{section.carouselInfo}}</span>
       <app-buttons
         [button]="'orange'"
         [content]="'Learn more'"

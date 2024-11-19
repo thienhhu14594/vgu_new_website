@@ -29,6 +29,7 @@ import { SearchBarComponent } from '../component/globalComponent/search-bar/sear
 import { MobileHeroComponent } from "../component/globalComponent/mobile/mobile-hero/mobile-hero.component";
 import { MobileEventComponent } from "../component/globalComponent/mobile/mobile-event/mobile-event.component";
 import { DirectusService } from '../../../directus.service';
+import { switchMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-testframe',
@@ -115,13 +116,32 @@ export class TestframeComponent implements AfterViewInit {
 ///////////////////////////////////////////////////////////////////////////
   admissionNews: any[] = [];
   generalNews: any[] = [];
+  idBlock: any;
+  imgBlock: any[] = [];
+
   ngOnInit(): void {
-    this.directusSrv.getGeneralNews().subscribe(data => {
-      this.generalNews = data.data;
-    });
-    this.directusSrv.getAdmission().subscribe(data => {
-      this.admissionNews = data.data;
-    });
+    // this.directusSrv.getGeneralNews().subscribe(data => {
+    //   this.generalNews = data.data;
+    // });
+    // this.directusSrv.getAdmission().subscribe(data => {
+    //   this.admissionNews = data.data;
+    // });
+    // this.directusSrv.getPartnerBlock().pipe(
+    //   switchMap((nameResponse: any) => {
+    //     const id = nameResponse.data[0].id; // Adjust based on your API structure
+    //     console.log('Fetched items:', id);
+    //     return this.directusSrv.getBlockImage(id); // Pass the name to the second request
+    //   })
+    // ).subscribe({
+    //   next: (itemResponse: any) => {
+    //     this.imgBlock = itemResponse.data; // Handle the response
+    //     console.log('Fetched items:', this.imgBlock);
+    //   },
+    //   error: (err) => {
+    //     console.error('Error occurred:', err);
+    //   }
+    // });
+    
   }
 ////////////////////////////////////////////////////////////////////////////
   ngAfterViewInit() {
@@ -205,5 +225,9 @@ export class TestframeComponent implements AfterViewInit {
 
   scroll(el: HTMLElement) {
       el.scrollIntoView({ behavior: "smooth" });
+  }
+
+  print(st: string) {
+    console.log(`${st}`)
   }
 }

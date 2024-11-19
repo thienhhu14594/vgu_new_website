@@ -29,8 +29,8 @@
     <img class="image1" [src]="imageSrc"/>
     <div class="e1container">
       <span class="e1subcontent1">{{subContent1}}</span>
-      <span class="e1title">{{title}}</span>
-      <span class="e1content">{{content}}</span>
+      <span class="e1title">{{title.length > 50 ? (title | slice:0:50) + '...':title}}</span>
+      <span class="e1content">{{ content.length > 100 ? (content | slice:0:100) + '...' : content }}</span>
     </div>
     <div class="e1arrow">
       <svg

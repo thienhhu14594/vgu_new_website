@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { createDirectus, readItems } from '@directus/sdk'
 
@@ -26,6 +26,19 @@ export interface Posts {
 export class DirectusService {
 
   constructor(private http: HttpClient) { }
+
+  getCarousel(): Observable<any> {
+    return this.http.get(`${apiUrl}/items/carousel_image`)
+  }
+
+  getPartnerBlock(): Observable<any> {
+    return this.http.get(`${apiUrl}/items/block_image_slideshow`)
+  }
+
+  getBlockImage(id: any): Observable<any> {
+    const params = new HttpParams().set('filter[block_image_slideshow_id][_eq]', id);
+    return this.http.get(`${apiUrl}/items/block_image_slideshow_files`, { params });
+  }
 
   getTest(): Observable<any> {
     return this.http.get(`${apiUrl}/items/test`)

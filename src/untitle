@@ -1,18 +1,1 @@
-/* University Partner */
-
-width: 370px;
-height: 31px;
-
-font-family: 'IBM Plex Serif';
-font-style: normal;
-font-weight: 500;
-font-size: 24px;
-line-height: 31px;
-
-color: #000000;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 1;
+$argon2id$v=19$m=65536,t=3,p=4$lD5JSwX3VTjSZeubbRiutg$E0YzOsWEblphyjZibQ9GKUVynyFGTdbTGnw1ffRndy0

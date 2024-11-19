@@ -88,12 +88,12 @@ export class LandingPageDesktopComponent implements AfterViewInit {
   admissionNews: any[] = [];
   generalNews: any[] = [];
   ngOnInit(): void {
-    this.directusSrv.getGeneralNews().subscribe(data => {
+    this.directusSrv.getPosts().subscribe(data => {
       this.generalNews = data.data;
     });
-    this.directusSrv.getAdmission().subscribe(data => {
-      this.admissionNews = data.data;
-    });
+    // this.directusSrv.getAdmission().subscribe(data => {
+    //   this.admissionNews = data.data;
+    // });
   }
 
   ngAfterViewInit() {
@@ -173,7 +173,11 @@ export class LandingPageDesktopComponent implements AfterViewInit {
     }
   }
 
-  
+  stripHtml(html: string): string {
+    const div = document.createElement('div');
+    div.innerHTML = html;
+    return div.textContent || div.innerText || '';
+  }
 
   scroll(el: HTMLElement) {
       el.scrollIntoView({ behavior: "smooth" });
