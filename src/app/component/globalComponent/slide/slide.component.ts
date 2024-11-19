@@ -24,9 +24,20 @@ export class SlideComponent {
   slides: any[] = [];
   constructor (public directusSrv: DirectusService){}
   ngOnInit(): void {
-    this.directusSrv.getSlide().subscribe(data => {
+    this.directusSrv.getVGUnumber().subscribe(data => {
       this.slides = data.data;
     });
+  }
+
+  getRandomColor(): string {
+    // List of CSS variables
+    const colors = ['var(--vgu_orange)', 'var(--vgu_gray)', 'var(--flag_red)', 'var(--neutral_brown)', 'var(--dark_blue)'];
+  
+    // Pick a random index from the array
+    const randomIndex = Math.floor(Math.random() * colors.length);
+  
+    // Return the selected color
+    return colors[randomIndex];
   }
 }
 

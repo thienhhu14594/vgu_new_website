@@ -4,15 +4,15 @@
 >
   <ng-template ngbSlide *ngFor="let slide of slides">
     <div class="frame109"
-    [ngStyle]="{ 'background': slide.color }">
+    [ngStyle]="{ 'background': getRandomColor() }">
       <div class="frame110">
         <div class="gameIconsGraduateCap">
-          <img [src]="this.directusSrv.getImageUrl(slide.icon)"
-          alt="{{slide.title}}">
+          <!-- <img [src]="this.directusSrv.getImageUrl(slide.icon)"
+          alt="{{slide.title}}"> -->
         </div>
         <div class="frame111">
           <span class="title">
-            {{slide.title}}
+            {{slide.figure}}
           </span>
         </div>
       </div>
@@ -21,9 +21,9 @@
           class="content"
           >{{slide.content}}</span
         >
-        <span class="subContent"
+        <!-- <span class="subContent"
           >{{slide.subContent}}</span
-        >
+        > -->
       </div>
     </div>
   </ng-template>

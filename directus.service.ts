@@ -40,6 +40,10 @@ export class DirectusService {
     return this.http.get(`${apiUrl}/items/block_image_slideshow_files`, { params });
   }
 
+  getVGUnumber(): Observable<any> {
+    return this.http.get(`${apiUrl}/items/vgu_in_numbers`)
+  }
+
   getTest(): Observable<any> {
     return this.http.get(`${apiUrl}/items/test`)
   }
