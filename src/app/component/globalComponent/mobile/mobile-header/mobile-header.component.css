@@ -28,8 +28,8 @@ app-logo{
 .hamburgerBar {
     position: sticky;
     top:8px;
-    border-top: 2px solid #000000;
-    background: #FFFFFF;
+    border-top: 2px solid black;
+    background: white;
     z-index: 98;
     pointer-events: auto;
 }
@@ -40,7 +40,7 @@ app-logo{
     top: -11px;
     left: 0px;
     right: 0px;
-    border: 5px solid #F28130;
+    border: 5px solid var(--vgu_orange);
     z-index: 0;
   }
 

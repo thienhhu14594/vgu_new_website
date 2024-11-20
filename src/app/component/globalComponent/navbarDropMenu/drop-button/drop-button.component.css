@@ -24,10 +24,10 @@
     box-sizing: content-box;
     color: #0b2240;
     font-size: 24px;
-    font-family: IBM Plex Sans;
+    font-family: var(--vgu_font_sansCondensed);
     letter-spacing: 0%;
     text-decoration: none;
-    font-weight: 400;
+    font-weight: 600;
     text-align: left;
     text-wrap: wrap;
     width: -webkit-fill-available;

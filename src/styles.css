@@ -1,6 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
-    --vgu_font: 'IBM Plex Sans', sans-serif;
+    --vgu_font_sans: 'IBM Plex Sans', sans-serif;
+    --vgu_font_serif: 'IBM Plex Serif', serif;
+    --vgu_font_mono: 'IBM Plex Mono', monospace;
+    --vgu_font_sansCondensed: 'IBM Plex Sans Condensed', sans-serif;
     --vgu_orange: #f28130;
     --vgu_gray: #666666;
     --flag_red: #e2231a;

@@ -22,8 +22,8 @@
     width: 10px !important;
     height: 10px !important;
     border-radius: 50%;
-    background-color: #ffffff;
-    border: 2px solid #000000 !important;
+    background-color: white;
+    border: 2px solid black !important;
     margin: 0 4px !important;
   }
 }
@@ -49,7 +49,7 @@
 .titleContent {
   display: flex;
   box-sizing: content-box;
-  color: #000000;
+  color: black;
   font-size: 31px;
   font-family: IBM Plex Sans;
   letter-spacing: 0%;

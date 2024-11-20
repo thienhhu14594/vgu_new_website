@@ -112,7 +112,7 @@
       <span class="admissiontitle">ADMISSION 2024</span>
       <div class="displayadmission1">
         <app-event *ngFor="let aNews of generalNews"
-          [subContent1]=aNews.date
+          [subContent1]=aNews.publish_date
           [event]="'e1'"
           [title]=aNews.title
           [content]="stripHtml(aNews.content)"

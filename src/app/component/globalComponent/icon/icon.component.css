@@ -15,12 +15,12 @@
 }
 
 .rectangleFacebook_propertyDefaultIconFacebook {
-  background: #0B2240;
+  background: var(--dark_blue);
   display: flex;
 }
 
 .rectangleFacebook_propertyHoverIconFacebook {
-  background: #F58221;
+  background: var(--vgu_orange);
   display: flex;
 }
 
@@ -41,12 +41,12 @@
 }
 
 .rectangleLinkedin_propertyDefaultIconLinkedin {
-  background: #0B2240;
+  background: var(--dark_blue);
   display: flex;
 }
 
 .rectangleLinkedin_propertyHoverIconLinkedin {
-  background: #F58221;
+  background: var(--vgu_orange);
   display: flex;
 }
 
@@ -67,12 +67,12 @@
 }
 
 .rectangleMap_propertyDefaultIconMap {
-  background: #0B2240;
+  background: var(--dark_blue);
   display: flex;
 }
 
 .rectangleMap_propertyHoverIconMap {
-  background: #F58221;
+  background: var(--vgu_orange);
   display: flex;
 }
 
@@ -93,12 +93,12 @@
 }
 
 .rectangleYoutube_propertyDefaultIconYoutube {
-  background: #0B2240;
+  background: var(--dark_blue);
   display: flex;
 }
 
 .rectangleYoutube_propertyHoverIconYoutube {
-  background: #F58221;
+  background: var(--vgu_orange);
   display: flex;
 }
 

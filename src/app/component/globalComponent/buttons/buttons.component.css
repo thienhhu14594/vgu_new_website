@@ -10,7 +10,7 @@
 }
 
 .root_propertyDefaultButtonOrangeBlue {
-  background: #f58221;
+  background: var(--vgu_orange);
 }
 
 .root_buttonWhiteButtonOrange {
@@ -20,7 +20,7 @@
 }
 
 .root_propertyHoverButtonOrangeBlue {
-  background: #0b2240;
+  background: var(--dark_blue);
 }
 
 .root_buttonOrangeBlue {
@@ -48,18 +48,18 @@
 }
 
 .moreVguNews_buttonOrange {
-  color: #f58221;
+  color: var(--vgu_orange);
 }
 
 .moreVguNews_buttonOrangeBlue {
   font-size: 14px;
-  font-family: IBM Plex Sans;
+  font-family: var(--vgu_font_sans);
   text-align: center;
 }
 
 .moreVguNews_buttonWhiteButtonOrange {
   font-size: 14px;
-  font-family: IBM Plex Sans;
+  font-family: var(--vgu_font_sans);
   font-style: italic;
   text-align: left;
 }
@@ -102,5 +102,5 @@
 }
 
 .vector_buttonOrange svg path {
-  fill:#F58221;
+  fill: var(--vgu_orange);
 }

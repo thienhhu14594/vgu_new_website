@@ -5,7 +5,7 @@
   align-items: center;
   gap: 0px;
   box-sizing: border-box;
-  background: #ffffff;
+  background: white;
 }.root {
   display: flex;
   flex-direction: column;
@@ -14,14 +14,14 @@
   align-items: center;
   gap: 0px;
   box-sizing: border-box;
-  background: #ffffff;
+  background: white;
 }
 .aboutVgu {
   display: flex;
   box-sizing: content-box;
-  color: #000000;
+  color: black;
   font-size: 19px;
-  font-family: IBM Plex Sans;
+  font-family: var(--vgu_font_sans);
   letter-spacing: 0%;
   font-weight: 1000;
   text-align: left;
@@ -39,9 +39,9 @@
 .studyAndAdmission {
   display: flex;
   box-sizing: content-box;
-  color: #000000;
+  color: black;
   font-size: 19px;
-  font-family: IBM Plex Sans;
+  font-family: var(--vgu_font_sans);
   letter-spacing: 0%;
   font-weight: 1000;
   text-align: left;
@@ -59,9 +59,9 @@
 .research {
   display: flex;
   box-sizing: content-box;
-  color: #000000;
+  color: black;
   font-size: 19px;
-  font-family: IBM Plex Sans;
+  font-family: var(--vgu_font_sans);
   letter-spacing: 0%;
   font-weight: 1000;
   text-align: left;
@@ -79,9 +79,9 @@
 .industrialRelation {
   display: flex;
   box-sizing: content-box;
-  color: #000000;
+  color: black;
   font-size: 19px;
-  font-family: IBM Plex Sans;
+  font-family: var(--vgu_font_sans);
   letter-spacing: 0%;
   font-weight: 1000;
   text-align: left;
@@ -129,9 +129,9 @@
 .aboutVgu {
   display: flex;
   box-sizing: content-box;
-  color: #000000;
+  color: black;
   font-size: 19px;
-  font-family: IBM Plex Sans;
+  font-family: var(--vgu_font_sans);
   letter-spacing: 0%;
   font-weight: 1000;
   text-align: left;
@@ -149,9 +149,9 @@
 .studyAndAdmission {
   display: flex;
   box-sizing: content-box;
-  color: #000000;
+  color: black;
   font-size: 19px;
-  font-family: IBM Plex Sans;
+  font-family: var(--vgu_font_sans);
   letter-spacing: 0%;
   font-weight: 1000;
   text-align: left;
@@ -169,9 +169,9 @@
 .research {
   display: flex;
   box-sizing: content-box;
-  color: #000000;
+  color: black;
   font-size: 19px;
-  font-family: IBM Plex Sans;
+  font-family: var(--vgu_font_sans);
   letter-spacing: 0%;
   font-weight: 1000;
   text-align: left;
@@ -189,9 +189,9 @@
 .industrialRelation {
   display: flex;
   box-sizing: content-box;
-  color: #000000;
+  color: black;
   font-size: 19px;
-  font-family: IBM Plex Sans;
+  font-family: var(--vgu_font_sans);
   letter-spacing: 0%;
   font-weight: 1000;
   text-align: left;

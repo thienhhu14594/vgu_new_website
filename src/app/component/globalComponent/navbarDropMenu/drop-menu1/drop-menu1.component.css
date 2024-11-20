@@ -8,5 +8,5 @@
   gap: 0px;
   box-sizing: border-box;
   overflow: hidden;
-  background: #d9d9d9;
+  background: var(--neutral_gray);
 }
