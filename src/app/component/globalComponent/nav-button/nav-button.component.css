@@ -3,19 +3,11 @@
   flex-direction: column;
   flex-wrap: nowrap;
   align-items: center;
-  gap: 0px;
-  box-sizing: border-box;
-  background: white;
-}.root {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  flex-wrap: nowrap;
-  align-items: center;
-  gap: 0px;
+  gap: 10.5px;
   box-sizing: border-box;
   background: white;
 }
+
 .aboutVgu {
   display: flex;
   box-sizing: content-box;

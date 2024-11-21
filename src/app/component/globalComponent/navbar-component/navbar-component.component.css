@@ -56,20 +56,6 @@ flex-grow: 0;
   box-sizing: content-box;
 }
 
-.frame6 {
-  top: 23px;
-  left: 40.31%;
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: nowrap;
-  align-items: flex-start;
-  gap: auto;
-  box-sizing: border-box;
-  width: 55.08%;
-  height: 45px;
-}
 app-nav-button {
   display: flex;
   box-sizing: border-box;
@@ -94,14 +80,12 @@ app-nav-button {
   justify-content: flex-start;
   flex-wrap: nowrap;
   align-items: stretch;
-  gap: 5px;
   box-sizing: border-box;
   overflow: hidden;
   background: var(--neutral_gray);
   width: 71.15%;
 }
 app-drop-menu1 {
-  padding: 10px 0px 10px 0px;
   display: flex;
   box-sizing: border-box;
   overflow: hidden;
@@ -169,5 +153,5 @@ border-width: 0px;
   gap: auto;
   box-sizing: border-box;
   width: 55.08%;
-  height: 45px;
+  height: 53px;
 }
