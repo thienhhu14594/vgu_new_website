@@ -5,7 +5,7 @@
     root_somethingSelected: property !== 'default',
   }"
 >
-  <span *ngIf="property === 'services'" class="head">Services</span>
+  <!-- <span *ngIf="property === 'services'" class="head">Services</span> -->
   <app-drop-button
     *ngIf="property === 'services'"
     [function]="'Overview'"
@@ -22,7 +22,7 @@
     *ngIf="property === 'services'"
     [function]="'Library'"
   ></app-drop-button>
-  <span *ngIf="property === 'master'" class="head">Master</span>
+  <!-- <span *ngIf="property === 'master'" class="head">Master</span> -->
   <app-drop-button
     *ngIf="property === 'master'"
     [function]="'Study programs'"
@@ -39,7 +39,7 @@
     *ngIf="property === 'master'"
     [function]="'Faculty'"
   ></app-drop-button>
-  <span *ngIf="property === 'bachelor'" class="head">Bachelor</span>
+  <!-- <span *ngIf="property === 'bachelor'" class="head">Bachelor</span> -->
   <app-drop-button
     *ngIf="property === 'bachelor'"
     [function]="'Study programs'"
@@ -56,7 +56,7 @@
     *ngIf="property === 'bachelor'"
     [function]="'Faculty'"
   ></app-drop-button>
-  <span *ngIf="property === 'faculty'" class="head">Faculty</span>
+  <!-- <span *ngIf="property === 'faculty'" class="head">Faculty</span> -->
   <app-drop-button
     *ngIf="property === 'faculty'"
     [function]="'Faculty of Engineering Office'"

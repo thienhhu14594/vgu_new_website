@@ -28,7 +28,7 @@ align-self: stretch;
 flex-grow: 0;
 }
 .group7 {
-  top: 33px;
+  top: 23px;
   left: 98px;
   position: absolute;
   display: flex;
@@ -85,7 +85,7 @@ app-nav-button {
 }
 
 .frame89 {
-  padding: 10px 10px 0px 10px;
+  padding: 0px;
   top: 76px;
   left: 24.15%;
   position: relative;

@@ -5,9 +5,9 @@
     root_somethingSelected: property !== 'default',
   }"
 >
-  <span *ngIf="property === 'organization'" class="head"
+  <!-- <span *ngIf="property === 'organization'" class="head"
     >Organization</span
-  >
+  > -->
   <app-drop-button
     *ngIf="property === 'organization'"
     [function]="'Overview'"
@@ -25,9 +25,9 @@
     [function]="'Faculty information >'"
     (click) = "notifyClickedToNavbar('faculty')"
   ></app-drop-button>
-  <span *ngIf="property === 'level'" class="head"
+  <!-- <span *ngIf="property === 'level'" class="head"
     >Education level</span
-  >
+  > -->
   <app-drop-button
     *ngIf="property === 'level'"
     [function]="'Bachelor programs >'"
@@ -38,7 +38,7 @@
     [function]="'Master programs >'"
     (click) = "notifyClickedToNavbar('master')"
   ></app-drop-button>
-  <span *ngIf="property === 'student'" class="head">Students</span>
+  <!-- <span *ngIf="property === 'student'" class="head">Students</span> -->
   <app-drop-button
     *ngIf="property === 'student'"
     [function]="'Services >'"

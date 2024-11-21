@@ -1,11 +1,11 @@
 .root {
-  padding: 10px 0px 10px 0px;
+  padding: 24px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   flex-wrap: nowrap;
   align-items: flex-start;
-  gap: 0px;
+  gap: 12px;
   box-sizing: border-box;
   overflow: hidden;
   background: var(--neutral_gray);
@@ -18,8 +18,8 @@
 }
 
 .root_somethingSelected {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 .head {
   display: flex;

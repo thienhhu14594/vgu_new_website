@@ -10,14 +10,14 @@
     display: flex;
     width: max-content; /* Ensure container expands for all images */
     height: fit-content;
-    animation: slide 10s linear infinite; /* Infinite sliding animation */
+    animation: slide 15s linear infinite; /* Infinite sliding animation */
 }
   
 .root_partner .carousel-slide img {
     position: relative;
-    width: 480px;
+    width: 380px;
     max-height: 256px;
-    margin-right: 20px; /* Optional: space between images */
+    margin-right: 15px; /* Optional: space between images */
 }
   
 /* Define the animation */
@@ -26,7 +26,7 @@
     transform: translateX(0%);
   }
   100% {
-    transform: translateX(calc(-500px * 12)); /* Slide left by the total width of images */
+    transform: translateX(calc(-395px * 12)); /* Slide left by the total width of images */
   }
 }
   
