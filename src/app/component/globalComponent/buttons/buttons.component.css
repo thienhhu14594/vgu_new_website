@@ -6,7 +6,6 @@
   flex-wrap: nowrap;
   align-items: center;
   box-sizing: border-box;
-  overflow: hidden;
 }
 
 .root_propertyDefaultButtonOrangeBlue {
@@ -15,7 +14,7 @@
 
 .root_buttonWhiteButtonOrange {
   position: relative;
-  gap: 0px;
+  gap: 5px;
   width: 123px;
 }
 
