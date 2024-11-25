@@ -1,0 +1,70 @@
+<div class="root">
+  <span
+    *ngIf="function === 'About'"
+    class="aboutVgu"
+    [ngClass]="{
+      aboutVgu_propertyDefaultPropertySelected:
+        property === 'Default' || property === 'Selected',
+      aboutVgu_functionAboutPropertyHover:
+        function === 'About' && property === 'Hover',
+    }"
+    >About VGU</span
+  >
+  <span
+    *ngIf="function === 'Study'"
+    class="studyAndAdmission"
+    [ngClass]="{
+      studyAndAdmission_propertyDefaultPropertySelected:
+        property === 'Default' || property === 'Selected',
+      studyAndAdmission_functionStudyPropertyHover:
+        function === 'Study' && property === 'Hover',
+    }"
+    >Study and Admission</span
+  >
+  <span
+    *ngIf="function === 'Research'"
+    class="research"
+    [ngClass]="{
+      research_propertyDefaultPropertySelected:
+        property === 'Default' || property === 'Selected',
+      research_functionResearchPropertyHover:
+        function === 'Research' && property === 'Hover',
+    }"
+    >Research</span
+  >
+  <span
+    *ngIf="function === 'Industrial'"
+    class="industrialRelation"
+    [ngClass]="{
+      industrialRelation_propertyDefaultPropertySelected:
+        property === 'Default' || property === 'Selected',
+      industrialRelation_functionIndustrialPropertyHover:
+        function === 'Industrial' && property === 'Hover',
+    }"
+    >Industrial Relation</span
+  >
+  <div
+    *ngIf="property === 'Selected'"
+    class="polygon5"
+    [ngClass]="{
+      polygon5_functionStudyPropertySelected:
+        function === 'Study' && property === 'Selected',
+      polygon5_functionAboutPropertySelected:
+        function === 'About' && property === 'Selected',
+      polygon5_functionResearchPropertySelected:
+        function === 'Research' && property === 'Selected',
+      polygon5_functionIndustrialPropertySelected:
+        function === 'Industrial' && property === 'Selected',
+    }"
+  >
+    <svg
+      width="35"
+      height="15"
+      viewBox="0 0 35 15"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path d="M17.5 0L34.8205 15H0.179491L17.5 0Z" fill="var(--neutral_gray)" />
+    </svg>
+  </div>
+</div>

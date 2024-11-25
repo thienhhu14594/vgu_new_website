@@ -1,0 +1,157 @@
+.root {
+  /* position: relative; */
+  box-sizing: border-box;
+}
+
+.root_collapseClose {
+  /* collapse=close */
+width: 100%;
+height: 76px;
+
+background: white;
+border-bottom: 1px solid #d5d5d5;
+
+/* Inside auto layout */
+flex: none;
+align-self: stretch;
+flex-grow: 0;
+}
+
+.root_collapseOpen {
+  /* collapse=open */
+width: 100%;
+height: 97.5vh;
+backdrop-filter: blur(5px);
+/* Inside auto layout */
+flex: none;
+align-self: stretch;
+flex-grow: 0;
+}
+.group7 {
+  top: 23px;
+  left: 98px;
+  position: absolute;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: [object Object]px;
+  box-sizing: content-box;
+  border-top-left-radius: [object Object]px;
+  border-top-right-radius: [object Object]px;
+  border-bottom-right-radius: [object Object]px;
+  border-bottom-left-radius: [object Object]px;
+  border-image-source: var(--flag_red);
+  border-image-slice: 1;
+  border-style: solid;
+  border-width: [object Object]px;
+  width: 78px;
+  height: 25px;
+}
+.toppngComHomeIconFree980X8981 {
+  display: flex;
+  box-sizing: content-box;
+}
+
+.pngtreeSearchVectorIcon40173841 {
+  display: flex;
+  box-sizing: content-box;
+}
+
+app-nav-button {
+  display: flex;
+  box-sizing: border-box;
+  background: white;
+  height: 25px;
+}
+
+.nav {
+  display: flex;
+  box-sizing: border-box;
+  background: white;
+  height: 25px;
+}
+
+.frame89 {
+  padding: 0px;
+  top: 76px;
+  left: 24.15%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: var(--neutral_gray);
+  width: 71.15%;
+}
+app-drop-menu1 {
+  display: flex;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: var(--neutral_gray);
+  width: -webkit-fill-available;
+}
+
+app-drop-menu2 {
+  display: flex;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: var(--neutral_gray);
+  width: -webkit-fill-available;
+}
+
+app-drop-menu3 {
+  display: flex;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: var(--neutral_gray);
+  width: -webkit-fill-available;
+}
+
+.frame88 {
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  display: flex;
+  box-sizing: border-box;
+  background: white;
+  width: 100%;
+  height: 76px;
+}
+.group7 {
+  /* Group 7 */
+
+position: relative;
+width: 78px;
+height: 25px;
+border-width: 0px;
+
+}
+.toppngComHomeIconFree980X8981 {
+  position: relative;
+  display: flex;
+  box-sizing: content-box;
+}
+
+.pngtreeSearchVectorIcon40173841 {
+  position: relative;
+  left: 8px;
+  display: flex;
+  box-sizing: content-box;
+}
+
+.frame6 {
+  top: 23px;
+  left: 40.31%;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  gap: auto;
+  box-sizing: border-box;
+  width: 55.08%;
+  height: 53px;
+}

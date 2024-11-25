@@ -1,0 +1,35 @@
+.root_mobileHero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    img {
+        width: 100%;
+        aspect-ratio: 195/94;
+    }
+    .carousel-item {
+        transition: transform 0.4s ease-in-out; 
+        will-change: transform;
+    }
+    
+    .carousel-control-prev, .carousel-control-next {
+        height: calc(100vw / 195 * 94);
+    }
+    
+    .titleFrame {
+        display: flex;
+        flex-direction: column;
+        padding: 16px 16px 16px 16px;
+        gap: 10px;
+    }
+    
+    .titleContent {
+        font-family: var(--vgu_font_sans);
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 31px;
+        color: black;
+    }
+}
+

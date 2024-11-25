@@ -1,0 +1,109 @@
+.root {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 10px;
+  box-sizing: border-box;
+  background: white;
+}
+.quickAccess {
+  display: flex;
+  box-sizing: content-box;
+  color: var(--vgu_gray);
+  font-size: 14px;
+  font-family: var(--vgu_font_sans);
+  letter-spacing: 0%;
+  font-weight: 750;
+  text-align: left;
+  text-wrap: nowrap;
+}
+
+.quickAccess_propertyDefaultFunctionQuickAccess {
+  text-decoration: none;
+}
+
+.quickAccess_propertyHoverFunctionQuickAccess {
+  text-decoration: underline;
+}
+
+.english {
+  display: flex;
+  box-sizing: content-box;
+  color: var(--vgu_gray);
+  font-size: 14px;
+  font-family: var(--vgu_font_sans);
+  letter-spacing: 0%;
+  font-weight: 750;
+  text-align: left;
+  text-wrap: nowrap;
+}
+
+.english_propertyDefaultFunctionLanguage {
+  text-decoration: none;
+}
+
+.english_propertyHoverFunctionLanguage {
+  text-decoration: underline;
+}
+
+.home {
+  display: flex;
+  box-sizing: content-box;
+  color: var(--vgu_gray);
+  font-size: 14px;
+  font-family: var(--vgu_font_sans);
+  letter-spacing: 0%;
+  font-weight: 750;
+  text-align: left;
+  text-wrap: nowrap;
+}
+
+.home_propertyDefaultFunctionHome {
+  text-decoration: none;
+}
+
+.home_propertyHoverFunctionHome {
+  text-decoration: underline;
+}
+
+.search {
+  display: flex;
+  box-sizing: content-box;
+  color: var(--vgu_gray);
+  font-size: 14px;
+  font-family: var(--vgu_font_sans);
+  letter-spacing: 0%;
+  font-weight: 750;
+  text-align: left;
+  text-wrap: nowrap;
+}
+
+.search_propertyDefaultFunctionSearch {
+  text-decoration: none;
+}
+
+.search_propertyHoverFunctionSearch {
+  text-decoration: underline;
+}
+
+.login {
+  display: flex;
+  box-sizing: content-box;
+  color: var(--vgu_gray);
+  font-size: 14px;
+  font-family: var(--vgu_font_sans);
+  letter-spacing: 0%;
+  font-weight: 750;
+  text-align: left;
+  text-wrap: nowrap;
+}
+
+.login_propertyDefaultFunctionLogin {
+  text-decoration: none;
+}
+
+.login_propertyHoverFunctionLogin {
+  text-decoration: underline;
+}

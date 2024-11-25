@@ -1,0 +1,11 @@
+<div
+  class="root"
+  [ngClass]="{
+    root_propertyDefault: property === 'Default',
+    root_propertyHover: property === 'Hover',
+  }"
+  (mouseenter)="property='Hover'"
+  (mouseleave)="property='Default'"
+>
+  <span class="content">{{function}}</span>
+</div>

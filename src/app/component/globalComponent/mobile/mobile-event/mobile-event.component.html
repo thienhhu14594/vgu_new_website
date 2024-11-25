@@ -1,0 +1,15 @@
+<ngb-carousel
+  class="root_mobileEvent"
+  [showNavigationIndicators]="false"
+  [interval]="6000"
+>
+  <ng-template ngbSlide *ngFor="let section of sections">
+    <app-event
+        [event]="'e1'"
+        [title]=section.title
+        [content]=section.shortDescription
+        [subContent1]=section.date
+        [imageSrc]="this.directusSrv.getImageUrl(section.frontImg)"
+    />
+  </ng-template>
+</ngb-carousel>

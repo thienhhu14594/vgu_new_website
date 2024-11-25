@@ -1,0 +1,52 @@
+<div
+  class="root"
+>
+    <app-logo/>
+    <div class="hamburgerBar">
+        <div class="hamburgerButton">
+            <svg
+              *ngIf="menu === 'open'"
+              width="24"
+              height="55"
+              viewBox="0 0 24 55"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              (click)="menu = 'close'"
+            >
+              <path
+                d="M23.4944 37.0697C23.8163 37.3916 23.9971 37.8282 23.9971 38.2835C23.9971 38.7387 23.8163 39.1753 23.4944 39.4972C23.1724 39.8192 22.7358 40 22.2805 40C21.8252 40 21.3886 39.8192 21.0667 39.4972L12 30.4282L2.93047 39.4944C2.60854 39.8163 2.17191 39.9971 1.71663 39.9971C1.26135 39.9971 0.82472 39.8163 0.502789 39.4944C0.180859 39.1725 4.79714e-09 38.7359 0 38.2806C-4.79714e-09 37.8254 0.180859 37.3888 0.502789 37.0668L9.57232 28.0007L0.505645 18.9317C0.183714 18.6098 0.00285616 18.1732 0.00285616 17.718C0.00285617 17.2627 0.183714 16.8261 0.505645 16.5042C0.827576 16.1823 1.26421 16.0014 1.71949 16.0014C2.17476 16.0014 2.6114 16.1823 2.93333 16.5042L12 25.5732L21.0695 16.5028C21.3915 16.1808 21.8281 16 22.2834 16C22.7386 16 23.1753 16.1808 23.4972 16.5028C23.8191 16.8247 24 17.2613 24 17.7165C24 18.1718 23.8191 18.6084 23.4972 18.9303L14.4277 28.0007L23.4944 37.0697Z"
+                fill="black"
+              />
+            </svg>
+            <svg
+              *ngIf="menu === 'close'"
+              width="26"
+              height="55"
+              viewBox="0 0 26 55"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              (click)="menu = 'open'"
+            >
+              <path
+                d="M1 40H25M1 28H25M1 16H25"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+        </div>
+        <div class="hamburgerInside" *ngIf="menu === 'open'">
+          <app-hamburger-component/>
+          <app-search-bar/>
+          <div class="subNav">
+            <app-subnav [function]="'quickAccess'"/>
+            <app-subnav [function]="'language'"/>
+            <app-subnav [function]="'login'"/>
+            <app-subnav [function]="'home'"/>
+          </div>
+        </div>
+        
+    </div>
+    
+</div>

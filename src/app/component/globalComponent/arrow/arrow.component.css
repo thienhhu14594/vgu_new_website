@@ -1,0 +1,39 @@
+.root {
+  position: relative;
+  box-sizing: border-box;
+}
+.forward {
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  display: flex;
+  box-sizing: content-box;
+}
+
+.forward_propertyDefaultDirectionRight {
+  display: flex;
+  fill-opacity: 75%;
+}
+
+.forward_propertyOnClickDirectionRight {
+  display: flex;
+  fill-opacity: 100%;
+}
+
+.back {
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  display: flex;
+  box-sizing: content-box;
+}
+
+.back_propertyDefaultDirectionLeft {
+  display: flex;
+  fill-opacity: 75%;
+}
+
+.back_propertyOnClickDirectionLeft {
+  display: flex;
+  fill-opacity: 100%;
+}

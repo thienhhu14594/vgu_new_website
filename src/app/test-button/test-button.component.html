@@ -1,0 +1,25 @@
+<div class="root">
+    <span
+      *ngIf="function === 'test'"
+      class="test"
+      [ngClass]="{
+        test_propertyDefaultFunctionTest:
+          property === 'Default' && function === 'test',
+        test_propertyHoverFunctionTest:
+          property === 'hover' && function === 'test',
+      }"
+      >test</span
+    >
+    <span
+      *ngIf="function === 'test2'"
+      class="test2"
+      [ngClass]="{
+        test2_propertyDefaultFunctionTest2:
+          property === 'Default' && function === 'test2',
+        test2_propertyHoverFunctionTest2:
+          property === 'hover' && function === 'test2',
+      }"
+      >test2</span
+    >
+  </div>
+  

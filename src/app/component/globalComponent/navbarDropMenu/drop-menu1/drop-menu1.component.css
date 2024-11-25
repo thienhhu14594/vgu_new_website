@@ -1,0 +1,12 @@
+.root {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  gap: 12px;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: var(--neutral_gray);
+}

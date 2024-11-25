@@ -1,0 +1,220 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 10.5px;
+  box-sizing: border-box;
+  background: white;
+}
+
+.aboutVgu {
+  display: flex;
+  box-sizing: content-box;
+  color: black;
+  font-size: 19px;
+  font-family: var(--vgu_font_sans);
+  letter-spacing: 0%;
+  font-weight: 1000;
+  text-align: left;
+  text-wrap: nowrap;
+}
+
+.aboutVgu_propertyDefaultPropertySelected {
+  text-decoration: none;
+}
+
+.aboutVgu_functionAboutPropertyHover {
+  text-decoration: underline;
+}
+
+.studyAndAdmission {
+  display: flex;
+  box-sizing: content-box;
+  color: black;
+  font-size: 19px;
+  font-family: var(--vgu_font_sans);
+  letter-spacing: 0%;
+  font-weight: 1000;
+  text-align: left;
+  text-wrap: nowrap;
+}
+
+.studyAndAdmission_propertyDefaultPropertySelected {
+  text-decoration: none;
+}
+
+.studyAndAdmission_functionStudyPropertyHover {
+  text-decoration: underline;
+}
+
+.research {
+  display: flex;
+  box-sizing: content-box;
+  color: black;
+  font-size: 19px;
+  font-family: var(--vgu_font_sans);
+  letter-spacing: 0%;
+  font-weight: 1000;
+  text-align: left;
+  text-wrap: nowrap;
+}
+
+.research_propertyDefaultPropertySelected {
+  text-decoration: none;
+}
+
+.research_functionResearchPropertyHover {
+  text-decoration: underline;
+}
+
+.industrialRelation {
+  display: flex;
+  box-sizing: content-box;
+  color: black;
+  font-size: 19px;
+  font-family: var(--vgu_font_sans);
+  letter-spacing: 0%;
+  font-weight: 1000;
+  text-align: left;
+  text-wrap: nowrap;
+}
+
+.industrialRelation_propertyDefaultPropertySelected {
+  text-decoration: none;
+}
+
+.industrialRelation_functionIndustrialPropertyHover {
+  text-decoration: underline;
+}
+
+.polygon5 {
+  display: flex;
+  position: relative;
+  box-sizing: content-box;
+}
+
+.polygon5_functionStudyPropertySelected {
+  display: flex;
+}
+
+.polygon5_functionAboutPropertySelected {
+  display: flex;
+}
+
+.polygon5_functionResearchPropertySelected {
+  display: flex;
+}
+
+.polygon5_functionIndustrialPropertySelected {
+  display: flex;
+}
+
+
+.root_propertyDefaultPropertyHoverFunctionIndustrial {
+  justify-content: center;
+}
+
+.root_propertySelectedFunctionAboutFunctionStudyFunctionResearch {
+  justify-content: flex-start;
+}
+.aboutVgu {
+  display: flex;
+  box-sizing: content-box;
+  color: black;
+  font-size: 19px;
+  font-family: var(--vgu_font_sans);
+  letter-spacing: 0%;
+  font-weight: 1000;
+  text-align: left;
+  text-wrap: nowrap;
+}
+
+.aboutVgu_propertyDefaultPropertySelected {
+  text-decoration: none;
+}
+
+.aboutVgu_functionAboutPropertyHover {
+  text-decoration: underline;
+}
+
+.studyAndAdmission {
+  display: flex;
+  box-sizing: content-box;
+  color: black;
+  font-size: 19px;
+  font-family: var(--vgu_font_sans);
+  letter-spacing: 0%;
+  font-weight: 1000;
+  text-align: left;
+  text-wrap: nowrap;
+}
+
+.studyAndAdmission_propertyDefaultPropertySelected {
+  text-decoration: none;
+}
+
+.studyAndAdmission_functionStudyPropertyHover {
+  text-decoration: underline;
+}
+
+.research {
+  display: flex;
+  box-sizing: content-box;
+  color: black;
+  font-size: 19px;
+  font-family: var(--vgu_font_sans);
+  letter-spacing: 0%;
+  font-weight: 1000;
+  text-align: left;
+  text-wrap: nowrap;
+}
+
+.research_propertyDefaultPropertySelected {
+  text-decoration: none;
+}
+
+.research_functionResearchPropertyHover {
+  text-decoration: underline;
+}
+
+.industrialRelation {
+  display: flex;
+  box-sizing: content-box;
+  color: black;
+  font-size: 19px;
+  font-family: var(--vgu_font_sans);
+  letter-spacing: 0%;
+  font-weight: 1000;
+  text-align: left;
+  text-wrap: nowrap;
+}
+
+.industrialRelation_propertyDefaultPropertySelected {
+  text-decoration: none;
+}
+
+.industrialRelation_functionIndustrialPropertyHover {
+  text-decoration: underline;
+}
+
+.polygon5 {
+  display: flex;
+  box-sizing: content-box;
+}
+
+.polygon5_functionStudyPropertySelected {
+  display: flex;
+}
+
+.polygon5_functionAboutPropertySelected {
+  display: flex;
+}
+
+.polygon5_functionResearchPropertySelected {
+  display: flex;
+}
+
+.polygon5_functionIndustrialPropertySelected {
+  display: flex;
+}

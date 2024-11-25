@@ -1,0 +1,10 @@
+<div class="root_universityOverview">
+    <app-header/>
+    <div class="body">
+        <img
+            *ngIf=""
+            [src]="this.directusSrv.getImageUrl(section.image)"
+            alt="{{section.title}}">
+    </div>
+    <app-footer/>
+</div>

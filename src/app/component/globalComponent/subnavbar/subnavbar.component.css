@@ -1,0 +1,85 @@
+.root {
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.root_propertyDefault {
+  /* Property=Default */
+
+width: 100%;
+height: 24px;
+
+background: white;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+}
+
+.root_propertyDisappear {
+  /* Property=disappear */
+
+width: 100%;
+height: 18px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+}
+.subNavbar {
+  padding: 0px 160px 0px 0px;
+  top: 0px;
+  left: 40.31%;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: auto;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: white;
+  width: 56.85%;
+}
+.subNav {
+  display: flex;
+  box-sizing: border-box;
+  background: white;
+}
+
+.subNav {
+  display: flex;
+  box-sizing: border-box;
+  background: white;
+}
+
+.subNav {
+  display: flex;
+  box-sizing: border-box;
+  background: white;
+}
+
+.subNav {
+  display: flex;
+  box-sizing: border-box;
+  background: white;
+}
+
+.blank {
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  display: flex;
+  box-sizing: border-box;
+  overflow: hidden;
+  width: 1440px;
+  height: 18px;
+}
