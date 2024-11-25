@@ -20,4 +20,7 @@
     --dark_red: #802528;
     --dark_blue: #0d2240;
     --dark_green: #4e5a30;
+    /* -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; */
 }
+

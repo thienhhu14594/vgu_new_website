@@ -23,8 +23,8 @@
     display: flex;
     box-sizing: content-box;
     color: #0b2240;
-    font-size: 24px;
-    font-family: var(--vgu_font_sansCondensed);
+    font-size: 19px;
+    font-family: var(--vgu_font_sans);
     letter-spacing: 0%;
     text-decoration: none;
     font-weight: 400;
