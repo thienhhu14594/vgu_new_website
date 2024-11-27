@@ -28,7 +28,7 @@ export class SlidePartnerComponent {
     this.directusSrv.getPartnerBlock().pipe(
       switchMap((nameResponse: any) => {
         const id = nameResponse.data[0].id; // Adjust based on your API structure
-        return this.directusSrv.getBlockImage(id); // Pass the name to the second request
+        return this.directusSrv.getBlockImage_byID(id); // Pass the name to the second request
       })
     ).subscribe({
       next: (itemResponse: any) => {
@@ -38,7 +38,7 @@ export class SlidePartnerComponent {
         console.error('Error occurred:', err);
       }
     });
-    this.partners = [...this.partners,...this.partners.slice(0, 3)];
+    this.partners = [...this.partners,...this.partners.slice(0, this.partners.length)];
   }
   
 }

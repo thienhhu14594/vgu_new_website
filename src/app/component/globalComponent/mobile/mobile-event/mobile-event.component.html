@@ -5,11 +5,11 @@
 >
   <ng-template ngbSlide *ngFor="let section of sections">
     <app-event
+        [subContent1]=section.publish_date
         [event]="'e1'"
         [title]=section.title
-        [content]=section.shortDescription
-        [subContent1]=section.date
-        [imageSrc]="this.directusSrv.getImageUrl(section.frontImg)"
+        [content]="stripHtml(section.content)"
+        [imageSrc]="this.directusSrv.getImageUrl(section.image)"
     />
   </ng-template>
 </ngb-carousel>

@@ -1,8 +1,10 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component, Input, ViewEncapsulation } from '@angular/core';
+import { Input, ViewEncapsulation } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, Inject, PLATFORM_ID, QueryList, Renderer2, ViewChild, ViewChildren } from '@angular/core';
 import { NgbCarouselModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { EventComponent } from '../../event/event.component';
 import { DirectusService } from '../../../../../../directus.service';
+import { htmlToText } from 'html-to-text';
 
 @Component({
   selector: 'app-mobile-event',
@@ -21,4 +23,7 @@ import { DirectusService } from '../../../../../../directus.service';
 export class MobileEventComponent {
   constructor (public directusSrv: DirectusService){}
   @Input() sections: any[] = [];
+  stripHtml(html: string): string {
+    return htmlToText(html);
+  }
 }

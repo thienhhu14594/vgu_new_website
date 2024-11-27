@@ -11,11 +11,14 @@
 </ngb-carousel> -->
 
 <div class="root_partner">
-  <div
-    *ngFor="let partner of partners"
-    class="carousel-slide"
-  >
-    <img [src]="this.directusSrv.getImageUrl(partner.directus_files_id)"
-    alt="{{partner.id}}">
+  <div class="allPartner">
+    <div
+      *ngFor="let partner of partners"
+      class="carousel-slide"
+    >
+      <img [src]="this.directusSrv.getImageUrl(partner.directus_files_id)"
+      alt="{{partner.id}}">
+    </div>
   </div>
+  
 </div>

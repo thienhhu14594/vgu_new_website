@@ -30,6 +30,16 @@
     min-width: 122px;
     height: auto;
     aspect-ratio: 5 / 3;
+    img {
+      margin: auto;
+      position: relative;
+      display: flex;
+      box-sizing: border-box;
+      overflow: hidden;
+      /* background:; */
+      width: 64%;
+      height: auto;
+    }
   }
   .imageLogo {
     margin: auto;
