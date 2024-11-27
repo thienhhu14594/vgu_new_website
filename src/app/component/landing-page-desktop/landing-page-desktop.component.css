@@ -10,7 +10,6 @@
     overflow: visible;
     background: white;
     max-width: 1300px;
-    min-width: 1007px;
     height: fit-content;
     margin: auto;
   }
@@ -18,6 +17,10 @@
   app-header {
     width: 100%;
   }
+  app-mobile-header {
+    display: none;
+  }
+
   app-footer {
     margin: auto;
     position: relative;
@@ -27,6 +30,7 @@
   .body {
     flex-grow: 1;
     width: 100%;
+    /* overflow-x:hidden; */
   }
   /* Hero section */
   app-slide-news {
@@ -34,6 +38,9 @@
     top: 118px;
     position: relative;
     z-index: 9;
+  }
+  app-mobile-hero {
+    display: none;
   }
   /* Teaser box */
   .teaserbox {
@@ -96,7 +103,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 180px 410px 80px 60px;
+    padding: 180px 0px 80px 60px;
     gap: 10px;
     width: 100%;
     height: fit-content;
@@ -197,7 +204,9 @@
     row-gap: 60px;
     width: 90.77%;
     app-event {
-      width: 353px;
+      height: 40vw;
+      max-height: 517px;
+      width: 30%;
     }
   }
   
@@ -207,7 +216,8 @@
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
-    padding: 10px 27.2% 10px 9.58%;
+    flex-wrap: wrap;
+    padding: 10px 0px 10px 0px;
     gap: 24px;
     width: 90.77%;
     height: fit-content;
@@ -302,7 +312,9 @@
     width: 90.77%;
     row-gap: 60px;
     app-event {
-      width: 353px;
+      height: 40vw;
+      max-height: 517px;
+      width: 30%;
     }
   }
   
@@ -381,12 +393,12 @@
     align-items: center;
     align-content: flex-start;
     padding: 0px 0px 0px 0px;
-    gap: 60px;
+    gap: 5%;
     position: relative;
     width: 90.77%;
     height: fit-content;
     app-event{
-      width: 250px;
+      width: 21.18%;
     }
   }
   
@@ -411,7 +423,8 @@
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
-    padding: 10px 27.2% 10px 9.58%;
+    flex-wrap: wrap;
+    padding: 10px 0px 10px 0px;
     gap: 24px;
     width: 90.77%;
     height: fit-content;
@@ -476,11 +489,11 @@
     align-items: flex-start;
     align-content: flex-start;
     padding: 0px;
-    gap: 24px 60px;
+    gap: 24px 5%;
     width: 90.77%;
     position: relative;
     app-event {
-      width: 353px;
+      width: 30%;
     }
   }
   /* University partner */
@@ -499,7 +512,7 @@
     background: white;
     order: 6;
     app-slide-partner {
-      width: 90.77%;
+      width: 100%;
     }
   }
   
@@ -515,4 +528,52 @@
     text-align: center;
     color: black;
   }
-  /*draft///////////////////////////////////////////////////////*/
+
+/*tablet screen*/
+  @media only screen and (max-width: 1023px) {
+    .stickybar{
+      display: none;
+    }
+    app-mobile-header {
+      display: flex;
+      width: 100%;
+    }
+    app-header {
+      display: none;
+    }
+    app-slide-news {
+      display: none;
+    }
+    app-mobile-hero {
+      display: flex;
+    }
+    .teaserbox {
+      position: unset;
+      width: 100%;
+      height: fit-content;
+      gap: 10px;
+    }
+    .displaynews1 app-event{
+      width: 49%;
+      height: fit-content;
+    }
+    .displayadmission1 app-event{
+      width: 49%;
+      height: fit-content;
+    }
+    .displayevent1 {
+      gap: 2%;
+    }
+    .displayevent1 app-event {
+      width: 32%;
+    }
+
+    .displayevent4{
+      gap: 12px 1%;
+    }
+
+    .displayevent4 app-event {
+      width: 49%;
+    }
+  }
+    /*draft///////////////////////////////////////////////////////*/

@@ -18,6 +18,7 @@
     
     .titleFrame {
         display: flex;
+        position: relative;
         flex-direction: column;
         padding: 16px 16px 16px 16px;
         gap: 10px;

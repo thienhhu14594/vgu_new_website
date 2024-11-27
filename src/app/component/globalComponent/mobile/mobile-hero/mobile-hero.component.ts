@@ -30,7 +30,7 @@ export class MobileHeroComponent {
   heroSection: any[] = [];
   constructor (public directusSrv: DirectusService){}
   ngOnInit(): void {
-    this.directusSrv.getHeroSection().subscribe(data => {
+    this.directusSrv.getCarousel().subscribe(data => {
       this.heroSection = data.data;
     });
   }
