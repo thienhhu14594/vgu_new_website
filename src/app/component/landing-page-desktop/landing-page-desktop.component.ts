@@ -12,7 +12,7 @@ import { DirectusService } from '../../../../directus.service';
 import { MobileHeaderComponent } from '../globalComponent/mobile/mobile-header/mobile-header.component';
 import { MobileHeroComponent } from '../globalComponent/mobile/mobile-hero/mobile-hero.component';
 import { CommonService } from '../../common.service';
-import { Router, RouterLink } from '@angular/router';
+import { Router, RouterLink, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-landing-desktop',
@@ -28,8 +28,7 @@ import { Router, RouterLink } from '@angular/router';
     EventComponent,
     HeaderComponent,
     MobileHeaderComponent,
-    MobileHeroComponent,
-    RouterLink
+    MobileHeroComponent
    ],
   templateUrl: './landing-page-desktop.component.html',
   styleUrl: './landing-page-desktop.component.css',
