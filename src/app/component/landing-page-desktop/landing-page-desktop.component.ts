@@ -12,6 +12,7 @@ import { DirectusService } from '../../../../directus.service';
 import { MobileHeaderComponent } from '../globalComponent/mobile/mobile-header/mobile-header.component';
 import { MobileHeroComponent } from '../globalComponent/mobile/mobile-hero/mobile-hero.component';
 import { CommonService } from '../../common.service';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-landing-desktop',
@@ -27,7 +28,8 @@ import { CommonService } from '../../common.service';
     EventComponent,
     HeaderComponent,
     MobileHeaderComponent,
-    MobileHeroComponent
+    MobileHeroComponent,
+    RouterLink
    ],
   templateUrl: './landing-page-desktop.component.html',
   styleUrl: './landing-page-desktop.component.css',
@@ -85,7 +87,8 @@ export class LandingPageDesktopComponent implements AfterViewInit {
     @Inject(PLATFORM_ID) private platformId: any,
     private cdr: ChangeDetectorRef,
     public directusSrv: DirectusService,
-    public commonSrc: CommonService
+    public commonSrc: CommonService,
+    private router: Router
   ) { }
   @ViewChildren('intro, news, admission, research, upevent, partner') elements!: QueryList<ElementRef>; // Reference to all elements
 
