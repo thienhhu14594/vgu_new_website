@@ -1,7 +1,9 @@
 <div class="root_landingPC">
   <app-header/>
+  <app-mobile-header/>
   <div class="body">
     <app-slide-news #herosection class="herosection"/>
+    <app-mobile-hero/>
     <div class="teaserbox">
       <span class="teaser_title">NEW MODEL UNIVERSITY</span>
       <span class="teaser_content">
@@ -78,7 +80,7 @@
         /> -->
       </div>
       <div class="displaynews2">
-        <img [src]="'http://localhost:8055/assets/399ce2db-1b79-46ae-bae6-2253698d705c'"/>
+        <img [src]="'http://localhost:8055/assets/eb981c65-5359-4235-9bc5-e355c88b11a9'"/>
         <div class="news2info">
           <span
             class="news2head"
@@ -136,7 +138,9 @@
       <app-buttons
         [button]="'orangeBlue'"
         [content]="'More Admission News'"
+        routerLink="/blog"
       />
+      <a href="blog">asd</a>
       <div class="displayadmission2">
         <app-event [event]="'e3'"/>
         <app-event [event]="'e3'"/>
@@ -188,19 +192,19 @@
       <div class="displayevent2">
         <app-event
         [event]="'e5'"
-        [imageSrc]="'http://localhost:8055/assets/399ce2db-1b79-46ae-bae6-2253698d705c'"
+        [imageSrc]="'http://localhost:8055/assets/eb981c65-5359-4235-9bc5-e355c88b11a9'"
         [title]="'Upcoming event title'"
         [content]="'Some content that I try to make it looks long enough but it is not that long enough so I have to try again'"
         />
         <app-event
         [event]="'e5'"
-        [imageSrc]="'http://localhost:8055/assets/399ce2db-1b79-46ae-bae6-2253698d705c'"
+        [imageSrc]="'http://localhost:8055/assets/eb981c65-5359-4235-9bc5-e355c88b11a9'"
         [title]="'Upcoming event title'"
         [content]="'Some content that I try to make it looks long enough but it is not that long enough so I have to try again'"
         />
       </div>
       <div class="displayevent3">
-        <img [src]="'http://localhost:8055/assets/399ce2db-1b79-46ae-bae6-2253698d705c'"/>
+        <img [src]="'http://localhost:8055/assets/eb981c65-5359-4235-9bc5-e355c88b11a9'"/>
         <div class="event3info">
           <span
             class="event3head"

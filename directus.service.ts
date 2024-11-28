@@ -35,7 +35,8 @@ export class DirectusService {
     return this.http.get(`${apiUrl}/items/block_image_slideshow`)
   }
 
-  getBlockImage(id: any): Observable<any> {
+  getBlockImage_byID(id: any): Observable<any> {
+    //input the id for image block
     const params = new HttpParams().set('filter[block_image_slideshow_id][_eq]', id);
     return this.http.get(`${apiUrl}/items/block_image_slideshow_files`, { params });
   }
@@ -44,6 +45,10 @@ export class DirectusService {
     return this.http.get(`${apiUrl}/items/vgu_in_numbers`)
   }
 
+  getOverviewPic(): Observable<any> {
+    return this.http.get(`${apiUrl}/items/vgu_in_numbers`)
+  }
+////////////////////////////////////////////////////////
   getTest(): Observable<any> {
     return this.http.get(`${apiUrl}/items/test`)
   }

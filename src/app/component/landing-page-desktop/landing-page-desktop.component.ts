@@ -1,7 +1,6 @@
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, Inject, PLATFORM_ID, QueryList, Renderer2, ViewChild, ViewChildren } from '@angular/core';
 import { SlideComponent } from '../globalComponent/slide/slide.component';
-import { ClickOutsideDirective } from '../../click-outside.directive';
 import { FooterComponent } from '../globalComponent/footer/footer.component';
 import { ButtonsComponent } from '../globalComponent/buttons/buttons.component';
 import { SlideNewsComponent } from '../globalComponent/slide-news/slide-news.component';
@@ -10,6 +9,10 @@ import { NavNewsComponent } from '../globalComponent/nav-news/nav-news.component
 import { EventComponent } from '../globalComponent/event/event.component';
 import { HeaderComponent } from '../globalComponent/header/header.component';
 import { DirectusService } from '../../../../directus.service';
+import { MobileHeaderComponent } from '../globalComponent/mobile/mobile-header/mobile-header.component';
+import { MobileHeroComponent } from '../globalComponent/mobile/mobile-hero/mobile-hero.component';
+import { CommonService } from '../../common.service';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-landing-desktop',
@@ -17,14 +20,16 @@ import { DirectusService } from '../../../../directus.service';
   imports: [
     CommonModule,
     SlideComponent,
-    ClickOutsideDirective,
     FooterComponent,
     ButtonsComponent,
     SlideNewsComponent,
     SlidePartnerComponent,
     NavNewsComponent,
     EventComponent,
-    HeaderComponent
+    HeaderComponent,
+    MobileHeaderComponent,
+    MobileHeroComponent,
+    RouterLink
    ],
   templateUrl: './landing-page-desktop.component.html',
   styleUrl: './landing-page-desktop.component.css',
@@ -81,7 +86,9 @@ export class LandingPageDesktopComponent implements AfterViewInit {
   constructor(
     @Inject(PLATFORM_ID) private platformId: any,
     private cdr: ChangeDetectorRef,
-    public directusSrv: DirectusService
+    public directusSrv: DirectusService,
+    public commonSrc: CommonService,
+    private router: Router
   ) { }
   @ViewChildren('intro, news, admission, research, upevent, partner') elements!: QueryList<ElementRef>; // Reference to all elements
 
@@ -168,9 +175,10 @@ export class LandingPageDesktopComponent implements AfterViewInit {
       
       window.addEventListener('scroll', handleScroll);
 
-    } else {
-      console.error('IntersectionObserver not supported or not in browser');
-    }
+    } 
+    // else {
+    //   console.error('IntersectionObserver not supported or not in browser');
+    // }
   }
 
   stripHtml(html: string): string {
@@ -182,4 +190,6 @@ export class LandingPageDesktopComponent implements AfterViewInit {
   scroll(el: HTMLElement) {
       el.scrollIntoView({ behavior: "smooth" });
   }
+
+
 }

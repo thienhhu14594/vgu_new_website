@@ -36,10 +36,10 @@ export class LandingPageMobileComponent {
   admissionNews: any[] = [];
   generalNews: any[] = [];
   ngOnInit(): void {
-    this.directusSrv.getGeneralNews().subscribe(data => {
+    this.directusSrv.getPosts().subscribe(data => {
       this.generalNews = data.data;
     });
-    this.directusSrv.getAdmission().subscribe(data => {
+    this.directusSrv.getPosts().subscribe(data => {
       this.admissionNews = data.data;
     });
   }
