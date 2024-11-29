@@ -1,11 +1,11 @@
-import 'intersection-observer'
-/// <reference types="@angular/localize" />
-
 import { bootstrapApplication } from '@angular/platform-browser';
-import { appConfig } from './app/app.config';
+import { provideRouter } from '@angular/router';
 import { AppComponent } from './app/app.component';
+import { routes } from './app/app.routes'; // Import routes from the separate file
 
-
-
-bootstrapApplication(AppComponent, appConfig)
-  .catch((err) => console.error(err));
+// Bootstrap the app with the routes
+bootstrapApplication(AppComponent, {
+  providers: [
+    provideRouter(routes), // Provides routing configuration to the app
+  ],
+});

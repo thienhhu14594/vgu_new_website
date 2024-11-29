@@ -1,21 +1,12 @@
-import { provideRouter, Routes } from '@angular/router';
-import {GlobalComponent} from "./component/global/global.component";
-import { PageComponent } from './component/page/page.component';
-import { PostsComponent } from './component/posts/posts.component';
-import { PostComponent } from './component/post/post.component';
-import { TestComponent } from './test/test.component';
-import { TestframeComponent } from './testframe/testframe.component';
-import { LandingPageDesktopComponent } from './component/landing-page-desktop/landing-page-desktop.component';
-import { LandingPageMobileComponent } from './component/landing-page-mobile/landing-page-mobile.component';
-import { UniversityOverviewComponent } from './pages/university-overview/university-overview.component';
+import { LandingPageComponent } from './pages/landing-page/landing-page.component';
+import { OrganizationComponent } from './pages/organization/organization.component';
+
+import { provideRouter, RouterModule, Routes } from '@angular/router';
+import { StudyProgramsComponent } from './pages/study-programs/study-programs.component';
 
 export const routes: Routes = [
-  {path: 'landing-desktop', component: LandingPageDesktopComponent},
-  {path: 'landing-mobile', component: LandingPageMobileComponent},
-  {path: 'overview-desktop', component: UniversityOverviewComponent},
-  // {path: '', component: GlobalComponent},
-  {path: 'blog', component: PostsComponent},
-  // {path: ':slug', component: PageComponent},
-  {path: 'blog/:slug', component: PostComponent},
-  {path: 'test', component: TestframeComponent},
+  { path: '', redirectTo: '/landing-page', pathMatch: 'full' },
+  { path: 'landing-page', component: LandingPageComponent },
+  { path: 'organization', component: OrganizationComponent },
+  { path: 'study-programs', component: StudyProgramsComponent },
 ];
