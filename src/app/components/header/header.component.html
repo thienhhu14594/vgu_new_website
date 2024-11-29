@@ -1,1 +1,40 @@
-<div class="header">header</div>
+<div class="header">
+  <div class="tophead">
+    <div class="upperline"></div>
+  </div>
+  <div class="header-logo" [class.scrolled]="isScrolled">
+    <img
+      [src]="
+        'http://localhost:8055/assets/ea4ec4d0-c581-419c-a3b1-4b4bd799bb7f'
+      "
+    />
+  </div>
+
+  <div class="navbar-container" [class.scrolled]="isScrolled">
+    <div class="nav-buttons">
+      <div class="nav-search-button">
+        <img src="assets/SearchButton.png" alt="Search" />
+      </div>
+      <div class="nav-home-button">X</div>
+    </div>
+    <div class="nav-wrapper">
+      <nav class="subNavbar">
+        <ul class="subNavList">
+          <li><a href="#">Quick access 1</a></li>
+          <li><a href="#">Quick access 2</a></li>
+          <li><a href="#">Quick access 3</a></li>
+          <li><a href="#">Quick access 4</a></li>
+        </ul>
+      </nav>
+      <nav class="navbar">
+        <ul class="navList">
+          <li><a href="#">Quick access 1</a></li>
+          <li><a href="#">Quick access 2</a></li>
+          <li><a href="#">Quick access 3</a></li>
+          <li><a href="#">Quick access 4</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <!-- <app-navbar-component/> -->
+</div>
