@@ -1,0 +1,19 @@
+.header-collapse {
+  width: 60%;
+  height: fit-content;
+  background-color: var(--neutral_gray);
+  position: absolute;
+  right: 60px;
+  display: flex;
+}
+.collapsed-1,
+.collapsed-2,
+.collapsed-3 {
+  height: 200px;
+  width: 33%;
+}
+
+.collapsed-2,
+.collapsed-3 {
+  border-left: 2px solid white;
+}

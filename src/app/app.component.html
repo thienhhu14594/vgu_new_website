@@ -1,6 +1,7 @@
 <div class="container">
-  <app-header />
-
-  <router-outlet></router-outlet>
-  <app-footer />
+  <app-header [isScrolled]="isScrolled" />
+  <div class="content" (scroll)="onContentScroll($event)">
+    <router-outlet></router-outlet>
+    <app-footer />
+  </div>
 </div>

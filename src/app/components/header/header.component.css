@@ -1,10 +1,10 @@
 .header {
   width: 100%;
-  position: sticky;
-  top: 0px;
-  top: 0px;
-  bottom: 0px;
   height: fit-content;
+  border: 1px solid black;
+}
+.header.scrolled {
+  height: 50px;
 }
 
 .tophead {
@@ -46,7 +46,7 @@
 
 .navbar-container {
   display: flex;
-  border: 1px solid purple;
+
   height: fit-content;
   width: 100%;
   margin-top: 15px;
@@ -71,7 +71,7 @@
 .nav-home-button {
   width: 30px;
   height: 30px;
-  border: 1px solid green;
+
   margin-left: 20px;
 }
 .nav-wrapper {
@@ -88,7 +88,7 @@
 .subNavList {
   list-style: none; /* Remove bullets */
   display: flex; /* Make the list items appear in a row */
-  gap: 20px; /* Add spacing between list items */
+  gap: 100px; /* Add spacing between list items */
   margin: 0; /* Remove default margin */
   padding: 0; /* Remove default padding */
 }
@@ -109,7 +109,7 @@
 .navList {
   list-style: none; /* Remove bullets */
   display: flex; /* Make the list items appear in a row */
-  gap: 20px; /* Add spacing between list items */
+  gap: 50px; /* Add spacing between list items */
   margin: 0; /* Remove default margin */
   padding: 0; /* Remove default padding */
 }

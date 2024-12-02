@@ -1,3 +1,7 @@
 .test {
   height: 1000px;
+  background-color: var(--vgu_gray);
+}
+p {
+  margin-top: 0px;
 }

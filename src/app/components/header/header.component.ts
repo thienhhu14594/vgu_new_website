@@ -1,21 +1,21 @@
 import { CommonModule } from '@angular/common';
-import { Component, HostListener } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  HostListener,
+  Input,
+} from '@angular/core';
+import { HeaderCollapseComponent } from '../header-collapse/header-collapse.component';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, HeaderCollapseComponent],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeaderComponent {
-  isScrolled = false;
-
-  @HostListener('window:scroll', [])
-  onWindowScroll() {
-    const scrollPosition = window.scrollY || document.documentElement.scrollTop;
-
-    // Add scrolled class when scrolling down more than 50px
-    this.isScrolled = scrollPosition > 50;
-  }
+  @Input() isScrolled: boolean;
+  collapsed: boolean = false;
 }
