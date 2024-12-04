@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-header-collapse',
@@ -8,10 +8,19 @@ import { Component, Input } from '@angular/core';
   templateUrl: './header-collapse.component.html',
   styleUrl: './header-collapse.component.css',
 })
-export class HeaderCollapseComponent {
+export class HeaderCollapseComponent implements OnChanges {
   @Input() lv1: any[] = [];
   lv2: any[] | null = null; // Null if no second level selected
   lv3: any[] | null = null; // Null if no third level selected
   openedId2: any = null;
   openedId3: any = null;
+
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes['lv1']) {
+      this.lv2 = null;
+      this.lv3 = null;
+      this.openedId2 = null;
+      this.openedId3 = null;
+    }
+  }
 }

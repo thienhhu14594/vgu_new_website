@@ -3,7 +3,7 @@
     <ul class="collapsed-1">
       <li *ngFor="let level2 of lv1">
         <a
-          (click)="openedId2 = level2.id; lv2 = level2.children"
+          (click)="openedId2 = level2.id; lv2 = level2.children; lv3 = null; openedId3 = null"
           [ngClass]="{ opened: level2.id === openedId2 }"
           >{{ level2.name }} <span *ngIf="level2.children.length">></span></a
         >

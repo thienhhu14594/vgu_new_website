@@ -36,7 +36,7 @@
                 (click)="
                   openedId !== null ? null : (collapsed = !collapsed);
                   level1.id === openedId ? (collapsed = !collapsed) : null;
-                  openedId = level1.id;
+                  level1.id === openedId ? (openedId = null) : (openedId = level1.id);
                   lv1 = level1.children
                 "
                 id="{{ level1.id }}"
