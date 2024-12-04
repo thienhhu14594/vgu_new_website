@@ -7,12 +7,12 @@ import {
 } from '@angular/core';
 import { HeaderCollapseComponent } from '../header-collapse/header-collapse.component';
 import { DirectusService } from '../../../../directus.service';
-import { HttpClientModule } from '@angular/common/http';
+import { ClickOutsideDirective } from '../../click-outside.directive';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule, HeaderCollapseComponent, HttpClientModule],
+  imports: [CommonModule, HeaderCollapseComponent, ClickOutsideDirective],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
