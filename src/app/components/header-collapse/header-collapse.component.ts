@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-header-collapse',
@@ -7,6 +7,7 @@ import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
   imports: [CommonModule],
   templateUrl: './header-collapse.component.html',
   styleUrl: './header-collapse.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeaderCollapseComponent implements OnChanges {
   @Input() lv1: any[] = [];

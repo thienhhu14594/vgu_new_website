@@ -1,7 +1,8 @@
 .header {
   width: 100%;
-  height: fit-content;
+  height: 117px;
   border: 1px solid black;
+  transition: height 0.3s ease-in-out;
 }
 .header.scrolled {
   height: 50px;
@@ -124,4 +125,13 @@
 .navList a:hover {
   cursor: pointer;
   color: var(--vgu_orange);
+}
+
+app-header-collapse {
+  top: 116.5px;
+  transition: top 0.3s ease-in-out;
+}
+
+app-header-collapse.scrolled {
+  top: 81.5px;
 }

@@ -25,7 +25,7 @@
           <li><a href="#">Quick access</a></li>
           <li><a href="#">English</a></li>
           <li><a href="#">Search</a></li>
-          <li><a href="#">Login</a></li>
+          <li><a href="#">{{openedId}}</a></li>
         </ul>
       </nav>
       <nav class="navbar">
@@ -54,9 +54,9 @@
     </div>
   </div>
   <!-- <app-navbar-component/> -->
-  <app-header-collapse
+  <app-header-collapse [class.scrolled]="isScrolled"
     *ngIf="collapsed"
-    (clickedOutside)="collapsed = false"
+    (clickedOutside)="openedId = '1'"
     [lv1]="lv1"
   />
 </div>
