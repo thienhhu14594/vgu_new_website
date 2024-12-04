@@ -99,7 +99,8 @@
   font-size: 14px; /* Adjust font size */
 }
 .subNavList a:hover {
-  color: #007bff; /* Change color on hover */
+  color: black;
+  text-decoration: underline;
 }
 
 /* BIG NAV BAR */
@@ -121,5 +122,6 @@
   font-weight: bold;
 }
 .navList a:hover {
-  color: #007bff; /* Change color on hover */
+  cursor: pointer;
+  color: var(--vgu_orange);
 }

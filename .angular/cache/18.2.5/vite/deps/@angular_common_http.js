@@ -1,4 +1,3 @@
-import { createRequire } from 'module';const require = createRequire(import.meta.url);
 import {
   FetchBackend,
   HTTP_INTERCEPTORS,
@@ -38,10 +37,10 @@ import {
   withNoXsrfProtection,
   withRequestsMadeViaParent,
   withXsrfConfiguration
-} from "./chunk-MQAK7ISI.js";
-import "./chunk-HPCJCK5S.js";
-import "./chunk-Y4H4SSVZ.js";
-import "./chunk-MV52JWQN.js";
+} from "./chunk-PSHP4LVZ.js";
+import "./chunk-2QMYEKKM.js";
+import "./chunk-CX57EAW7.js";
+import "./chunk-IVRF44LT.js";
 export {
   FetchBackend,
   HTTP_INTERCEPTORS,

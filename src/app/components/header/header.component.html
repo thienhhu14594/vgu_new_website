@@ -30,14 +30,33 @@
       </nav>
       <nav class="navbar">
         <ul class="navList">
-          <li><a (click)="collapsed = !collapsed">About VGU</a></li>
-          <li><a (click)="collapsed = !collapsed">Study and admission</a></li>
-          <li><a href="#">Research</a></li>
-          <li><a href="#">Industrial Relation</a></li>
+          <ng-container *ngFor="let level1 of navbarTree">
+            <li>
+              <a
+                (click)="
+                  openedId !== null ? null : (collapsed = !collapsed);
+                  level1.id === openedId ? (collapsed = !collapsed) : null;
+                  openedId = level1.id;
+                  lv1 = level1.children
+                "
+                id="{{ level1.id }}"
+                >{{ level1.name }}</a
+              >
+
+              <!-- <ul *ngIf="nav.parent_id = nav" class="submenu">
+        <li *ngFor="let child of item.children">
+          <a [href]="child.url || '#'">{{ child.name }}</a> -->
+            </li>
+          </ng-container>
         </ul>
       </nav>
+      <!-- <p>{{}}</p> -->
     </div>
   </div>
   <!-- <app-navbar-component/> -->
-  <app-header-collapse *ngIf="collapsed" (clickedOutside)="collapsed = false" />
+  <app-header-collapse
+    *ngIf="collapsed"
+    (clickedOutside)="collapsed = false"
+    [lv1]="lv1"
+  />
 </div>

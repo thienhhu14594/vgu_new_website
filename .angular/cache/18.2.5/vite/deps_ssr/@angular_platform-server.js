@@ -5,11 +5,11 @@ import {
   DomRendererFactory2,
   EVENT_MANAGER_PLUGINS,
   EventManagerPlugin
-} from "./chunk-HEFWIPQ7.js";
+} from "./chunk-CCLSMPJY.js";
 import {
   HTTP_ROOT_INTERCEPTOR_FNS,
   HttpClientModule
-} from "./chunk-GKKT3YEK.js";
+} from "./chunk-MQAK7ISI.js";
 import {
   DOCUMENT,
   NullViewportScroller,
@@ -19,7 +19,7 @@ import {
   XhrFactory,
   getDOM,
   setRootDomAdapter
-} from "./chunk-RJK55TS6.js";
+} from "./chunk-HPCJCK5S.js";
 import {
   ALLOW_MULTIPLE_PLATFORMS,
   ANIMATION_MODULE_TYPE,
@@ -58,13 +58,13 @@ import {
   ɵɵdefineInjector,
   ɵɵdefineNgModule,
   ɵɵinject
-} from "./chunk-5JKYDCKR.js";
+} from "./chunk-Y4H4SSVZ.js";
 import {
   __async,
   __objRest,
   __spreadValues,
   __toESM
-} from "./chunk-NQ4HTGF6.js";
+} from "./chunk-MV52JWQN.js";
 
 // node_modules/@angular/animations/fesm2022/animations.mjs
 var AnimationMetadataType;
@@ -20893,7 +20893,7 @@ var ServerXhr = class _ServerXhr {
       if (!this.xhrImpl) {
         const {
           default: xhr
-        } = yield import("./xhr2-JDAPKF6S.js");
+        } = yield import("./xhr2-C2LJXZX5.js");
         this.xhrImpl = xhr;
       }
     });
