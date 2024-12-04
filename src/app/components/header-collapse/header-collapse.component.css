@@ -2,6 +2,8 @@
   width: 60%;
   max-height: 500px;
   overflow-y: auto;
+  scrollbar-gutter: stable;
+  scrollbar-width: thin;
   position: absolute;
   top: inherit;
   right: 60px;

@@ -56,8 +56,10 @@
   <!-- <app-navbar-component/> -->
   <app-header-collapse [class.scrolled]="isScrolled"
     *ngIf="collapsed"
-    appClickOutside
-    (clickedOutside)="collapsed = !collapsed; collapsed === false ? openedId = null : null"
+    appClickOutside (clickedOutside)="
+      collapsed = !collapsed;
+      collapsed === false ? openedId = null : null
+    "
     [lv1]="lv1"
   />
 </div>
