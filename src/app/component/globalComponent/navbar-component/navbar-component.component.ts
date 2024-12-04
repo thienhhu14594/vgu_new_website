@@ -124,5 +124,7 @@ export class NavbarComponentComponent {
       this.propertyDropmenu3 = selected;
     }
   }
+
+  
   
 }

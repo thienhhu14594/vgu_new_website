@@ -28,7 +28,8 @@ import { Router, RouterLink, RouterModule } from '@angular/router';
     EventComponent,
     HeaderComponent,
     MobileHeaderComponent,
-    MobileHeroComponent
+    MobileHeroComponent,
+    RouterModule
    ],
   templateUrl: './landing-page-desktop.component.html',
   styleUrl: './landing-page-desktop.component.css',
