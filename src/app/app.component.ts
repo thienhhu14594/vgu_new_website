@@ -25,6 +25,6 @@ export class AppComponent {
   onContentScroll(event: Event) {
     const scrollPosition = (event.target as HTMLElement).scrollTop;
     console.log('Content scrolled:', scrollPosition);
-    this.isScrolled = scrollPosition > 50;
+    this.isScrolled = scrollPosition > 120;
   }
 }
