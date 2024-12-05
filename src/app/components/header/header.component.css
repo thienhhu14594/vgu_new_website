@@ -1,8 +1,9 @@
 .header {
   width: 100%;
-  height: 117px;
+  height: fit-content;
   border: 1px solid black;
   transition: height 0.3s ease-in-out;
+  position: fixed;
 }
 .header.scrolled {
   height: 50px;
