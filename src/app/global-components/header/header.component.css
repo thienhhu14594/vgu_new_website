@@ -131,7 +131,7 @@
 }
 .navList a:hover {
   cursor: pointer;
-  color: var(--vgu_orange);
+  color: var(--primary-color);
 }
 
 app-header-collapse {

@@ -1,5 +1,12 @@
 <div class="test">
   <p>landing-page works!</p>
+  <div class="test1">
+    <app-card3-s *ngFor="let gNews of generalNews"
+      [title]="'Karlsruhe Concert Duo Performed'"
+      [content]="'Last Friday, The Vietnamese-German University (VGU) has been...'"
+    />
+  </div>
+  <app-arrow-button [text]="'test'"/>
   <button routerLink="/organization">organ</button>
   <button routerLink="/study-programs">study</button>
 </div>

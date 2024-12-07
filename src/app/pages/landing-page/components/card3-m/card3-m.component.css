@@ -1,0 +1,108 @@
+.card3-m {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 12px;
+    height: 100%;
+    position: relative;
+    background: var(--primary-background);
+    border-bottom: 5px solid var(--primary-color);
+  }
+  
+  .card3-m-image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 353 / 265;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+    z-index: 0;
+  }
+
+  .card3-m-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0px;
+    padding: 0px 12px;
+    width: auto;
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 1;
+  }
+    
+  .card3-m-subcontent {
+    width: fit-content;
+    height: 22px;
+    font-family: var(--vgu_font_serif);
+    font-style: normal;
+    font-weight: 300;
+    color: var(--primary-text);
+    font-size: clamp(13px, 1.3vw, 17px);
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+  
+  .card3-m-title {
+    width: 100%;
+    height: 90px;
+    font-family: var(--vgu_font_serif);
+    font-style: normal;
+    font-weight: 500;
+    font-size: clamp(20px, 2vw, 26px);
+    color: var(--primary-text);
+    overflow: hidden;
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+  }
+
+  .card3-m-content {
+    width: 100%;
+    max-height: var(100% - 112px);
+    overflow: hidden;
+    font-family: var(--vgu_font_serif);
+    font-style: normal;
+    font-weight: 400;
+    font-size: clamp(13px, 1.3vw, 17px);
+    color:var(--primary-text);
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+  }
+
+  .card3-m-arrow {
+    display: none;
+    box-sizing: border-box;
+    position: absolute;
+    width: 22px;
+    height: 0px;
+    right: 15px;
+    bottom: 30px;
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+    z-index: 2;
+  }
+
+  .card3-m:hover {
+    border-width: 0px;
+    background: var(--primary-color);
+    .card3-m-title {
+      color: var(--secondary-text);
+    }
+    .card3-m-subcontent {
+      color: var(--secondary-text);
+    }
+    .card3-m-content {
+      color: var(--secondary-text);
+    }
+    .card3-m-arrow {
+        display: unset;
+    }
+  }

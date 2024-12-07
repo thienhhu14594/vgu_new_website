@@ -35,7 +35,15 @@ export class AppComponent {
   ngOnInit() {
     this.colorService.getThemeColors().subscribe((data) => {
       this.setCSSVariable('primary-color', data.data.primaryColor.color);
-      console.log(data.data.primaryColor.color);
+      this.setCSSVariable('primary-text', data.data.primaryText.color);
+      this.setCSSVariable('primary-background', data.data.primaryBackground.color);
+      this.setCSSVariable('primary-button', data.data.primaryButton.color);
+      this.setCSSVariable('primary-button-hover', data.data.primaryButtonHover.color);
+      this.setCSSVariable('secondary-color', data.data.secondaryColor.color);
+      this.setCSSVariable('secondary-background', data.data.secondaryBackground.color);
+      this.setCSSVariable('secondary-text', data.data.secondaryText.color);
+      this.setCSSVariable('secondary-button', data.data.secondaryButton.color);
+      this.setCSSVariable('secondary-button-hover', data.data.secondaryButtonHover.color);
     });
   }
 
