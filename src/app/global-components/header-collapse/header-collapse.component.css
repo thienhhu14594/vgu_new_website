@@ -4,9 +4,8 @@
   overflow-y: auto;
   scrollbar-gutter: stable;
   scrollbar-width: thin;
-  position: absolute;
-  top: inherit;
-  right: 60px;
+  margin-left: calc(40% - 60px);
+  margin-right: 60px;
 }
 .header-collapse {
   height: fit-content;

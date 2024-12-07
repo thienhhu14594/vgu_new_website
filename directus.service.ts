@@ -87,4 +87,7 @@ export class DirectusService {
   getNavButtons(): Observable<any> {
     return this.http.get(`${apiUrl}/items/navButton`);
   }
+  getThemeColors(): Observable<any> {
+    return this.http.get(`${apiUrl}/items/themesColor?fields=*,*.color`);
+  }
 }

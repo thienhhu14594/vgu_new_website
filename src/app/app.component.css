@@ -7,6 +7,11 @@
   flex-direction: column;
   overflow: hidden;
 }
+app-header {
+  height: fit-content;
+}
 .content {
+  padding-top: 117px;
   overflow-y: scroll;
+  flex: 1;
 }

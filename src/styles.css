@@ -22,6 +22,7 @@
   --dark_green: #4e5a30;
   /* -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; */
+  --primary-color: white;
 }
 body {
   margin: 0px;

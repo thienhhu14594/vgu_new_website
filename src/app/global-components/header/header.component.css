@@ -1,12 +1,15 @@
 .header {
   width: 100%;
-  height: fit-content;
-  border: 1px solid black;
-  transition: height 0.3s ease-in-out;
+  max-height: 117px;
+  /* border: 4px solid black; */
+  transition: max-height 0.3s ease-in-out;
+  background-color: transparent;
   position: fixed;
 }
 .header.scrolled {
-  height: 50px;
+  max-height: 50px;
+  /* transform: translateY(-35px); Moves the logo up by 50px */
+  /* transition: height 0.3s ease-in-out; */
 }
 
 .tophead {
@@ -21,7 +24,7 @@
 }
 
 .upperline {
-  background: var(--vgu_orange);
+  background: var(--primary-color);
   height: 13px;
 }
 
@@ -51,14 +54,17 @@
 
   height: fit-content;
   width: 100%;
-  margin-top: 15px;
+  padding-top: 15px;
   padding-bottom: 20px;
   justify-content: flex-end;
-  transition: transform 0.3s ease-in-out; /* Smooth animation */
+
   z-index: 99;
   background-color: white;
 }
-.navbar-container.scrolled {
+.test {
+  transition: transform 0.3s ease-in-out; /* Smooth animation */
+}
+.test.scrolled {
   transform: translateY(-35px); /* Moves the logo up by 50px */
 }
 .nav-buttons {
@@ -129,10 +135,9 @@
 }
 
 app-header-collapse {
-  top: 116.5px;
-  transition: top 0.3s ease-in-out;
+  position: relative;
 }
 
-app-header-collapse.scrolled {
+/* app-header-collapse.scrolled {
   top: 81.5px;
-}
+} */

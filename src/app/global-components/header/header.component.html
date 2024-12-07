@@ -1,0 +1,67 @@
+<div class="header" [class.scrolled]="isScrolled">
+  <div class="tophead">
+    <div class="upperline"></div>
+  </div>
+  <div class="header-logo" [class.scrolled]="isScrolled">
+    <img
+      [src]="
+        'http://localhost:8055/assets/ea4ec4d0-c581-419c-a3b1-4b4bd799bb7f'
+      "
+    />
+  </div>
+  <div class="test" [class.scrolled]="isScrolled">
+    <div class="navbar-container">
+      <div class="nav-buttons">
+        <div class="nav-search-button">
+          <img src="SearchButton.png" alt="Search" />
+        </div>
+        <div class="nav-home-button">
+          <img src="HomeButton.png" alt="Search" />
+        </div>
+      </div>
+      <div class="nav-wrapper">
+        <nav class="subNavbar">
+          <ul class="subNavList">
+            <li><a href="#">Quick access</a></li>
+            <li><a href="#">English</a></li>
+            <li><a href="#">Search</a></li>
+            <li><a href="#">Login</a></li>
+          </ul>
+        </nav>
+        <nav class="navbar">
+          <ul class="navList">
+            <ng-container *ngFor="let level1 of navbarTree">
+              <li>
+                <a
+                  (click)="
+                    level1.id === openedId ? (collapsed = !collapsed) : null;
+                    level1.id === openedId ? null : (openedId = level1.id);
+                    collapsed = !collapsed;
+                    lv1 = level1.children
+                  "
+                  id="{{ level1.id }}"
+                  >{{ level1.name }}</a
+                >
+
+                <!-- <ul *ngIf="nav.parent_id = nav" class="submenu">
+        <li *ngFor="let child of item.children">
+          <a [href]="child.url || '#'">{{ child.name }}</a> -->
+              </li>
+            </ng-container>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <app-header-collapse
+      [class.scrolled]="isScrolled"
+      *ngIf="collapsed"
+      appClickOutside
+      (clickedOutside)="
+        collapsed = !collapsed; collapsed === false ? (openedId = null) : null
+      "
+      [lv1]="lv1"
+    />
+  </div>
+  <!-- <app-navbar-component/> -->
+</div>
