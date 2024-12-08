@@ -26,6 +26,10 @@ export interface Posts {
 export class DirectusService {
   constructor(private http: HttpClient) {}
 
+  getImageUrl(img: string) {
+    return apiUrl + '/assets/' + img;
+  }
+  
   getCarousel(): Observable<any> {
     return this.http.get(`${apiUrl}/items/carousel_image`);
   }
@@ -52,13 +56,20 @@ export class DirectusService {
   getOverviewPic(): Observable<any> {
     return this.http.get(`${apiUrl}/items/vgu_in_numbers`);
   }
+
+  getPosts(): Observable<any> {
+    return this.http.get(`${apiUrl}/items/posts?fields=*,author.name`);
+  }
+
+  getNavButtons(): Observable<any> {
+    return this.http.get(`${apiUrl}/items/navButton`);
+  }
+  getThemeColors(): Observable<any> {
+    return this.http.get(`${apiUrl}/items/themesColor?fields=*,*.color`);
+  }
   ////////////////////////////////////////////////////////
   getTest(): Observable<any> {
     return this.http.get(`${apiUrl}/items/test`);
-  }
-
-  getPosts(): Observable<any> {
-    return this.http.get(`${apiUrl}/items/posts`);
   }
 
   getHeroSection(): Observable<any> {
@@ -79,15 +90,5 @@ export class DirectusService {
 
   getAdmission(): Observable<any> {
     return this.http.get(`${apiUrl}/items/admission`);
-  }
-
-  getImageUrl(img: string) {
-    return apiUrl + '/assets/' + img;
-  }
-  getNavButtons(): Observable<any> {
-    return this.http.get(`${apiUrl}/items/navButton`);
-  }
-  getThemeColors(): Observable<any> {
-    return this.http.get(`${apiUrl}/items/themesColor?fields=*,*.color`);
   }
 }

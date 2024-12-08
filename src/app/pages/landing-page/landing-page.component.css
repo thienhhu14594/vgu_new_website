@@ -1,26 +1,10 @@
 .test {
   height: 1000px;
   background-color: var(--vgu_gray);
+  margin-left: 60px;
+  margin-right: 60px;
+  align-items: center;
 }
 p {
   margin-top: 0px;
-}
-
-.test1 {  
-  position: relative;
-  display: flex;
-  margin-left: 60px;
-  margin-right: 60px;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  align-content: flex-start;
-  padding: 0px;
-  row-gap: 60px;
-  app-card1-l {
-    /* height: 40vw;
-    max-height: 517px; */
-    width: 100%;
-  }
 }

@@ -10,21 +10,15 @@ import { Card2MComponent } from "./components/card2-m/card2-m.component";
 import { Card4MComponent } from "./components/card4-m/card4-m.component";
 import { Card1SComponent } from './components/card1-s/card1-s.component';
 import { Card1LComponent } from './components/card1-l/card1-l.component';
+import { DisplayCardsComponent } from './components/display-cards/display-cards.component';
 
 @Component({
   selector: 'app-landing-page',
   standalone: true,
   imports: [
     RouterModule,
-    Card3MComponent,
     CommonModule,
-    Card3SComponent,
-    PrimaryButtonComponent,
-    ArrowButtonComponent,
-    Card2MComponent,
-    Card4MComponent,
-    Card1SComponent,
-    Card1LComponent
+    DisplayCardsComponent,
 ],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.css',

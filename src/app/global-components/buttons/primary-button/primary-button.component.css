@@ -6,7 +6,8 @@
     flex-wrap: nowrap;
     align-items: center;
     padding: 10px 24px;
-  width: fit-content;
+    margin: auto;
+    width: fit-content;
     box-sizing: border-box;
     background: var(--primary-button);
 }

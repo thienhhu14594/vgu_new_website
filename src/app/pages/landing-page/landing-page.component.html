@@ -1,14 +1,6 @@
 <div class="test">
   <p>landing-page works!</p>
-  <div class="test1">
-    <app-card1-l *ngFor="let gNews of generalNews"
-      [image]="directus.getImageUrl(gNews.image)"
-      [title]="gNews.title"
-      [content]="gNews.content"
-      
-    />
-  </div>
-  <app-arrow-button [text]="'test'"/>
+  <app-display-cards [type]="'card1-l'" [datas]="generalNews" [header]="'General News'"/>
   <button routerLink="/organization">organ</button>
   <button routerLink="/study-programs">study</button>
 </div>
