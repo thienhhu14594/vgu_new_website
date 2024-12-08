@@ -6,6 +6,10 @@ import { CommonModule } from '@angular/common';
 import { Card3SComponent } from "./components/card3-s/card3-s.component";
 import { PrimaryButtonComponent } from "../../global-components/buttons/primary-button/primary-button.component";
 import { ArrowButtonComponent } from "../../global-components/buttons/arrow-button/arrow-button.component";
+import { Card2MComponent } from "./components/card2-m/card2-m.component";
+import { Card4MComponent } from "./components/card4-m/card4-m.component";
+import { Card1SComponent } from './components/card1-s/card1-s.component';
+import { Card1LComponent } from './components/card1-l/card1-l.component';
 
 @Component({
   selector: 'app-landing-page',
@@ -16,7 +20,11 @@ import { ArrowButtonComponent } from "../../global-components/buttons/arrow-butt
     CommonModule,
     Card3SComponent,
     PrimaryButtonComponent,
-    ArrowButtonComponent
+    ArrowButtonComponent,
+    Card2MComponent,
+    Card4MComponent,
+    Card1SComponent,
+    Card1LComponent
 ],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.css',

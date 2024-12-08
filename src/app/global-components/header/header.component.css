@@ -103,11 +103,10 @@
 
 .subNavList a {
   text-decoration: none; /* Remove underline from links */
-  color: #333; /* Link color */
+  color: var(--primary-text); /* Link color */
   font-size: 14px; /* Adjust font size */
 }
 .subNavList a:hover {
-  color: black;
   text-decoration: underline;
 }
 
@@ -125,7 +124,7 @@
 
 .navList a {
   text-decoration: none; /* Remove underline from links */
-  color: #333; /* Link color */
+  color: var(--primary-text); /* Link color */
   font-size: 19px; /* Adjust font size */
   font-weight: bold;
 }
