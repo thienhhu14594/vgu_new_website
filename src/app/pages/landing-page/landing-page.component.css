@@ -4,4 +4,11 @@
   margin-left: 60px;
   margin-right: 60px;
   align-items: center;
+  max-width: 1300px;
+}
+.section1,
+.section2,
+.section3,
+.section4 {
+  padding-top: 40px;
 }

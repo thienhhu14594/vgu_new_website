@@ -5,13 +5,18 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
 }
 app-header {
   height: fit-content;
 }
+.content-wrapper {
+  max-width: 1300px;
+  margin: auto;
+}
 .content {
   padding-top: 117px;
   overflow-y: scroll;
-  flex: 1;
+  width: 100%;
+
+  scrollbar-width: none;
 }

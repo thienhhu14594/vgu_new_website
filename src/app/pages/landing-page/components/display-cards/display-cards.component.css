@@ -8,9 +8,11 @@
   line-height: 52px;
   text-align: start;
   color: var(--primary-text);
+  margin-bottom: 80px;
 }
 
 .card3-m-display {
+  margin-bottom: 80px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -36,13 +38,14 @@
   padding: 0px;
   gap: 24px 5%;
   width: 100%;
-
+  margin-bottom: 80px;
   app-card3-s {
     width: 30%;
   }
 }
 
 .card4-m-display {
+  margin-bottom: 80px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -59,6 +62,7 @@
 }
 
 .card2-m-display {
+  margin-bottom: 80px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -74,6 +78,7 @@
 }
 
 .card1-l-display {
+  margin-bottom: 80px;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -81,6 +86,7 @@
 }
 
 .card1-s-display {
+  margin-bottom: 80px;
   display: flex;
   flex-direction: column;
   width: 100%;
