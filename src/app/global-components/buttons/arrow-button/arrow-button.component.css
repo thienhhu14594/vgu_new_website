@@ -1,53 +1,50 @@
 .arrow-button {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    flex-wrap: nowrap;
-    align-items: center;
-    box-sizing: border-box;
-    gap: 5px;
-    width: 123px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  align-items: center;
+  box-sizing: border-box;
+  gap: 5px;
+  width: 123px;
 }
 
 .arrow {
-    position: relative;
-    overflow: hidden;
-    width: 18px;
-    height: 18px;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
+  overflow: hidden;
+  width: 18px;
+  height: 18px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
 }
 
 .vector {
-    display: flex;
-    box-sizing: content-box;
+  display: flex;
+  box-sizing: content-box;
 }
-  
+
 .vector svg path {
-    fill: var(--primary-color)
+  fill: var(--primary-color);
 }
 
 .text {
-    position: relative;
-    display: flex;
-    box-sizing: content-box;
-    letter-spacing: 0%;
-    text-align: left;
-    text-wrap: wrap;
-    font-weight: 400;
-    font-size: 14px;
-    font-family: var(--vgu_font_sans);
-    font-style: italic;
-    color: var(--primary-color);
-    width: -webkit-fill-available;
-    flex: none;
-    order: 1;
-    flex-grow: 1;
+  display: flex;
+  box-sizing: content-box;
+  letter-spacing: 0%;
+  text-align: left;
+  text-wrap: wrap;
+  font-weight: 400;
+  font-size: 14px;
+  font-family: var(--vgu_font_sans);
+  font-style: italic;
+  color: var(--primary-color);
+  width: -webkit-fill-available;
+  flex: none;
+  order: 1;
+  flex-grow: 1;
 }
 
 .arrow-button:hover .text {
-    text-decoration: underline;
-    cursor: pointer;
+  text-decoration: underline;
+  cursor: pointer;
 }
