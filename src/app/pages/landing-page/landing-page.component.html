@@ -3,7 +3,7 @@
   <div class="landing-wrapper">
     <h1>About VGU</h1>
     <div *ngFor="let section of sections">
-      <span>{{section.section_name}}</span>
+      <h1>{{section.section_name}}</h1>
       <app-display-cards
         *ngFor="let groupCard of section.source"
         [datas]="getSource(groupCard.source_id.data)"

@@ -1,14 +1,16 @@
-<owl-carousel-o [options]="{
-    loop: true, 
-    margin: 10, 
-    nav: true, 
-    dots: true, 
-    items: 1,
-    autoplay: true,
-    autoplayTimeout: 4000,
-    autoplayHoverPause: true
-}">
-    <ng-template carouselSlide *ngFor="let item of heroSection">
-      <img [src]="this.directus.getImageUrl(item.image)" alt="Image">
-    </ng-template>
-  </owl-carousel-o>
+<ngb-carousel #root_herosection
+  class="root_herosection"
+  [interval]="4000"
+  [pauseOnHover]="false"
+>
+  <ng-template ngbSlide *ngFor="let section of heroSection">
+    <div class="heroSection">
+      <img [src]="this.directus.getImageUrl(section.image)"
+      alt="{{section.title}}">
+    </div>
+    <div *ngIf="section.carouselInfo" class="titleFrame">
+      <span class="titleContent">{{section.carouselInfo}}</span>
+      <app-arrow-button [text]="'Learn more'"/>
+    </div>
+  </ng-template>
+</ngb-carousel>

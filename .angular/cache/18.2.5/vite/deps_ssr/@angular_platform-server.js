@@ -2,8 +2,8 @@ import { createRequire } from 'module';const require = createRequire(import.meta
 import {
   NoopAnimationsModule,
   provideNoopAnimations
-} from "./chunk-P5X3NUQP.js";
-import "./chunk-ZHJMKBLD.js";
+} from "./chunk-BBRLGIVO.js";
+import "./chunk-4EFXQPON.js";
 import {
   BrowserDomAdapter,
   BrowserModule,

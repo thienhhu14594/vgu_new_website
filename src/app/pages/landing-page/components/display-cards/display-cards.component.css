@@ -1,16 +1,3 @@
-.section-header {
-  width: 100%;
-  height: fit-content;
-  font-family: var(--vgu_font_serif);
-  font-style: normal;
-  font-weight: 750;
-  font-size: 40px;
-  line-height: 52px;
-  text-align: start;
-  color: var(--primary-text);
-  margin-bottom: 80px;
-}
-
 .card3-m-display {
   margin-bottom: 80px;
   display: flex;
