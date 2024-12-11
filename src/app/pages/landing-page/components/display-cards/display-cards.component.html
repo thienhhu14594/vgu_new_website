@@ -32,10 +32,9 @@
 </div>
 <div class="card1-l-display" *ngIf="type === 'card1-l'">
   <app-card1-l
-    *ngFor="let data of datas"
-    [image]="directus.getImageUrl(data.image)"
-    [title]="data.title"
-    [content]="data.content"
+    [image]="directus.getImageUrl(datas[0].image)"
+    [title]="datas[0].title"
+    [content]="datas[0].content"
   />
 </div>
 <div class="card1-s-display" *ngIf="type === 'card1-s'">
