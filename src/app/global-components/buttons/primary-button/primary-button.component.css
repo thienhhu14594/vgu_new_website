@@ -29,4 +29,5 @@
 
 .primary-button:hover {
   background: var(--primary-button-hover);
+  cursor: pointer;
 }

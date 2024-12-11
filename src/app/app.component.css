@@ -10,7 +10,6 @@ app-header {
   height: fit-content;
 }
 .content-wrapper {
-  max-width: 1300px;
   margin: auto;
 }
 .content {

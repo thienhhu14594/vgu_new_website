@@ -88,7 +88,6 @@
 }
 
 .card3-m:hover {
-  border-width: 0px;
   background: var(--primary-color);
   .card3-m-title {
     color: var(--secondary-text);
@@ -102,5 +101,5 @@
   .card3-m-arrow {
     display: unset;
   }
-  cursor: default;
+  cursor: pointer;
 }

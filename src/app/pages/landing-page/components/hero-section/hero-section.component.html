@@ -1,0 +1,14 @@
+<owl-carousel-o [options]="{
+    loop: true, 
+    margin: 10, 
+    nav: true, 
+    dots: true, 
+    items: 1,
+    autoplay: true,
+    autoplayTimeout: 4000,
+    autoplayHoverPause: true
+}">
+    <ng-template carouselSlide *ngFor="let item of heroSection">
+      <img [src]="this.directus.getImageUrl(item.image)" alt="Image">
+    </ng-template>
+  </owl-carousel-o>

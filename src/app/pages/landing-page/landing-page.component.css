@@ -4,7 +4,11 @@
   margin-left: 60px;
   margin-right: 60px;
   align-items: center;
+}
+
+.landing-wrapper {
   max-width: 1300px;
+  margin: auto;
 }
 .section1,
 .section2,
@@ -12,3 +16,4 @@
 .section4 {
   padding-top: 40px;
 }
+

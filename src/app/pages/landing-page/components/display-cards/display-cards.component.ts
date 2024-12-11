@@ -27,7 +27,12 @@ import { PrimaryButtonComponent } from '../../../../global-components/buttons/pr
 })
 export class DisplayCardsComponent {
   constructor(public directus: DirectusService) {}
-  @Input() datas: any[]=[];
+  @Input() datas: any[];
   @Input() header: string;
   @Input() type: 'card1-l' | 'card1-s'| 'card2-m' | 'card3-m' | 'card3-s' | 'card4-m' = 'card3-m';
+  stripHtml(html: string): string {
+    const div = document.createElement('div');
+    div.innerHTML = html;
+    return div.textContent || div.innerText || '';
+  }
 }

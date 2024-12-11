@@ -1,6 +1,16 @@
 <div class="landing-page">
-  <h1>About VGU</h1>
-  <div class="section1">
+  <app-hero-section />
+  <div class="landing-wrapper">
+    <h1>About VGU</h1>
+    <div *ngFor="let section of sections">
+      <span>{{section.section_name}}</span>
+      <app-display-cards
+        *ngFor="let groupCard of section.source"
+        [datas]="getSource(groupCard.source_id.data)"
+        [type]="groupCard.source_id.type.type" />
+    </div>
+  </div>
+  <!-- <div class="section1">
     <app-display-cards
       [type]="'card3-m'"
       [datas]="generalNews"
@@ -24,9 +34,9 @@
     />
     <app-display-cards [type]="'card2-m'" [datas]="generalNews" [header]="''" />
     <app-display-cards [type]="'card1-l'" [datas]="generalNews" [header]="''" />
-  </div>
-  <button routerLink="/organization">organ</button>
-  <button routerLink="/study-programs">study</button>
+  </div> -->
+  <!-- <button routerLink="/organization">organ</button>
+  <button routerLink="/study-programs">study</button> -->
 </div>
 <!-- [subcontent1]="'test'"
       [subcontent2]="'test'" -->

@@ -122,4 +122,5 @@
   .card1-s-arrow svg path {
     fill: var(--secondary-text);
   }
+  cursor: pointer;
 }

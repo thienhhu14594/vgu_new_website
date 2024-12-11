@@ -135,6 +135,9 @@
 
 app-header-collapse {
   position: relative;
+  display: flex;
+  margin-left: calc(40% - 60px);
+  margin-right: 60px;
 }
 
 /* app-header-collapse.scrolled {

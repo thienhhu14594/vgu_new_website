@@ -32,6 +32,9 @@
   flex-grow: 0;
 }
 
-.card4-m:hover .card4-m-title {
-  text-decoration: underline;
+.card4-m:hover {
+  cursor: pointer;;
+  .card4-m-title {
+    text-decoration: underline;
+  }
 }
