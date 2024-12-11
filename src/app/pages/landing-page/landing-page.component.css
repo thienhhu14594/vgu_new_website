@@ -1,10 +1,14 @@
-.test {
-  height: 1000px;
-  background-color: var(--vgu_gray);
+.landing-page {
+  height: fit-content;
+  background-color: var(--primary-background);
   margin-left: 60px;
   margin-right: 60px;
   align-items: center;
+  max-width: 1300px;
 }
-p {
-  margin-top: 0px;
+.section1,
+.section2,
+.section3,
+.section4 {
+  padding-top: 40px;
 }

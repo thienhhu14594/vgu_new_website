@@ -1,92 +1,94 @@
 .section-header {
-    position: relative;
-    width: 100%;
-    height: fit-content;
-    font-family: var(--vgu_font_serif);
-    font-style: normal;
-    font-weight: 750;
-    font-size: 40px;
-    line-height: 52px;
-    text-align: start;
-    color: var(--primary-text);
+  width: 100%;
+  height: fit-content;
+  font-family: var(--vgu_font_serif);
+  font-style: normal;
+  font-weight: 750;
+  font-size: 40px;
+  line-height: 52px;
+  text-align: start;
+  color: var(--primary-text);
+  margin-bottom: 80px;
 }
 
-.card3-m-display{
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    align-content: flex-start;
-    padding: 0px;
-    gap: 24px 5%;
-    width: 100%;
-    app-card3-m {
-      height: 40vw;
-      max-height: 517px;
-      width: 30%;
-    }
+.card3-m-display {
+  margin-bottom: 80px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: flex-start;
+  padding: 0px;
+  gap: 24px 5%;
+  width: 100%;
+  app-card3-m {
+    height: 40vw;
+    max-height: 517px;
+    width: 30%;
+  }
 }
 
 .card3-s-display {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    align-content: flex-start;
-    padding: 0px;
-    gap: 24px 5%;
-    width: 100%;
-    position: relative;
-    app-card3-s {
-      width: 30%;
-    }
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+  padding: 0px;
+  gap: 24px 5%;
+  width: 100%;
+  margin-bottom: 80px;
+  app-card3-s {
+    width: 30%;
+  }
 }
 
 .card4-m-display {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    align-content: flex-start;
-    padding: 0px 0px 0px 0px;
-    gap: 24px 4%;
-    position: relative;
-    width: 100%;
-    height: fit-content;
-    app-card4-m {
-      width: 22%;
-    }
+  margin-bottom: 80px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: flex-start;
+  padding: 0px 0px 0px 0px;
+  gap: 24px 4%;
+
+  width: 100%;
+  height: fit-content;
+  app-card4-m {
+    width: 22%;
+  }
 }
 
 .card2-m-display {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 24px 4%;
-    position: relative;
-    width: 100%;
-    height: fit-content;
-    app-card2-m {
-      width: 48%;
-    }
+  margin-bottom: 80px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 24px 4%;
+
+  width: 100%;
+  height: fit-content;
+  app-card2-m {
+    width: 48%;
+  }
 }
 
 .card1-l-display {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 24px;
+  margin-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 24px;
 }
 
 .card1-s-display {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 24px;
+  margin-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 24px;
 }

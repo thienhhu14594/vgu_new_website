@@ -1,6 +1,30 @@
-<div class="test">
-  <p>landing-page works!</p>
-  <app-display-cards [type]="'card1-l'" [datas]="generalNews" [header]="'General News'"/>
+<div class="landing-page">
+  <h1>About VGU</h1>
+  <div class="section1">
+    <app-display-cards
+      [type]="'card3-m'"
+      [datas]="generalNews"
+      [header]="'VGU General News'"
+    />
+    <app-display-cards [type]="'card1-l'" [datas]="generalNews" [header]="''" />
+  </div>
+  <div class="section2">
+    <app-display-cards
+      [type]="'card3-m'"
+      [datas]="generalNews"
+      [header]="'Admisstion 2024'"
+    />
+    <app-display-cards [type]="'card1-s'" [datas]="generalNews" [header]="''" />
+  </div>
+  <div class="section3">
+    <app-display-cards
+      [type]="'card4-m'"
+      [datas]="generalNews"
+      [header]="'Research news'"
+    />
+    <app-display-cards [type]="'card2-m'" [datas]="generalNews" [header]="''" />
+    <app-display-cards [type]="'card1-l'" [datas]="generalNews" [header]="''" />
+  </div>
   <button routerLink="/organization">organ</button>
   <button routerLink="/study-programs">study</button>
 </div>

@@ -1,129 +1,125 @@
 .card1-s {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-    padding: 0px;
-    row-gap: 0px;
-    position: relative;
-    height: fit-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  padding: 0px;
+  row-gap: 0px;
+
+  height: fit-content;
 }
 
 .card1-s-wrapper1 {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 20px 10px 20px 12px;
-    width: fit-content;
-    height: fit-content;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-    z-index: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px 10px 20px 12px;
+  width: fit-content;
+  height: fit-content;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
 }
-  
+
 .card1-s-subcontent1 {
-    width: 142px;
-    height: 30px;
-    font-family: var(--vgu_font_serif);
-    font-style: normal;
-    font-weight: 1000;
-    font-size: 23px;
-    line-height: 30px;
-    color: var(--primary-text);
-    flex: none;
-    order: 0;
-    align-self: stretch;
-    flex-grow: 0;
+  width: 142px;
+  height: 30px;
+  font-family: var(--vgu_font_serif);
+  font-style: normal;
+  font-weight: 1000;
+  font-size: 23px;
+  line-height: 30px;
+  color: var(--primary-text);
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
 }
-  
+
 .card1-s-subcontent2 {
-    width: 142px;
-    height: 30px;
-    font-family: var(--vgu_font_serif);
-    font-style: normal;
-    font-weight: 300;
-    font-size: 23px;
-    line-height: 30px;
-    color: var(--primary-text);
-    flex: none;
-    order: 1;
-    align-self: stretch;
-    flex-grow: 0;
+  width: 142px;
+  height: 30px;
+  font-family: var(--vgu_font_serif);
+  font-style: normal;
+  font-weight: 300;
+  font-size: 23px;
+  line-height: 30px;
+  color: var(--primary-text);
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
 }
 
 .card1-s-wrapper2 {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 20px 10px 20px 12px;
-    height: fit-content;
-    width: fill;
-    flex: none;
-    order: 1;
-    flex-grow: 1;
-    z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px 10px 20px 12px;
+  height: fit-content;
+  width: fill;
+  flex: none;
+  order: 1;
+  flex-grow: 1;
 }
 
-.card1-s-title{
-    width: 100%;
-    height: fit-content;
-    font-family: var(--vgu_font_serif);
-    font-style: normal;
-    font-weight: 1000;
-    font-size: 23px;
-    line-height: 30px;
-    color: var(--primary-text);
-    flex: none;
-    order: 0;
-    align-self: stretch;
-    flex-grow: 0;
+.card1-s-title {
+  width: 100%;
+  height: fit-content;
+  font-family: var(--vgu_font_serif);
+  font-style: normal;
+  font-weight: 1000;
+  font-size: 23px;
+  line-height: 30px;
+  color: var(--primary-text);
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
 }
-  
+
 .card1-s-content {
-    width: 100%;
-    height: fit-content;
-    font-family: var(--vgu_font_serif);
-    font-style: normal;
-    font-weight: 300;
-    font-size: 23px;
-    line-height: 30px;
-    color: var(--primary-text);
-    flex: none;
-    order: 1;
-    align-self: stretch;
-    flex-grow: 0;
+  width: 100%;
+  height: fit-content;
+  font-family: var(--vgu_font_serif);
+  font-style: normal;
+  font-weight: 300;
+  font-size: 23px;
+  line-height: 30px;
+  color: var(--primary-text);
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
 }
-  
+
 .card1-s-arrow {
-    position: relative;
-    height: fit-content;
-    flex: none;
-    margin-right: 15px;
-    order: 2;
-    flex-grow: 0;
-    z-index: 2;
-    svg path {
-        fill: none;
-    }
+  height: fit-content;
+  flex: none;
+  margin-right: 15px;
+  order: 2;
+  flex-grow: 0;
+  z-index: 2;
+  svg path {
+    fill: none;
+  }
 }
 
 .card1-s:hover {
-    background: var(--primary-color);
-    .card1-s-title {
-        color: var(--secondary-text);
-    }
-    .card1-s-subcontent1 {
-        color: var(--secondary-text);
-    }
-    .card1-s-content{
-        color: var(--secondary-text);
-    }
-    .card1-s-subcontent2 {
-        color: var(--secondary-text);
-    }
-    .card1-s-arrow svg path{
-        fill: var(--secondary-text);
-    }
+  background: var(--primary-color);
+  .card1-s-title {
+    color: var(--secondary-text);
+  }
+  .card1-s-subcontent1 {
+    color: var(--secondary-text);
+  }
+  .card1-s-content {
+    color: var(--secondary-text);
+  }
+  .card1-s-subcontent2 {
+    color: var(--secondary-text);
+  }
+  .card1-s-arrow svg path {
+    fill: var(--secondary-text);
+  }
 }
-  
