@@ -1,8 +1,6 @@
 .landing-page {
   height: fit-content;
   background-color: var(--primary-background);
-  margin-left: 60px;
-  margin-right: 60px;
   align-items: center;
 }
 
