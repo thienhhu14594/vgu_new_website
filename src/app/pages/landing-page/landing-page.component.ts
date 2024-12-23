@@ -29,15 +29,13 @@ export class LandingPageComponent {
   }
 
   getSource(name: string): any[] {
-    console.log('haha');
     if (this.dataSet.has(name)) {
       return this.dataSet.get(name);
-      console.log('hehe');
     } else {
       this.directus.getData(name).subscribe((data) => {
         this.dataSet.set(name, data.data);
       });
-      console.log('hello ', this.dataSet.get(name));
+
       return this.dataSet.get(name);
     }
   }

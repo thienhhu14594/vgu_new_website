@@ -1,0 +1,7 @@
+{
+  "routes": [
+    "/landing-page",
+    "/organization",
+    "/study-programs"
+  ]
+}
