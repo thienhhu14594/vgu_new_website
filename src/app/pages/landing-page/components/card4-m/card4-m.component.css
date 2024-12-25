@@ -15,13 +15,13 @@
   order: 0;
   align-self: stretch;
   flex-grow: 0;
+  object-fit: cover;
 }
 
 .card4-m-title {
   width: 100%;
   height: 52px;
-  font-family: var(--vgu_font_serif);
-  font-style: normal;
+
   font-weight: 500;
   font-size: 20px;
   line-height: 26px;
@@ -33,7 +33,7 @@
 }
 
 .card4-m:hover {
-  cursor: pointer;;
+  cursor: pointer;
   .card4-m-title {
     text-decoration: underline;
   }

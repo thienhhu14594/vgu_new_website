@@ -1,82 +1,78 @@
-
-
 .root_herosection {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    flex-wrap: nowrap;
-    align-items: center;
-    gap: 10px;
-    box-sizing: border-box;
-    overflow: visible;
-    width: 100%;
-    .carousel-indicators {
-      position: absolute;
-      width: -webkit-fill-available;
-      bottom: -40px;
-    }
-    
-    .carousel-indicators .active {
-      background-color: #707372;
-    }
-    
-    .carousel-indicators button {
-      width: 10px !important;
-      height: 10px !important;
-      border-radius: 50%;
-      background-color: white;
-      border: 2px solid black !important;
-      margin: 0 4px !important;
-    }
-  }
-  
-  .root_herosection .titleFrame {
-    padding: 20px 50px 20px 90px;
-    bottom: 0px;
-    right: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 10px;
+  box-sizing: border-box;
+  overflow: visible;
+  width: 100%;
+  .carousel-indicators {
     position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    flex-wrap: nowrap;
-    align-items: flex-start;
-    gap: 0px;
-    box-sizing: border-box;
-    overflow: hidden;
-    background: #d9d9d9;
-    width: 74.85%;
-    height: 148px;
-  
-  }
-  .titleContent {
-    display: flex;
-    box-sizing: content-box;
-    color: black;
-    font-size: 31px;
-    font-family: IBM Plex Sans;
-    letter-spacing: 0%;
-    text-decoration: none;
-    font-weight: 750;
-    text-align: left;
-    text-wrap: wrap;
     width: -webkit-fill-available;
-  
-    flex: none;
-    order: 0;
-    align-self: stretch;
-    flex-grow: 0;
-  
+    bottom: -40px;
   }
-  
-  .heroSection img {
-    position: relative;
-    display: flex;
-    height: auto;
-    width: 100%;
-    aspect-ratio: 1300 / 627;
+
+  .carousel-indicators .active {
+    background-color: #707372;
   }
-  
-  .carousel-item {
-    transition: transform 0.4s ease-in-out; 
-    will-change: transform;
+
+  .carousel-indicators button {
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid black !important;
+    margin: 0 4px !important;
   }
+}
+
+.root_herosection .titleFrame {
+  padding: 20px 50px 20px 90px;
+  bottom: 0px;
+  right: 60px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  gap: 0px;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: #d9d9d9;
+  width: 74.85%;
+  height: 148px;
+}
+.titleContent {
+  display: flex;
+  box-sizing: content-box;
+  color: black;
+  font-size: 31px;
+
+  letter-spacing: 0%;
+  text-decoration: none;
+  font-weight: 750;
+  text-align: left;
+  text-wrap: wrap;
+  width: -webkit-fill-available;
+
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.heroSection img {
+  position: relative;
+  display: flex;
+  height: auto;
+  width: 100%;
+  aspect-ratio: 1300 / 627;
+}
+
+.carousel-item {
+  transition: transform 0.4s ease-in-out;
+  will-change: transform;
+}
