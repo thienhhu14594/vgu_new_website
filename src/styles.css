@@ -35,5 +35,5 @@
 }
 body {
   margin: 0px;
-  font-family: var(--vgu_font_sans);
+  font-family: var(--vgu_font_sans) !important;
 }
