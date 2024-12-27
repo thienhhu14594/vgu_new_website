@@ -4,6 +4,7 @@ import { DirectusService } from '../../../../directus.service';
 import { CommonModule } from '@angular/common';
 import { DisplayCardsComponent } from './components/display-cards/display-cards.component';
 import { HeroSectionComponent } from './components/hero-section/hero-section.component';
+import { PartnersComponent } from "./components/partners/partners.component";
 
 @Component({
   selector: 'app-landing-page',
@@ -13,7 +14,8 @@ import { HeroSectionComponent } from './components/hero-section/hero-section.com
     CommonModule,
     DisplayCardsComponent,
     HeroSectionComponent,
-  ],
+    PartnersComponent
+],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.css',
 })

@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 import { DirectusService } from '../../../../../../directus.service';
+import { switchMap } from 'rxjs';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-partners',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './partners.component.html',
   styleUrl: './partners.component.css'
 })

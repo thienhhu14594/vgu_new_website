@@ -3,6 +3,7 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 const apiUrl = 'http://172.16.2.212:8055';
+// const apiUrl = 'http://localhost:8055';
 
 export interface Test {
   slug: string;
@@ -36,9 +37,9 @@ export class DirectusService {
     return this.http.get(`${apiUrl}/items/carousel_image`);
   }
 
-  // getPartnerBlock(): Observable<any> {
-  //   return this.http.get(`${apiUrl}/items/block_image_slideshow`);
-  // }
+  getPartnerBlock(): Observable<any> {
+    return this.http.get(`${apiUrl}/items/block_image_slideshow`);
+  }
 
   getBlockImage_byID(id: any): Observable<any> {
     //input the id for image block
