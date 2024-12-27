@@ -1,5 +1,5 @@
-import { CommonModule } from '@angular/common';
-import { Component, HostListener } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { Component, HostListener, Inject, PLATFORM_ID } from '@angular/core';
 import { RouterLinkActive, RouterModule, RouterOutlet } from '@angular/router';
 import { FooterComponent } from './global-components/footer/footer.component';
 import { HeaderComponent } from './global-components/header/header.component';
@@ -30,7 +30,9 @@ export class AppComponent {
   }
 
   //color
-  constructor(private colorService: DirectusService) {}
+  constructor(private colorService: DirectusService,
+    @Inject(PLATFORM_ID) private platformId: any,
+  ) { }
 
   ngOnInit() {
     this.colorService.getThemeColors().subscribe((data) => {
@@ -49,6 +51,8 @@ export class AppComponent {
 
   setCSSVariable(variableName: string, color: string) {
     // Set the dynamic value for the CSS variable on the root element
-    document.documentElement.style.setProperty(`--${variableName}`, color);
+    if (isPlatformBrowser(this.platformId)) {
+      document.documentElement.style.setProperty(`--${variableName}`, color);
+    }
   }
 }

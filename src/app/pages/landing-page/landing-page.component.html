@@ -2,6 +2,11 @@
   <app-hero-section />
   <div class="landing-wrapper">
     <h1>About VGU</h1>
+    <div class="sticky-bar">
+      <div *ngFor="let section of sections">
+        <p>{{section.section_name}}</p>
+      </div>
+    </div>
     <div *ngFor="let section of sections" class="section" id={{section.section_name}}>
       <h1>{{ section.section_name }}</h1>
       <app-display-cards

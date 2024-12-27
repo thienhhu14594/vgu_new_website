@@ -1,5 +1,5 @@
-import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { Component, Inject, Input, OnInit, PLATFORM_ID } from '@angular/core';
 import { DirectusService } from '../../../../../../directus.service';
 import { Card1LComponent } from '../card1-l/card1-l.component';
 import { Card1SComponent } from '../card1-s/card1-s.component';
@@ -26,13 +26,19 @@ import { PrimaryButtonComponent } from '../../../../global-components/buttons/pr
   styleUrl: './display-cards.component.css'
 })
 export class DisplayCardsComponent {
-  constructor(public directus: DirectusService) {}
+  constructor(
+    public directus: DirectusService,
+  @Inject(PLATFORM_ID) private platformId: any,) {}
   @Input() datas: any[];
   @Input() header: string;
   @Input() type: 'card1-l' | 'card1-s'| 'card2-m' | 'card3-m' | 'card3-s' | 'card4-m' = 'card3-m';
+
   stripHtml(html: string): string {
-    const div = document.createElement('div');
-    div.innerHTML = html;
-    return div.textContent || div.innerText || '';
+    if (isPlatformBrowser(this.platformId)) {
+      const div = document.createElement('div');
+      div.innerHTML = html;
+      return div.textContent || div.innerText || '';
+    }
+    return '';
   }
 }
