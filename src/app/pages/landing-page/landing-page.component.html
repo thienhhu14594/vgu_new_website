@@ -3,11 +3,37 @@
   <div class="landing-wrapper">
     <h1>About VGU</h1>
     <div class="sticky-bar">
-      <div *ngFor="let section of sections">
-        <p>{{section.section_name}}</p>
+      <div
+        class="sticky-button"
+        *ngFor="let section of sections"
+        [class.selected]="section.section_name == selectedSection"
+        id="{{ section.section_name }}-selected"
+        [style.width]="
+          'calc((100% - 5px*' +
+          sections.length +
+          ' ) / ' +
+          (sections.length + 1) +
+          ')'
+        "
+        (click)="scroll(section.section_name)"
+      >
+        <p>{{ section.section_name }}</p>
+      </div>
+      <div
+        class="sticky-button"
+        [class.selected]="'Partners' == selectedSection"
+        id="Partners-selected"
+        [style.width]="'calc(100% / ' + (sections.length + 1) + ')'"
+        (click)="scroll('Partners')"
+      >
+        <p>Partners</p>
       </div>
     </div>
-    <div *ngFor="let section of sections" class="section" id={{section.section_name}}>
+    <div
+      *ngFor="let section of sections"
+      class="section"
+      id="{{ section.section_name }}"
+    >
       <h1>{{ section.section_name }}</h1>
       <app-display-cards
         *ngFor="let groupCard of section.source"
@@ -15,7 +41,7 @@
         [type]="groupCard.source_id.type.type"
       />
     </div>
-    <app-partners/>
+    <app-partners id="Partners" />
   </div>
   <!-- <div class="section1">
     <app-display-cards
