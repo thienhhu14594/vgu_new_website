@@ -1,10 +1,17 @@
 import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
-import { provideRouter, RouterLink, RouterModule } from '@angular/router';
+import { provideRouter, RouterLink, RouterModule, withHashLocation } from '@angular/router';
 
 import { routes } from './app.routes';
 import { provideClientHydration } from '@angular/platform-browser';
-import { provideHttpClient, withFetch } from '@angular/common/http';
+import { HttpHandler, HttpInterceptorFn, HttpRequest, provideHttpClient, withFetch, withInterceptors } from '@angular/common/http';
 import { provideAnimations } from '@angular/platform-browser/animations';
+
+const corsInterceptor: HttpInterceptorFn = (req, next) => {
+  const modifiedReq = req.clone({
+    headers: req.headers.set('Content-Type', 'application/json')
+  });
+  return next(modifiedReq);
+};
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -13,6 +20,7 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes),
     RouterModule,
     provideClientHydration(),
-    provideHttpClient(withFetch()),
+    provideHttpClient(withFetch(),
+    withInterceptors([corsInterceptor])),
   ],
 };
