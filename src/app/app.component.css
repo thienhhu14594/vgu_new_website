@@ -16,6 +16,7 @@ app-header {
 .content {
   padding-top: 117px;
   overflow-y: scroll;
+  overflow-x: hidden;
   width: 100%;
 
   scrollbar-width: none;

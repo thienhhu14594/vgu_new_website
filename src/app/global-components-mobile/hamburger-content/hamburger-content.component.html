@@ -1,0 +1,11 @@
+<div class="hamburger-content">
+  <span *ngIf="lvlStack.length > 1" class="subtitle" (click)="lvlStack.pop()">
+    < {{ currentLvl }}</span
+  >
+  <span
+    *ngFor="let button of lvlStack[lvlStack.length - 1]"
+    class="section"
+    (click)="pushStack(button)"
+    >{{ button.name }}</span
+  >
+</div>

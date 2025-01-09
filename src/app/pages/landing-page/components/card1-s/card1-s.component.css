@@ -53,7 +53,7 @@
   align-items: flex-start;
   padding: 20px 10px 20px 12px;
   height: fit-content;
-  width: 500px;
+  width: calc(100% - 164px);
   flex: 1;
 }
 
@@ -76,7 +76,7 @@
   font-size: 23px;
   line-height: 30px;
   color: var(--primary-text);
-
+  
   align-self: stretch;
 
   white-space: nowrap; /* Prevent text from wrapping to the next line */

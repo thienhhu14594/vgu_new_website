@@ -1,0 +1,51 @@
+.header-mobile {
+    width: 100%;
+    position: absolute;
+    top: 16px;
+    bottom: 0px;
+    pointer-events: none;
+}
+
+.hamburgerInside {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-top: 90px;
+    gap: 60px;
+    height: calc(100vh - 65px);
+    overflow-y: scroll;
+    overscroll-behavior: none;
+}
+
+.hamburgerBar {
+    position: sticky;
+    top: 18px;
+    background: white;
+    z-index: 98;
+    pointer-events: auto;
+}
+
+.hamburgerButton {
+    position: relative;
+    width: fit-content;
+    left: calc(100% - 46px)
+}
+
+a {
+    text-decoration: none; /* Remove underline from links */
+    color: var(--primary-text); /* Link color */
+    font-size: 14px; /* Adjust font size */
+  }
+a:hover {
+    text-decoration: underline;
+  }
+
+.subNav {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px 20px 123px 20px;
+    gap: 25px;
+}
