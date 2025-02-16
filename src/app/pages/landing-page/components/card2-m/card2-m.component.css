@@ -22,9 +22,7 @@
   width: 100%;
   height: fit-content;
   max-height: 68px;
-  margin-left: 12px;
-  margin-right: 12px;
-
+  overflow: hidden;
   font-weight: 1000;
   font-size: 26px;
   line-height: 34px;
@@ -39,8 +37,7 @@
   width: 100%;
   height: fit-content;
   max-height: 68px;
-  margin-left: 12px;
-
+  overflow: hidden;
   font-weight: 400;
   font-size: 17px;
   line-height: 22px;

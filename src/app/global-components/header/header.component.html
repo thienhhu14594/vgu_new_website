@@ -3,12 +3,9 @@
     <div class="upperline"></div>
   </div>
   <div class="header-logo" [class.scrolled]="isScrolled">
-    <img
-      [src]="
-        'http://localhost:8055/assets/ea4ec4d0-c581-419c-a3b1-4b4bd799bb7f'
-      "
-    />
+    <img src="VGUnewlogo.png" />
   </div>
+  <!--  -->
   <div class="test" [class.scrolled]="isScrolled">
     <div class="navbar-container">
       <div class="nav-buttons">
@@ -25,7 +22,7 @@
             <li><a href="#">Quick access</a></li>
             <li><a href="#">English</a></li>
             <li><a href="#">Search</a></li>
-            <li><a href="#">Login</a></li>
+            <li><a href="#">test5</a></li>
           </ul>
         </nav>
         <nav class="navbar">
@@ -64,4 +61,5 @@
     />
   </div>
   <!-- <app-navbar-component/> -->
+  <app-header-mobile class="mobile-header" [navTree]="this.navbarTree" />
 </div>

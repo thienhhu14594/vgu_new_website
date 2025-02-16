@@ -9,11 +9,12 @@
   padding: 0px;
   gap: 24px 5%;
   width: 100%;
-  app-card3-m {
-    height: 40vw;
-    max-height: 517px;
-    width: 30%;
-  }
+}
+app-card3-m {
+  height: 40vw;
+  max-height: 517px;
+  overflow: hidden;
+  width: 30%;
 }
 
 .card3-s-display {
@@ -26,9 +27,10 @@
   gap: 24px 5%;
   width: 100%;
   margin-bottom: 80px;
-  app-card3-s {
-    width: 30%;
-  }
+}
+
+app-card3-s {
+  width: 30%;
 }
 
 .card4-m-display {
@@ -43,9 +45,10 @@
 
   width: 100%;
   height: fit-content;
-  app-card4-m {
-    width: 22%;
-  }
+}
+
+app-card4-m {
+  width: 22%;
 }
 
 .card2-m-display {
@@ -59,9 +62,10 @@
 
   width: 100%;
   height: fit-content;
-  app-card2-m {
-    width: 48%;
-  }
+}
+
+app-card2-m {
+  width: 48%;
 }
 
 .card1-l-display {
@@ -78,4 +82,19 @@
   flex-direction: column;
   width: 100%;
   gap: 24px;
+}
+
+@media only screen and (max-width: 1023px) {
+  app-card3-m {
+    width: 45%;
+    height: fit-content;
+  }
+
+  .card4-m-display {
+    gap: 24px 2%;
+  }
+
+  app-card4-m {
+    width: 32%;
+  }
 }

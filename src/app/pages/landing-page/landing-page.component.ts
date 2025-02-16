@@ -21,6 +21,7 @@ import { PartnersComponent } from "./components/partners/partners.component";
 })
 export class LandingPageComponent implements AfterViewInit {
   sections: any[] = [];
+  selectedSection: string;
   private dataSet = new Map<string, any[]>();
   constructor(
     public directus: DirectusService,
@@ -38,30 +39,14 @@ export class LandingPageComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     let observer: any;
     const sectionNames = this.sections.map((section) => section.section_name);
+    sectionNames.push("Partners");
+    console.log(sectionNames)
     if (isPlatformBrowser(this.platformId) && 'IntersectionObserver' in window) {
       observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             console.log(`${entry.target.id}`);
-            // this.setNavNewsDefault();
-            // switch (entry.target.className) {
-            //   case 'news':
-            //     this.propertyN = 'Selected';
-            //     break;
-            //   case 'admission':
-            //     this.propertyA = 'Selected';
-            //     break;
-            //   case 'research':
-            //     this.propertyR = 'Selected';
-            //     break;
-            //   case 'upevent':
-            //     this.propertyU = 'Selected';
-            //     break;
-            //   case 'partner':
-            //     this.propertyP = 'Selected';
-            //     break;
-            //   default: this.setNavNewsDefault(); break;
-            // }
+            this.selectedSection = entry.target.id;
             this.cdr.detectChanges();
           }
           else {
@@ -70,8 +55,8 @@ export class LandingPageComponent implements AfterViewInit {
         });
       }, {
         root: null,
-        rootMargin: '0px 0px 0px 0px',
-        threshold: 0.21
+        rootMargin: '100px 0px 0px 0px',
+        threshold: [0.4]
       }
     );
 
@@ -129,4 +114,13 @@ export class LandingPageComponent implements AfterViewInit {
       return this.dataSet.get(name);
     }
   }
+
+  scroll(el: string) {
+    const element = document.getElementById(el);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+      console.error(`Element with ID "${el}" not found.`);
+    }
+}
 }

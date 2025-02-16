@@ -8,11 +8,12 @@ import {
 import { HeaderCollapseComponent } from '../header-collapse/header-collapse.component';
 import { DirectusService } from '../../../../directus.service';
 import { ClickOutsideDirective } from '../../click-outside.directive';
+import { HeaderMobileComponent } from '../../global-components-mobile/header-mobile/header-mobile.component';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule, HeaderCollapseComponent, ClickOutsideDirective],
+  imports: [CommonModule, HeaderCollapseComponent, ClickOutsideDirective, HeaderMobileComponent],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -28,8 +29,8 @@ export class HeaderComponent {
   constructor(public services: DirectusService) {}
   ngOnInit(): void {
     this.services.getNavButtons().subscribe((data) => {
-      const flatData = data.data;
-      this.navbarTree = this.buildTree(flatData);
+      this.navButtons = data.data;
+      this.navbarTree = this.buildTree(this.navButtons);
     });
   }
 

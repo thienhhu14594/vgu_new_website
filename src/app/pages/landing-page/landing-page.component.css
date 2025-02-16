@@ -20,10 +20,46 @@ h1 {
 .landing-wrapper {
   max-width: 1300px;
   margin: auto;
+  margin-top: 60px;
+}
+
+.sticky-bar {
+  position: sticky;
+  top: -35px;
+  width: 100%;
+  display: flex;
+  gap: 5px;
+}
+
+.sticky-button {
+  border: none;
+  background-color: var(--secondary-button);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--secondary-text);
+  padding: 6px 0px 6px 0px;
+  p {
+    margin: 0px;
+  }
+}
+.sticky-button:hover {
+  cursor: pointer;
+  background-color: var(--secondary-button-hover);
+}
+.selected {
+  background-color: var(--secondary-button-hover);
 }
 .section {
   margin-bottom: 80px;
   display: flex;
   flex-direction: column;
   gap: 40px;
+}
+
+@media only screen and (max-width: 1023px) {
+  
+  .sticky-bar{
+    display: none;
+  }
 }
