@@ -1,4 +1,5 @@
 import { CommonModule } from '@angular/common';
+import { RouterLink, RouterModule } from '@angular/router';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -13,7 +14,14 @@ import { HeaderMobileComponent } from '../../global-components-mobile/header-mob
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule, HeaderCollapseComponent, ClickOutsideDirective, HeaderMobileComponent],
+  imports: [
+    CommonModule,
+    HeaderCollapseComponent,
+    ClickOutsideDirective,
+    HeaderMobileComponent,
+    RouterModule,
+    RouterLink,
+  ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,

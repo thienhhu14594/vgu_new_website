@@ -8,5 +8,5 @@ export const routes: Routes = [
   { path: '', redirectTo: '/landing-page', pathMatch: 'full' },
   { path: 'landing-page', component: LandingPageComponent },
   { path: 'organization', component: OrganizationComponent },
-  { path: 'study-programs', component: StudyProgramsComponent },
+  { path: 'programs', component: StudyProgramsComponent },
 ];
