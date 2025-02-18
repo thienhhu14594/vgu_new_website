@@ -2,16 +2,21 @@
   <img src="programs.png" />
   <div class="programs">
     <div class="levels">
-      <p>Bachelor Programs</p>
+      <p class="actived">Bachelor Programs</p>
       <p>Master Programs</p>
     </div>
     <div class="FY">
       <h1>Foundation year</h1>
-      <p>
-        The Foundation Year at VGU is a mandatory preparation course for all
-        Bachelor programs, with a duration of one year.
-      </p>
-      <button>Learn more</button>
+      <div class="FY-wrapper">
+        <p>
+          The Foundation Year at VGU is a mandatory preparation course for all
+          Bachelor programs, with a duration of one year.
+        </p>
+        <app-primary-button text="Learn more" />
+      </div>
+    </div>
+    <div class="test">
+      <app-card3-m *ngFor="let test of tests" title="hehe" class="program" />
     </div>
   </div>
 </div>
