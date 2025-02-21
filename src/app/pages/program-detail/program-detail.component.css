@@ -1,5 +1,8 @@
 .program-detail-page {
   width: 1300px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   margin: auto;
 }
 .header1 {
