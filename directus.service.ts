@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpParams } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
+import { Observable, catchError, retry, throwError } from 'rxjs';
 
 const apiUrl = 'http://172.16.2.212:8055';
 // const apiUrl = 'http://localhost:8055';
@@ -71,7 +71,33 @@ export class DirectusService {
     return this.http.get(`${apiUrl}/items/themesColor?fields=*,*.color`);
   }
   getLandingPage(): Observable<any> {
-    return this.http.get(`${apiUrl}/items/landing_page?fields=*,*.source_id.*.type&&sort=section_order`);
+    return this.http
+      .get(
+        'http://172.16.2.212:8055/items/landing_page?fields=*,*.source_id.*.type&&sort=section_order',
+        {
+          headers: new HttpHeaders({
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
+          }),
+        }
+      )
+      .pipe(
+        retry(2), // Retry failed requests
+        catchError((error) => {
+          console.error('API Error:', error);
+          return throwError(() => error);
+        })
+      );
+  }
+  getPrograms(): Observable<any> {
+    return this.http.get(
+      `${apiUrl}/items/program_detail?fields=title,content,image`
+    );
+  }
+  getProgramDetail(program_name: string): Observable<any> {
+    return this.http.get(
+      `${apiUrl}/items/program_detail?filter[title][_eq]=${program_name}`
+    );
   }
   ////////////////////////////////////////////////////////
 }

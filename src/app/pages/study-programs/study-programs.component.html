@@ -16,7 +16,12 @@
       </div>
     </div>
     <div class="test">
-      <app-card3-m *ngFor="let test of tests" title="hehe" class="program" />
+      <app-card3-m
+        *ngFor="let program of programId"
+        [title]="program.title"
+        class="program"
+        [routerLink]="['/programs', program.title]"
+      />
     </div>
   </div>
 </div>
