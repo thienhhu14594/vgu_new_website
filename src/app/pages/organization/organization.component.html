@@ -7,11 +7,26 @@
     <div class="UC">University Council</div>
     <div class="PB">Presidential Board</div>
     <div class="lv3">
-      <div class="lv3-unit">Central Institutions</div>
-      <div class="lv3-unit">Faculty</div>
-      <div class="lv3-unit">Administrative Units</div>
-      <div class="lv3-unit">Central Units</div>
-      <div class="lv3-unit">Others</div>
+      <div
+        class="lv3-unit"
+        *ngFor="let unit of units"
+        [class.active]="activeTab === unit.id"
+        (click)="setActiveTab(unit.id)"
+      >
+        {{ unit.name }}
+      </div>
+    </div>
+
+    <!-- Content Sections -->
+    <div
+      class="content"
+      *ngFor="let unit of units"
+      [id]="unit.id"
+      [class.active]="activeTab === unit.id"
+    >
+      <ul>
+        <li *ngFor="let item of unit.content">{{ item }}</li>
+      </ul>
     </div>
   </div>
 </div>
