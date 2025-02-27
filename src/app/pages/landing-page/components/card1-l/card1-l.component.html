@@ -1,23 +1,25 @@
-<div class="card1-l">
-    <img class="card1-l-image" [src]="image"/>
-    <div class="card1-l-wrapper">
-        <span class="card1-l-title">
-            {{title.length > 50 ? (title | slice:0:50) + '...':title}}
-        </span>
-        <div>
-            <svg
-                width="72"
-                height="12"
-                viewBox="0 0 72 12"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-            >
-                <rect width="72" height="12" fill="var(--primary-color)"/>
-            </svg>
-      </div>
-      <span class="card1-l-content">
-        {{ content.length > 100 ? (content | slice:0:100) + '...' : content }}
-      </span>
-      <app-arrow-button [text]="'Learn more'"/>
+<div class="card1-l" [ngClass]="{ reverse: title === htv }">
+  <img class="card1-l-image" [src]="image" />
+  <div class="card1-l-wrapper">
+    <span class="card1-l-title">
+      {{ title?.length > 50 ? (title | slice : 0 : 50) + "..." : title }}
+    </span>
+    <div>
+      <svg
+        width="72"
+        height="12"
+        viewBox="0 0 72 12"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect width="72" height="12" fill="var(--primary-color)" />
+      </svg>
     </div>
+    <span class="card1-l-content"
+      >{{
+        content?.length > 100 ? (content | slice : 0 : 100) + "..." : content
+      }}
+    </span>
+    <app-arrow-button [text]="'Learn more'" />
   </div>
+</div>

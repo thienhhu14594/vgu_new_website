@@ -1,7 +1,24 @@
 <div class="program-detail-page">
   <img src="programs.png" />
+  <div>
+    <a routerLink="/programs">Programs/ </a><span>{{ this.a }}</span>
+  </div>
   <div class="header1">
     <h1>{{ this.a }}</h1>
     <img src="cse.png" />
+  </div>
+  <div class="wrapper">
+    <div ngbAccordion *ngFor="let section of sections">
+      <div ngbAccordionItem>
+        <h2 ngbAccordionHeader>
+          <button ngbAccordionButton>{{ section.title }}</button>
+        </h2>
+        <div ngbAccordionCollapse>
+          <div ngbAccordionBody>
+            <ng-template>{{ section.content }}</ng-template>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

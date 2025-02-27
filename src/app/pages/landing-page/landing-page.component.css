@@ -56,10 +56,20 @@ h1 {
   flex-direction: column;
   gap: 40px;
 }
+.partners-wrapper {
+  height: 400px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.partners-wrapper p {
+  font-size: 40px;
+  font-weight: bold;
+}
 
 @media only screen and (max-width: 1023px) {
-  
-  .sticky-bar{
+  .sticky-bar {
     display: none;
   }
 }

@@ -7,10 +7,11 @@ import { ArrowButtonComponent } from '../../../../global-components/buttons/arro
   standalone: true,
   imports: [CommonModule, ArrowButtonComponent],
   templateUrl: './card1-l.component.html',
-  styleUrl: './card1-l.component.css'
+  styleUrl: './card1-l.component.css',
 })
 export class Card1LComponent {
   @Input() image: string;
   @Input() title: string;
   @Input() content: string;
+  htv = 'Dr. Ha Thuc Vien';
 }

@@ -36,4 +36,8 @@
 body {
   margin: 0px;
   font-family: var(--vgu_font_sans) !important;
+  a {
+    text-decoration: none;
+    color: black;
+  }
 }

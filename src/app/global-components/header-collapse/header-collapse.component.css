@@ -50,6 +50,7 @@
     display: block;
     width: 100%;
     font-size: 19px;
+    color: var(--vgu_gray) !important;
   }
   a:hover {
     text-decoration: underline;
