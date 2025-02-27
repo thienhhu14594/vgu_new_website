@@ -26,9 +26,8 @@ export class OrganizationComponent {
       id: 'faculty',
       name: 'Faculty',
       content: [
-        'Faculty of Science',
         'Faculty of Engineering',
-        'Faculty of Arts',
+        'Faculty of Economics and Management',
       ],
     },
     {
@@ -49,12 +48,20 @@ export class OrganizationComponent {
     {
       id: 'central-units',
       name: 'Central Units',
-      content: ['IT Infrastructure Unit', 'Data Management Office'],
+      content: [
+        'Library - Information Center',
+        'Language Center and Foundation Year',
+        'Industrial Relations and Technology Transfer Center',
+      ],
     },
     {
       id: 'others',
       name: 'Others',
-      content: ['Alumni Association', 'Community Outreach Programs'],
+      content: [
+        'Political - social organs',
+        'Communist Party Cell',
+        'Labor Union',
+      ],
     },
   ];
 
