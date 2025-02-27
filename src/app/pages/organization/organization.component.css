@@ -57,8 +57,20 @@
 
 .lv3-unit.active {
   border: 2px solid orange;
+  border-bottom: none;
+  position: relative;
 }
-
+.lv3-unit.active::after {
+  content: "";
+  position: absolute;
+  left: -2;
+  bottom: -12px; /* Extend downward */
+  width: calc(100% + 4px);
+  height: 14px;
+  background-color: white;
+  border-left: 2px solid orange;
+  border-right: 2px solid orange;
+}
 .content {
   display: none;
   border: 2px solid orange;
