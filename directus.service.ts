@@ -75,6 +75,7 @@ export class DirectusService {
       .get(
         'http://172.16.2.212:8055/items/landing_page?fields=*,*.source_id.*.type&&sort=section_order',
         {
+          withCredentials: true,
           headers: new HttpHeaders({
             'Content-Type': 'application/json',
             Accept: 'application/json',
