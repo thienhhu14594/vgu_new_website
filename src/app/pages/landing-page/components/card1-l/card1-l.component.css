@@ -52,8 +52,12 @@
   order: 2;
   align-self: stretch;
   flex-grow: 0;
+  white-space: pre-wrap;
 }
 
 .card1-l app-arrow-button {
   order: 3;
+}
+.reverse {
+  flex-direction: row-reverse !important;
 }

@@ -1,0 +1,101 @@
+.organization-page {
+  width: 1300px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+}
+.header1 {
+  border-top: 5px solid var(--vgu_orange);
+  width: 100%;
+  padding-left: 20px;
+  padding-top: 10px;
+  margin-top: 20px;
+}
+.header1 h1 {
+  color: var(--primary-color);
+}
+.wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 24px;
+
+  margin-bottom: 30px;
+}
+.UC {
+  border: 1px solid black;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+.PB {
+  border: 1px solid black;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+.PB:hover {
+  cursor: pointer;
+}
+.lv3 {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+.lv3-unit {
+  border: 1px solid black;
+  height: 130px;
+  width: calc(100% / 5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lv3-unit:hover {
+  background-color: #f9f9f9;
+}
+
+.lv3-unit.active {
+  border: 2px solid orange;
+  border-bottom: none;
+  position: relative;
+}
+.lv3-unit.active::after {
+  content: "";
+  position: absolute;
+  left: -2;
+  bottom: -12px; /* Extend downward */
+  width: calc(100% + 4px);
+  height: 14px;
+  background-color: white;
+  border-left: 2px solid orange;
+  border-right: 2px solid orange;
+}
+.content {
+  display: none;
+  border: 2px solid orange;
+  padding: 15px;
+  width: 100%;
+
+  background-color: #fff;
+}
+
+.content.active {
+  display: block;
+}
+
+.content ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.content li {
+  text-align: left;
+  margin: 5px 0;
+}

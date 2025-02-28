@@ -1,0 +1,41 @@
+<div class="PB-page">
+  <div class="wrapper">
+    <a routerLink="/organization">Organization/ </a>
+    <span>Presidential Board</span>
+  </div>
+
+  <div class="header1">
+    <h1>Presidential Board</h1>
+  </div>
+  <div class="pb-content">
+    <p>
+      The University Council (UC) is the university institution with the widest
+      ranging of authority. It is appointed by the Minister of Education and
+      Training and consists of 20 representatives from the government, academia,
+      business and society of Vietnam and Germany. Ten of its members are
+      nominated by the Ministry of Education and Training, while another ten are
+      named by the Hessen State Mi nistry of Higher Education, Research and the
+      Arts. The UC meets at least once a year to discuss and decide upon
+      important issues regarding strategic development of VGU. The Council,
+      which was founded in 2009, now is composed of following members:
+    </p>
+
+    <app-card1-l
+      *ngFor="let member of members"
+      [title]="member.name"
+      [content]="member.position + member.email + member.phone"
+      [image]="member.image"
+      routerLink="/organization/presidential-board/{{ member.link }}"
+    />
+
+    <!-- <div class="members">
+      <div *ngFor="let member of members" class="member-card">
+        <img [src]="member.image" alt="{{ member.name }}" />
+        <h3>{{ member.name }}</h3>
+        <p>{{ member.position }}</p>
+        <p>{{ member.email }}</p>
+        <p>{{ member.phone }}</p>
+      </div>
+    </div> -->
+  </div>
+</div>

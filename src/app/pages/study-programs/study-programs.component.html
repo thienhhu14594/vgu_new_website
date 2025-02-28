@@ -19,6 +19,8 @@
       <app-card3-m
         *ngFor="let program of programId"
         [title]="program.title"
+        [image]="directus.getImageUrl(program.image)"
+        [content]="program.content"
         class="program"
         [routerLink]="['/programs', program.title]"
       />

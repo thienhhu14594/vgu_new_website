@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Observable, catchError, retry, throwError } from 'rxjs';
 
-const apiUrl = 'http://172.16.2.212:8055';
-// const apiUrl = 'http://localhost:8055';
+// const apiUrl = 'http://172.16.2.212:8055';
+const apiUrl = 'http://localhost:8055';
 
 export interface Test {
   slug: string;
@@ -73,7 +73,7 @@ export class DirectusService {
   getLandingPage(): Observable<any> {
     return this.http
       .get(
-        'http://172.16.2.212:8055/items/landing_page?fields=*,*.source_id.*.type&&sort=section_order',
+        `${apiUrl}/items/landing_page?fields=*,*.source_id.*.type&&sort=section_order`,
         {
           withCredentials: true,
           headers: new HttpHeaders({

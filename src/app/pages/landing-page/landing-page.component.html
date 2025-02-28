@@ -41,7 +41,10 @@
         [type]="groupCard.source_id.type.type"
       />
     </div>
-    <app-partners id="Partners" />
+    <div class="partners-wrapper">
+      <p>University Partner</p>
+      <app-partners id="Partners" />
+    </div>
   </div>
   <!-- <div class="section1">
     <app-display-cards
@@ -68,8 +71,6 @@
     <app-display-cards [type]="'card2-m'" [datas]="generalNews" [header]="''" />
     <app-display-cards [type]="'card1-l'" [datas]="generalNews" [header]="''" />
   </div> -->
-  <button routerLink="/organization">organ</button>
-  <button routerLink="/programs">study</button>
 </div>
 <!-- [subcontent1]="'test'"
       [subcontent2]="'test'" -->
