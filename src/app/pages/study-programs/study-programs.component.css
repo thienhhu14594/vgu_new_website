@@ -3,6 +3,7 @@
   align-items: center;
 
   width: 1300px;
+  height: fit-content;
   flex-direction: column;
   margin: auto;
 }
@@ -26,6 +27,7 @@
   color: white;
 }
 .FY {
+  margin-top: 50px;
   border-top: 5px solid var(--vgu_orange);
   width: 100%;
   padding-left: 20px;
@@ -33,6 +35,7 @@
 }
 .FY h1 {
   color: var(--primary-color);
+  font-size: 40px;
 }
 .FY-wrapper {
   width: 100%;
@@ -41,13 +44,18 @@
 }
 .FY-wrapper p {
   width: 70%;
+  font-size: 24px;
 }
 .test {
+  margin-top: 50px;
+  margin-bottom: 50px;
   display: flex;
   width: 100%;
+  height: fit-content;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 10px;
+  justify-content: space-between;
+  row-gap: 20px;
 }
 .program {
   width: 32%;
