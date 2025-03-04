@@ -8,10 +8,10 @@
 .link {
   margin-top: 20px;
   font-size: 24px;
-  color: #6a6e6d;
+  color: var(--secondary-button);
 }
 .link a {
-  color: #6a6e6d;
+  color: var(--secondary-button);
 }
 .header1 {
   border-top: 5px solid var(--primary-color);
@@ -46,10 +46,13 @@ img {
 .accordion-button:focus {
   box-shadow: none;
 }
+.accordion-button::after {
+  color: var(--primary-color);
+}
 .accordion-button:not(.collapsed) {
   box-shadow: none;
-  background-color: white;
-  color: black;
+  background-color: var(--primary-background);
+  color: var(--primary-text);
 }
 .accordion-item {
   border-radius: 0px;

@@ -6,7 +6,7 @@
   margin: auto;
 }
 .header1 {
-  border-top: 5px solid var(--vgu_orange);
+  border-top: 5px solid var(--primary-color);
   width: 100%;
   padding-left: 20px;
   padding-top: 10px;
@@ -32,6 +32,10 @@
   align-items: center;
   height: 100px;
 }
+.UC:hover {
+  cursor: pointer;
+  background-color: var(--secondary-button-hover);
+}
 .PB {
   border: 1px solid black;
   width: 100%;
@@ -42,6 +46,7 @@
 }
 .PB:hover {
   cursor: pointer;
+  background-color: var(--secondary-button-hover);
 }
 .lv3 {
   display: flex;
@@ -58,7 +63,7 @@
 }
 
 .lv3-unit:hover {
-  background-color: #f9f9f9;
+  background-color: var(--secondary-button-hover);
   cursor: pointer;
 }
 
@@ -84,7 +89,7 @@
   padding: 15px;
   width: 100%;
 
-  background-color: #fff;
+  background-color: var(--primary-background);
 }
 
 .content.active {

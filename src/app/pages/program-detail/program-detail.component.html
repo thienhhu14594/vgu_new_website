@@ -8,8 +8,13 @@
   </div>
   <img src="cse.png" />
   <div class="wrapper">
-    <div ngbAccordion *ngFor="let section of sections">
-      <div ngbAccordionItem>
+    <!-- Apply ngbAccordion here, wrapping all items -->
+    <div ngbAccordion [closeOthers]="true">
+      <div
+        ngbAccordionItem
+        *ngFor="let section of sections"
+        [collapsed]="section.title !== 'Section 1'"
+      >
         <h2 ngbAccordionHeader>
           <button ngbAccordionButton>{{ section.title }}</button>
         </h2>
