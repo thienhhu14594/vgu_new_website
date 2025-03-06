@@ -16,8 +16,9 @@
   box-sizing: content-box;
   letter-spacing: 0%;
   text-align: center;
+  text-transform: uppercase;
 
-  font-weight: 400;
+  font-weight: bold;
   font-size: 14px;
   font-family: var(--vgu_font_sans);
   width: -webkit-fill-available;

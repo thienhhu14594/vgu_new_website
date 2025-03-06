@@ -33,7 +33,8 @@
   letter-spacing: 0%;
   text-align: left;
   text-wrap: wrap;
-  font-weight: 400;
+  font-weight: bold;
+  text-transform: uppercase;
   font-size: 14px;
   font-family: var(--vgu_font_sans);
   font-style: italic;
