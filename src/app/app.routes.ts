@@ -6,6 +6,7 @@ import { StudyProgramsComponent } from './pages/study-programs/study-programs.co
 import { ProgramDetailComponent } from './pages/program-detail/program-detail.component';
 import { PresidentialBoardComponent } from './pages/presidential-board/presidential-board.component';
 import { HaThucVienComponent } from './pages/ha-thuc-vien/ha-thuc-vien.component';
+import { Page404Component } from './pages/page-404/page-404.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/landing-page', pathMatch: 'full' },
@@ -25,4 +26,5 @@ export const routes: Routes = [
     path: 'organization/presidential-board/ha-thuc-vien',
     component: HaThucVienComponent,
   },
+  { path: '**', component: Page404Component },
 ];
