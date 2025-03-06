@@ -75,6 +75,7 @@ export class DirectusService {
       .get(
         `${apiUrl}/items/landing_page?fields=*,*.source_id.*.type&&sort=section_order`,
         {
+          withCredentials: true,
           headers: new HttpHeaders({
             'Content-Type': 'application/json',
             Accept: 'application/json',
