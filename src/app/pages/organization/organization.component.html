@@ -4,30 +4,28 @@
     <h1>Organization</h1>
   </div>
   <div class="wrapper">
-    <div class="UC">University Council</div>
-    <div class="PB" routerLink="/organization/presidential-board">
-      Presidential Board
-    </div>
+    <div class="UC" *ngFor="let UU of upperUnits">{{ UU.name }}</div>
+
     <div class="lv3">
       <div
         class="lv3-unit"
-        *ngFor="let unit of units"
-        [class.active]="activeTab === unit.id"
-        (click)="setActiveTab(unit.id)"
+        *ngFor="let LU of lowerUnits"
+        [class.active]="activeTab === LU.id"
+        (click)="setActiveTab(LU.id); getDep(LU.id)"
       >
-        {{ unit.name }}
+        {{ LU.name }}
       </div>
     </div>
 
     <!-- Content Sections -->
     <div
       class="content"
-      *ngFor="let unit of units"
-      [id]="unit.id"
-      [class.active]="activeTab === unit.id"
+      *ngFor="let LU of lowerUnits"
+      [id]="LU.id"
+      [class.active]="activeTab === LU.id"
     >
       <ul>
-        <li *ngFor="let item of unit.content">{{ item }}</li>
+        <li *ngFor="let item of departments">{{ item.name }}</li>
       </ul>
     </div>
   </div>
