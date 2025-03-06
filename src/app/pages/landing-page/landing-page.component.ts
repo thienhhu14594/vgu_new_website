@@ -68,7 +68,7 @@ export class LandingPageComponent implements OnInit, AfterViewInit {
         {
           root: null,
           rootMargin: '100px 0px 0px 0px',
-          threshold: [0.4],
+          threshold: [0.15],
         }
       );
 
