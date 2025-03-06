@@ -14,8 +14,12 @@ export class OrganizationComponent {
   activeTab: any = 1;
   constructor(public directus: DirectusService) {}
   upperUnits: any[] = [];
+
   lowerUnits: any[] = [];
   departments: any[] = [];
+  formatText(text) {
+    return text.toLowerCase().replace(/\s+/g, '-');
+  }
   getDep(unitId) {
     this.directus.getDepartments(unitId).subscribe((data) => {
       this.departments = data.data;
@@ -23,7 +27,7 @@ export class OrganizationComponent {
   }
   ngOnInit(): void {
     this.directus.getUpperUnits().subscribe((data) => {
-      this.upperUnits = data.data;
+      this.upperUnits = data.data.reverse();
     });
     this.directus.getLowerUnits().subscribe((data) => {
       this.lowerUnits = data.data;

@@ -4,7 +4,13 @@
     <h1>Organization</h1>
   </div>
   <div class="wrapper">
-    <div class="UC" *ngFor="let UU of upperUnits">{{ UU.name }}</div>
+    <div
+      class="UC"
+      *ngFor="let UU of upperUnits"
+      [routerLink]="formatText(UU.name)"
+    >
+      {{ UU.name }}
+    </div>
 
     <div class="lv3">
       <div
