@@ -1,7 +1,10 @@
 <div class="landing-page">
   <app-hero-section />
   <div class="landing-wrapper">
-    <h1>About VGU</h1>
+    <div class="about-vgu">
+      <h1>About VGU</h1>
+      <p>Introduction about VGU</p>
+    </div>
     <div class="sticky-bar">
       <div
         class="sticky-button"
@@ -30,16 +33,19 @@
       </div>
     </div>
     <div
-      *ngFor="let section of sections"
+      *ngFor="let section of sections; let i = index"
       class="section"
+      [ngClass]="{ 'even-section': (i + 1) % 2 === 0 }"
       id="{{ section.section_name }}"
     >
-      <h1>{{ section.section_name }}</h1>
-      <app-display-cards
-        *ngFor="let groupCard of section.source"
-        [datas]="getSource(groupCard.source_id.data)"
-        [type]="groupCard.source_id.type.type"
-      />
+      <div class="wrapper">
+        <h1>{{ section.section_name }}</h1>
+        <app-display-cards
+          *ngFor="let groupCard of section.source"
+          [datas]="getSource(groupCard.source_id.data)"
+          [type]="groupCard.source_id.type.type"
+        />
+      </div>
     </div>
     <div class="partners-wrapper">
       <p>University Partner</p>

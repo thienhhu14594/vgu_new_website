@@ -2,11 +2,12 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { Card1LComponent } from '../landing-page/components/card1-l/card1-l.component';
 import { RouterLink } from '@angular/router';
+import { Card3MComponent } from '../landing-page/components/card3-m/card3-m.component';
 
 @Component({
   selector: 'app-presidential-board',
   standalone: true,
-  imports: [CommonModule, Card1LComponent, RouterLink],
+  imports: [CommonModule, Card1LComponent, RouterLink, Card3MComponent],
   templateUrl: './presidential-board.component.html',
   styleUrl: './presidential-board.component.css',
 })
