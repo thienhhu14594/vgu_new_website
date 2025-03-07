@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Component, inject } from '@angular/core';
+import { Router, RouterLink } from '@angular/router';
 import { DirectusService } from '../../../../directus.service';
 
 @Component({
@@ -13,6 +13,10 @@ import { DirectusService } from '../../../../directus.service';
 export class OrganizationComponent {
   activeTab: any = 1;
   constructor(public directus: DirectusService) {}
+
+  programId: any[] = [];
+  private router = inject(Router);
+
   upperUnits: any[] = [];
 
   lowerUnits: any[] = [];

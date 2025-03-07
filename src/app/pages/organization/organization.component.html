@@ -7,7 +7,7 @@
     <div
       class="UC"
       *ngFor="let UU of upperUnits"
-      [routerLink]="formatText(UU.name)"
+      [routerLink]="['/organization', UU.id]"
     >
       {{ UU.name }}
     </div>

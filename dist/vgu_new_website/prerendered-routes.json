@@ -2,8 +2,7 @@
   "routes": [
     "/landing-page",
     "/organization",
-    "/organization/presidential-board",
-    "/organization/presidential-board/ha-thuc-vien",
+    "/pagenotfound",
     "/programs"
   ]
 }

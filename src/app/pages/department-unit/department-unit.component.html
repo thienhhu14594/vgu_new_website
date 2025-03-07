@@ -1,0 +1,44 @@
+<div class="PB-page">
+  <div class="wrapper">
+    <a routerLink="/organization">Organization/ </a>
+    <span>{{ depsName.name }}</span>
+  </div>
+
+  <div class="header1">
+    <h1>{{ depsName.name }}</h1>
+  </div>
+  <div class="pb-content">
+    <p>
+      The University Council (UC) is the university institution with the widest
+      ranging of authority. It is appointed by the Minister of Education and
+      Training and consists of 20 representatives from the government, academia,
+      business and society of Vietnam and Germany. Ten of its members are
+      nominated by the Ministry of Education and Training, while another ten are
+      named by the Hessen State Mi nistry of Higher Education, Research and the
+      Arts. The UC meets at least once a year to discuss and decide upon
+      important issues regarding strategic development of VGU. The Council,
+      which was founded in 2009, now is composed of following members:
+    </p>
+    <ng-container *ngFor="let staff of staffs; let i = index">
+      <app-card1-l
+        *ngIf="staff.show_as_front"
+        [reverse]="reverse(i)"
+        [title]="staff.name"
+        [content]="staff.position + staff.email + staff.phone"
+        [image]="this.directus.getImageUrl(staff.image)"
+        routerLink="/organization/{{ this.b }}/{{ staff.id }}"
+      />
+    </ng-container>
+  </div>
+  <div class="test">
+    <ng-container *ngFor="let staff of staffs; let i = index">
+      <app-card3-m
+        *ngIf="!staff.show_as_front"
+        [title]="staff.name"
+        [content]="staff.position + staff.email + staff.phone"
+        [image]="this.directus.getImageUrl(staff.image)"
+        routerLink="/organization/{{ this.b }}/{{ staff.id }}"
+      />
+    </ng-container>
+  </div>
+</div>

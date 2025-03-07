@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Observable, catchError, retry, throwError } from 'rxjs';
 
-const apiUrl = 'http://172.16.2.212:8055';
-// const apiUrl = 'http://localhost:8055';
+// const apiUrl = 'http://172.16.2.212:8055';
+const apiUrl = 'http://localhost:8055';
 
 export interface Test {
   slug: string;
@@ -112,6 +112,17 @@ export class DirectusService {
     return this.http.get(
       `${apiUrl}/items/departments?filter[unit][_eq]=${unitId}`
     );
+  }
+  getDepartmentsName(id: string): Observable<any> {
+    return this.http.get(`${apiUrl}/items/departments?filter[id][_eq]=${id}`);
+  }
+  getStaffs(departmentId: string): Observable<any> {
+    return this.http.get(
+      `${apiUrl}/items/Staffs?filter[department][_eq]=${departmentId}`
+    );
+  }
+  getStaffInfo(staffId: string): Observable<any> {
+    return this.http.get(`${apiUrl}/items/Staffs?filter[id][_eq]=${staffId}`);
   }
 
   ////////////////////////////////////////////////////////
