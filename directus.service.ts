@@ -100,5 +100,30 @@ export class DirectusService {
       `${apiUrl}/items/program_detail?filter[title][_eq]=${program_name}`
     );
   }
+  getUpperUnits(): Observable<any> {
+    return this.http.get(
+      `${apiUrl}/items/departments?filter[unit][_null]=true`
+    );
+  }
+  getLowerUnits(): Observable<any> {
+    return this.http.get(`${apiUrl}/items/department_units`);
+  }
+  getDepartments(unitId: string): Observable<any> {
+    return this.http.get(
+      `${apiUrl}/items/departments?filter[unit][_eq]=${unitId}`
+    );
+  }
+  getDepartmentsName(id: string): Observable<any> {
+    return this.http.get(`${apiUrl}/items/departments?filter[id][_eq]=${id}`);
+  }
+  getStaffs(departmentId: string): Observable<any> {
+    return this.http.get(
+      `${apiUrl}/items/Staffs?filter[department][_eq]=${departmentId}`
+    );
+  }
+  getStaffInfo(staffId: string): Observable<any> {
+    return this.http.get(`${apiUrl}/items/Staffs?filter[id][_eq]=${staffId}`);
+  }
+
   ////////////////////////////////////////////////////////
 }

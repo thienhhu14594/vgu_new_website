@@ -13,5 +13,6 @@ export class Card1LComponent {
   @Input() image: string;
   @Input() title: string;
   @Input() content: string;
+  @Input() reverse: boolean = false;
   htv = 'Dr. Ha Thuc Vien';
 }

@@ -2,6 +2,7 @@
   "routes": [
     "/landing-page",
     "/organization",
+    "/pagenotfound",
     "/programs"
   ]
 }

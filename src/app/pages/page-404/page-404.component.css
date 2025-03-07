@@ -1,0 +1,20 @@
+.page-not-found {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  color: var(--primary-color);
+  font-size: 200px;
+}
+button {
+  background-color: var(--primary-color);
+  color: var(--secondary-text);
+  border: none;
+  padding: 10px 30px;
+}
+button:hover {
+  background-color: var(--primary-button-hover);
+}

@@ -41,7 +41,7 @@
 .card3-m-subcontent {
   width: fit-content;
   height: 22px;
-
+  margin-top: 10px;
   font-weight: 300;
   color: var(--primary-text);
   font-size: clamp(13px, 1.3vw, 17px);
