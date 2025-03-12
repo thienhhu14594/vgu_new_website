@@ -1,4 +1,3 @@
-import { createRequire } from 'module';const require = createRequire(import.meta.url);
 import {
   AUTO_STYLE,
   AnimationGroupPlayer,
@@ -7,14 +6,14 @@ import {
   sequence,
   style,
   ɵPRE_STYLE
-} from "./chunk-XHNUKJPC.js";
+} from "./chunk-WYJXFZKA.js";
 import {
   BrowserModule,
   DomRendererFactory2
-} from "./chunk-RZI3VICU.js";
+} from "./chunk-RQKLEBOR.js";
 import {
   DOCUMENT
-} from "./chunk-27HNZWKO.js";
+} from "./chunk-CBR3RYSM.js";
 import {
   ANIMATION_MODULE_TYPE,
   Inject,
@@ -29,11 +28,11 @@ import {
   ɵɵdefineInjector,
   ɵɵdefineNgModule,
   ɵɵinject
-} from "./chunk-QIUYSFOA.js";
+} from "./chunk-WZ5D5QC4.js";
 import {
   __objRest,
   __spreadValues
-} from "./chunk-NQ4HTGF6.js";
+} from "./chunk-3OV72XIM.js";
 
 // node_modules/@angular/animations/fesm2022/browser.mjs
 var LINE_START = "\n - ";
@@ -4133,4 +4132,4 @@ export {
    * License: MIT
    *)
 */
-//# sourceMappingURL=chunk-GJP24S77.js.map
+//# sourceMappingURL=chunk-7EOSGI7B.js.map
