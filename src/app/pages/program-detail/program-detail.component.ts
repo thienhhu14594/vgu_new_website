@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
+import { DirectusService } from '../../../../directus.service';
 
 @Component({
   selector: 'app-program-detail',
@@ -46,9 +47,14 @@ export class ProgramDetailComponent {
 
   private route = inject(ActivatedRoute); // ✅ Correct usage of `inject()`
   a: string | null = null; // ✅ Declare `a` properly
-
+  programDetail: any;
+  constructor(public directus: DirectusService) {}
   ngOnInit() {
     this.a = this.route.snapshot.paramMap.get('program'); // ✅ Get route param safely
     console.log(this.a);
+    this.directus.getProgramDetail(this.a).subscribe((data) => {
+      this.programDetail = data.data[0];
+    });
+    console.log(this.programDetail);
   }
 }

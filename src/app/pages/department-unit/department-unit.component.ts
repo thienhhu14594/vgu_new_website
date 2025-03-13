@@ -27,7 +27,7 @@ export class DepartmentUnitComponent {
     this.b = this.route.snapshot.paramMap.get('departmentId'); // ✅ Get route param safely
     console.log(this.b);
     this.directus.getStaffs(this.b).subscribe((data) => {
-      this.staffs = data.data;
+      this.staffs = data.data.sort((a, b) => a.order - b.order);
       if (this.staffs.length === 0) {
         this.router.navigate(['/pagenotfound'], { replaceUrl: true });
       }
@@ -44,31 +44,6 @@ export class DepartmentUnitComponent {
   //     this.upperUnits = data.data.reverse();
   //   });
   // }
-  members = [
-    {
-      name: 'Prof. Dr. Rene Thiele',
-      position: 'President\n',
-      email: 'rene.thiele@vgu.edu.vn\n',
-      phone: '+84 274 222 0990, Ext. 70111',
-      image: 'rene-thiele.png',
-    },
-    {
-      name: 'Dr. Ha Thuc Vien',
-      reverse: true,
-      position: 'Vice President for Academic and Student Affairs\n',
-      email: 'vien.ht@vgu.edu.vn\n',
-      phone: '+84 274 222 0990, Ext. 70113',
-      image: 'ha-thuc-vien.png',
-      link: 'ha-thuc-vien',
-    },
-    {
-      name: 'Dr. Thomas Aulig',
-      position: 'Vice President\n',
-      email: 'rene.thiele@vgu.edu.vn\n',
-      phone: '+84 274 222 0990, Ext. 70112',
-      image: 'thomas-aulig.png',
-    },
-  ];
 }
 
 // routerLink = '/organization/presidential-board/{{ staff.link }}';
