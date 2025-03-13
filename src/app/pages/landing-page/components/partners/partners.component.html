@@ -1,12 +1,7 @@
 <div class="root_partner">
-    <div class="allPartner">
-      <div
-        *ngFor="let partner of partners"
-        class="carousel-slide"
-      >
-        <img [src]="this.directus.getImageUrl(partner.directus_files_id)"
-        alt="{{partner.id}}">
-      </div>
+  <div class="allPartner">
+    <div *ngFor="let partner of partners" class="carousel-slide">
+      <img [src]="this.directus.getImageUrl(partner.directus_files_id)" />
     </div>
-    
   </div>
+</div>

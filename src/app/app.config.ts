@@ -1,5 +1,5 @@
 import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
-import { provideRouter, RouterLink, RouterModule, withHashLocation } from '@angular/router';
+import { provideRouter, RouteReuseStrategy, RouterLink, RouterModule, withHashLocation } from '@angular/router';
 
 import { routes } from './app.routes';
 import { provideClientHydration } from '@angular/platform-browser';
@@ -22,5 +22,12 @@ export const appConfig: ApplicationConfig = {
     provideClientHydration(),
     provideHttpClient(withFetch(),
     withInterceptors([corsInterceptor])),
+    { provide: RouteReuseStrategy, useClass: class implements RouteReuseStrategy {
+      shouldDetach() { return false; }
+      store() {}
+      shouldAttach() { return false; }
+      retrieve() { return null; }
+      shouldReuseRoute() { return false; }
+    }},
   ],
 };

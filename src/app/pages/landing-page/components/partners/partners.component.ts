@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { DirectusService } from '../../../../../../directus.service';
-import { switchMap } from 'rxjs';
+import { switchMap, tap } from 'rxjs/operators';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -10,28 +10,47 @@ import { CommonModule } from '@angular/common';
   templateUrl: './partners.component.html',
   styleUrl: './partners.component.css'
 })
-export class PartnersComponent {
+export class PartnersComponent implements OnInit {
   partners: any[] = [];
+  originalPartners: any[] = [];
   block_id: any;
-  constructor (public directus: DirectusService){}
+  
+  constructor(public directus: DirectusService) {}
+  
   ngOnInit(): void {
-    // this.directusSrv.getPartnerBlock().subscribe(data => {
-    //   this.partners = data.data;
-    // });
-    this.directus.getPartnerBlock().pipe(
-      switchMap((nameResponse: any) => {
-        const id = nameResponse.data[0].id; // Adjust based on your API structure
-        return this.directus.getBlockImage_byID(id); // Pass the name to the second request
-      })
-    ).subscribe({
-      next: (itemResponse: any) => {
-        this.partners = itemResponse.data; // Handle the response
-      },
-      error: (err) => {
-        console.error('Error occurred:', err);
-      }
-    });
-    this.partners = [...this.partners,...this.partners.slice(0, this.partners.length)];
+    console.log('Partners component ngOnInit running');
+    this.loadPartners();
   }
   
+  private loadPartners(): void {
+    this.directus.getPartnerBlock().pipe(
+      switchMap((nameResponse: any) => {
+        const id = nameResponse.data[0].id;
+        return this.directus.getBlockImage_byID(id);
+      }),
+      tap((itemResponse: any) => {
+        // Store the original data
+        this.originalPartners = itemResponse.data || [];
+        // Create the duplicated array
+        this.partners = [...this.originalPartners, ...this.originalPartners];
+        console.log('Partners loaded and duplicated:', this.partners.length);
+      })
+    ).subscribe({
+      error: (err) => {
+        console.error('Error loading partners:', err);
+      }
+    });
+  }
+  
+  // Add this method to refresh the component data when needed
+  public refreshPartners(): void {
+    if (this.originalPartners.length > 0) {
+      // If we already have the original data, just re-duplicate it
+      this.partners = [...this.originalPartners, ...this.originalPartners];
+      console.log('Partners refreshed from cached data');
+    } else {
+      // Otherwise reload from the API
+      this.loadPartners();
+    }
+  }
 }

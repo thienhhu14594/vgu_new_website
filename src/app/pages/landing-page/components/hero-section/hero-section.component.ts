@@ -17,7 +17,6 @@ import { NgbCarouselModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
   templateUrl: './hero-section.component.html',
   styleUrl: './hero-section.component.css',
   encapsulation: ViewEncapsulation.None,
-  changeDetection: ChangeDetectionStrategy.OnPush,
   animations: [
     trigger('slide', [
       state('in', style({ translate: '200%' })),

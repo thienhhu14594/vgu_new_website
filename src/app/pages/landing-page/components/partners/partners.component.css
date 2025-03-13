@@ -1,5 +1,6 @@
 .root_partner {
     position: relative;
+    margin: auto;
     box-sizing: border-box;
     display: flex;
     align-items: center;
@@ -12,7 +13,7 @@
     display: flex;
     align-items: center;
     width: fit-content;
-    animation: slide 15s linear infinite; /* Infinite sliding animation */
+    animation: slide 20s linear infinite; /* Infinite sliding animation */
   }
     
   .root_partner .carousel-slide {
@@ -31,9 +32,9 @@
   /* Define the animation */
   @keyframes slide {
     0% {
-      transform: translateX(0%);
+      transform: translateX(25%);
     }
     100% {
-      transform: translateX(calc(-50%)); /* Slide left by the total width of images */
+      transform: translateX(calc(-25%)); /* Slide left by the total width of images */
     }
   }
