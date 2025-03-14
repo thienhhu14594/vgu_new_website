@@ -1,0 +1,34 @@
+.primary-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: 10px 24px;
+  margin: auto;
+  width: fit-content;
+  box-sizing: border-box;
+  background: var(--primary-button);
+}
+
+.primary-button-text {
+  display: flex;
+  box-sizing: content-box;
+  letter-spacing: 0%;
+  text-align: center;
+  text-transform: uppercase;
+
+  font-weight: bold;
+  font-size: 14px;
+  font-family: var(--vgu_font_sans);
+  width: -webkit-fill-available;
+  color: var(--secondary-text);
+  flex: none;
+  order: 1;
+  flex-grow: 1;
+}
+
+.primary-button:hover {
+  background: var(--primary-button-hover);
+  cursor: pointer;
+}

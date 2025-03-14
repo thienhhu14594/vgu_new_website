@@ -1,0 +1,48 @@
+<div class="PB-page">
+  <div class="wrapper">
+    <a routerLink="/organization">Organization/ </a>
+    <span>{{ depsName.name }}</span>
+  </div>
+
+  <div class="header1">
+    <h1>{{ depsName.name }}</h1>
+  </div>
+  <div class="pb-content">
+    <p>
+      {{ depsName.content }}
+    </p>
+    <ng-container *ngFor="let staff of staffs; let i = index">
+      <app-card1-l
+        *ngIf="staff.show_as_front"
+        [reverse]="reverse(i)"
+        [title]="(staff?.title ? staff?.title + ' ' : '') + (staff?.name ?? '')"
+        [content]="
+          (staff?.position ?? '') +
+          '\n' +
+          (staff?.email ?? '') +
+          '\n' +
+          (staff?.phone ?? '')
+        "
+        [image]="this.directus.getImageUrl(staff.image)"
+        routerLink="/organization/{{ this.b }}/{{ staff.id }}"
+      />
+    </ng-container>
+  </div>
+  <div class="test">
+    <ng-container *ngFor="let staff of staffs; let i = index">
+      <app-card3-m
+        *ngIf="!staff.show_as_front"
+        [title]="staff.name"
+        [content]="
+          (staff?.position ?? '') +
+          '\n' +
+          (staff?.email ?? '') +
+          '\n' +
+          (staff?.phone ?? '')
+        "
+        [image]="this.directus.getImageUrl(staff.image)"
+        routerLink="/organization/{{ this.b }}/{{ staff.id }}"
+      />
+    </ng-container>
+  </div>
+</div>

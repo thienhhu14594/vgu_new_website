@@ -1,0 +1,10 @@
+<div class="card3-m">
+  <img class="card3-m-image" [src]="image" />
+  <div class="card3-m-wrapper">
+    <span class="card3-m-subcontent">{{ subcontent }}</span>
+    <span class="card3-m-title">
+      {{ title.length > 50 ? (title | slice : 0 : 50) + "..." : title }}
+    </span>
+    <span class="card3-m-content">{{ content }} </span>
+  </div>
+</div>

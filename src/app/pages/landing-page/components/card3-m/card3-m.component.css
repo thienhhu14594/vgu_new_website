@@ -1,0 +1,105 @@
+.card3-m {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  padding-bottom: 10px;
+
+  height: 100%;
+  width: 100%;
+  max-width: 1300px;
+  background: linear-gradient(to bottom, var(--primary-background) 50%, var(--primary-color) 50%);
+  background-size: 100% 200%;
+  background-position: top;
+  transition: all 0.2s ease-in-out;
+  border-bottom: 5px solid var(--primary-color);
+}
+
+.card3-m-image {
+  max-width: 100%;
+
+  /* aspect-ratio: 353 / 265; */
+  height: 60%;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+  object-fit: cover;
+}
+
+.card3-m-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0px;
+  padding: 0px 12px;
+  width: 100%;
+  max-width: 400px;
+  height: 40%;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 1;
+  padding-bottom: 10px;
+}
+
+.card3-m-subcontent {
+  width: fit-content;
+  height: 22px;
+  margin-top: 10px;
+  font-weight: 300;
+  color: var(--primary-text);
+  font-size: clamp(13px, 1.3vw, 17px);
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  max-width: 400px;
+}
+
+.card3-m-title {
+  width: 100%;
+  height: fit-content;
+  font-weight: 500;
+  font-size: clamp(20px, 2vw, 26px);
+  color: var(--primary-text);
+  overflow: hidden;
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+}
+
+.card3-m-content {
+  width: 100%;
+  max-width: 400px;
+  max-height: var(100% - 112px);
+  
+  white-space: nowrap; /* Prevent text from wrapping to the next line */
+  overflow: hidden; /* Hide overflow text */
+  text-overflow: ellipsis;
+
+  font-weight: 400;
+  font-size: clamp(13px, 1.3vw, 17px);
+  color: var(--primary-text);
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+  margin-bottom: 30px;
+  white-space: pre-wrap;
+}
+
+.card3-m:hover {
+  background-position: bottom;
+  .card3-m-title {
+    color: var(--secondary-text);
+  }
+  .card3-m-subcontent {
+    color: var(--secondary-text);
+  }
+  .card3-m-content {
+    color: var(--secondary-text);
+  }
+  .card3-m-arrow {
+    display: unset;
+  }
+  cursor: pointer;
+}

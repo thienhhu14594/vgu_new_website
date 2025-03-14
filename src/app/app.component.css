@@ -1,0 +1,23 @@
+.container {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  max-width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+app-header {
+  height: fit-content;
+}
+.content-wrapper {
+  margin: auto;
+}
+.content {
+  padding-top: 117px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  width: 100%;
+
+  scrollbar-width: none;
+}

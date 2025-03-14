@@ -1,0 +1,10 @@
+<div class="card2-m">
+    <img class="card2-m-image" [src]="image"/>
+    <span class="card2-m-title">
+        {{title.length > 50 ? (title | slice:0:50) + '...':title}}
+    </span>
+    <span class="card2-m-content">
+        {{ content.length > 100 ? (content | slice:0:100) + '...' : content }}
+    </span>
+    <app-arrow-button [text]="'Learn more'"/>
+  </div>

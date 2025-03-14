@@ -1,0 +1,100 @@
+.card3-m-display {
+  margin-bottom: 80px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: flex-start;
+  padding: 0px;
+  gap: 24px 5%;
+  width: 100%;
+}
+app-card3-m {
+  height: 40vw;
+  max-height: 517px;
+  overflow: hidden;
+  width: 30%;
+}
+
+.card3-s-display {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+  padding: 0px;
+  gap: 24px 5%;
+  width: 100%;
+  margin-bottom: 80px;
+}
+
+app-card3-s {
+  width: 30%;
+}
+
+.card4-m-display {
+  margin-bottom: 80px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: flex-start;
+  padding: 0px 0px 0px 0px;
+  gap: 24px 4%;
+
+  width: 100%;
+  height: fit-content;
+}
+
+app-card4-m {
+  width: 22%;
+}
+
+.card2-m-display {
+  margin-bottom: 80px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 24px 4%;
+
+  width: 100%;
+  height: fit-content;
+}
+
+app-card2-m {
+  width: 48%;
+}
+
+.card1-l-display {
+  margin-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 24px;
+}
+
+.card1-s-display {
+  margin-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 24px;
+}
+
+@media only screen and (max-width: 1023px) {
+  app-card3-m {
+    width: 45%;
+    height: fit-content;
+  }
+
+  .card4-m-display {
+    gap: 24px 2%;
+  }
+
+  app-card4-m {
+    width: 32%;
+  }
+}

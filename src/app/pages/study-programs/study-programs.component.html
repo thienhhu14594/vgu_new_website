@@ -1,0 +1,29 @@
+<div class="programs-page">
+  <img src="programs.png" />
+  <div class="programs">
+    <div class="levels">
+      <p class="actived">Bachelor Programs</p>
+      <p>Master Programs</p>
+    </div>
+    <div class="FY">
+      <h1>Foundation year</h1>
+      <div class="FY-wrapper">
+        <p>
+          The Foundation Year at VGU is a mandatory preparation course for all
+          Bachelor programs, with a duration of one year.
+        </p>
+        <app-primary-button text="Learn more" />
+      </div>
+    </div>
+    <div class="test">
+      <app-card3-m
+        *ngFor="let program of programId"
+        [title]="program.title"
+        [image]="directus.getImageUrl(program.image)"
+        [content]="program.content"
+        class="program"
+        [routerLink]="['/programs', program.title]"
+      />
+    </div>
+  </div>
+</div>

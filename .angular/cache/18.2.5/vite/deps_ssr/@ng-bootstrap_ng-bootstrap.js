@@ -6,7 +6,7 @@ import {
   formatDate,
   getDOM,
   isPlatformBrowser
-} from "./chunk-3WPEY6LC.js";
+} from "./chunk-OVOGWG6K.js";
 import {
   AfterRenderPhase,
   ApplicationRef,
@@ -53,7 +53,6 @@ import {
   inject,
   isPromise,
   isSubscribable,
-  require_cjs,
   setClassMetadata,
   signal,
   untracked,
@@ -113,15 +112,19 @@ import {
   ɵɵtextInterpolate,
   ɵɵtextInterpolate1,
   ɵɵviewQuery
-} from "./chunk-POE4UYHY.js";
+} from "./chunk-Y3EYPGUR.js";
 import {
   require_operators
-} from "./chunk-AOODNVNQ.js";
+} from "./chunk-IJKRIHJI.js";
+import {
+  require_cjs
+} from "./chunk-IXWXOSOL.js";
+import "./chunk-4SNWTT7U.js";
 import {
   __spreadProps,
   __spreadValues,
   __toESM
-} from "./chunk-MV52JWQN.js";
+} from "./chunk-NQ4HTGF6.js";
 
 // node_modules/@angular/core/fesm2022/rxjs-interop.mjs
 var import_rxjs = __toESM(require_cjs(), 1);

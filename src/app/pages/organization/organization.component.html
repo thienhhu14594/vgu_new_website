@@ -1,0 +1,38 @@
+<div class="organization-page">
+  <img src="organization.png" />
+  <div class="header1">
+    <h1>Organization</h1>
+  </div>
+  <div class="wrapper">
+    <div
+      class="UC"
+      *ngFor="let UU of upperUnits"
+      [routerLink]="['/organization', UU.id]"
+    >
+      {{ UU.name }}
+    </div>
+
+    <div class="lv3">
+      <div
+        class="lv3-unit"
+        *ngFor="let LU of lowerUnits"
+        [class.active]="activeTab === LU.id"
+        (click)="setActiveTab(LU.id); getDep(LU.id)"
+      >
+        {{ LU.name }}
+      </div>
+    </div>
+
+    <!-- Content Sections -->
+    <div
+      class="content"
+      *ngFor="let LU of lowerUnits"
+      [id]="LU.id"
+      [class.active]="activeTab === LU.id"
+    >
+      <ul>
+        <li *ngFor="let item of departments">{{ item.name }}</li>
+      </ul>
+    </div>
+  </div>
+</div>

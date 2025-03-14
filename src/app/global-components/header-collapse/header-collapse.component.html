@@ -1,0 +1,39 @@
+<div class="header-collapse-wrapper">
+  <div class="header-collapse">
+    <ul class="collapsed-1">
+      <li *ngFor="let level2 of lv1">
+        <a
+          (click)="
+            openedId2 = level2.id;
+            lv2 = level2.children;
+            lv3 = null;
+            parentName = level2.name;
+            openedId3 = null
+          "
+          [ngClass]="{ opened: level2.id === openedId2 }"
+          >{{ level2.name }} <span *ngIf="level2.children.length">></span></a
+        >
+      </li>
+    </ul>
+    <ul class="collapsed-2" *ngIf="lv2">
+      <li *ngIf="parentName === 'Organization'">
+        <a routerLink="/organization">Overview</a>
+      </li>
+      <li *ngIf="parentName === 'Study programs'">
+        <a routerLink="/programs">Overview</a>
+      </li>
+      <li *ngFor="let level3 of lv2">
+        <a
+          (click)="openedId3 = level3.id; lv3 = level3.children"
+          [ngClass]="{ opened: level3.id === openedId3 }"
+          >{{ level3.name }} <span *ngIf="level3.children.length">></span></a
+        >
+      </li>
+    </ul>
+    <ul class="collapsed-3" *ngIf="lv3">
+      <li *ngFor="let level4 of lv3">
+        <a>{{ level4.name }} <span *ngIf="level4.children.length">></span></a>
+      </li>
+    </ul>
+  </div>
+</div>

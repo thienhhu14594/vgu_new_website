@@ -1,0 +1,54 @@
+.card2-m {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 12px;
+
+  height: fit-content;
+}
+
+.card2-m-image {
+  width: 100%;
+  aspect-ratio: 112 / 63;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+  object-fit: cover;
+}
+
+.card2-m-title {
+  width: 100%;
+  height: fit-content;
+  max-height: 68px;
+  overflow: hidden;
+  font-weight: 1000;
+  font-size: 26px;
+  line-height: 34px;
+  color: var(--primary-text);
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.card2-m-content {
+  width: 100%;
+  height: fit-content;
+  max-height: 68px;
+  overflow: hidden;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 22px;
+  color: var(--primary-text);
+  flex: none;
+  order: 2;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+app-arrow-button {
+  order: 3;
+  margin-left: 12px;
+}

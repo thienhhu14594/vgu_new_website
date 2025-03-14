@@ -1,0 +1,126 @@
+.card1-s {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  max-width: 1300px;
+  padding: 0px;
+  row-gap: 0px;
+  background: linear-gradient(to right, var(--primary-color) 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all 0.2s ease-in-out;
+  height: fit-content;
+}
+
+.card1-s-wrapper1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px 10px 20px 12px;
+
+  width: fit-content;
+  height: fit-content;
+  flex: 0 0 auto;
+}
+
+.card1-s-subcontent1 {
+  width: 142px;
+  height: 30px;
+
+  font-weight: 1000;
+  font-size: 23px;
+  line-height: 30px;
+  color: var(--primary-text);
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.card1-s-subcontent2 {
+  width: 142px;
+  height: 30px;
+
+  font-weight: 300;
+  font-size: 23px;
+  line-height: 30px;
+  color: var(--primary-text);
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.card1-s-wrapper2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px 10px 20px 12px;
+  height: fit-content;
+  width: calc(100% - 164px);
+
+  flex: 1;
+}
+
+.card1-s-title {
+  height: fit-content;
+  font-weight: 1000;
+  font-size: 23px;
+  line-height: 30px;
+  color: var(--primary-text);
+  align-self: stretch;
+
+  white-space: nowrap; /* Prevent text from wrapping to the next line */
+  overflow: hidden; /* Hide overflow text */
+  text-overflow: ellipsis;
+}
+
+.card1-s-content {
+  height: fit-content;
+  max-width: 1000px;
+  font-weight: 300;
+  font-size: 23px;
+  line-height: 30px;
+  color: var(--primary-text);
+
+  align-self: stretch;
+
+  white-space: nowrap; /* Prevent text from wrapping to the next line */
+  overflow: hidden; /* Hide overflow text */
+  text-overflow: ellipsis;
+}
+
+.card1-s-arrow {
+  height: fit-content;
+  flex: 0 0 auto;
+  margin-right: 15px;
+  order: 2;
+
+  z-index: 2;
+  svg path {
+    fill: none;
+  }
+}
+.card1-s-arrow svg path {
+  fill: #f5f5f5;
+}
+
+.card1-s:hover {
+  background-position: left bottom;
+  .card1-s-title {
+    color: var(--secondary-text);
+  }
+  .card1-s-subcontent1 {
+    color: var(--secondary-text);
+  }
+  .card1-s-content {
+    color: var(--secondary-text);
+  }
+  .card1-s-subcontent2 {
+    color: var(--secondary-text);
+  }
+  .card1-s-arrow svg path {
+    fill: var(--secondary-text);
+  }
+  cursor: pointer;
+}

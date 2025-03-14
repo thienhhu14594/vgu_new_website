@@ -1,0 +1,30 @@
+<div class="htv-page">
+  <div>
+    <a routerLink="/organization">Organization/ </a>
+    <a [routerLink]="['/organization', b]">Presidential Board/ </a>
+    <span>Dr. Ha Thuc Vien</span>
+  </div>
+
+  <div class="header1">
+    <h1>{{ staffInfo?.title }} {{ staffInfo?.name }}</h1>
+  </div>
+  <div class="wrapper">
+    <div class="upper">
+      <div class="img">
+        <img [src]="directus.getImageUrl(staffInfo?.image)" />
+      </div>
+      <div class="info1">
+        <h1>{{ staffInfo?.title }} {{ staffInfo?.name }}</h1>
+        <h2>{{ staffInfo?.position }}</h2>
+
+        <p>
+          <span><img src="@.png" /></span>{{ staffInfo?.email }}
+        </p>
+        <p>
+          <span><img src="phone.png" /></span>{{ staffInfo?.phone }}
+        </p>
+      </div>
+    </div>
+    <div class="below" [innerHTML]="safeStaffInfo"></div>
+  </div>
+</div>

@@ -1,11 +1,17 @@
-import 'intersection-observer'
-/// <reference types="@angular/localize" />
-
-import { bootstrapApplication } from '@angular/platform-browser';
-import { appConfig } from './app/app.config';
+import {
+  bootstrapApplication,
+  provideClientHydration,
+} from '@angular/platform-browser';
+import { RouterModule, provideRouter } from '@angular/router';
 import { AppComponent } from './app/app.component';
+import { routes } from './app/app.routes'; // Import routes from the separate file
+import { provideZoneChangeDetection } from '@angular/core';
+import { HttpHandler, HttpInterceptorFn, HttpRequest, provideHttpClient, withFetch, withInterceptors } from '@angular/common/http';
+import { provideAnimations } from '@angular/platform-browser/animations';
+import { appConfig } from './app/app.config';
+import { config } from './app/app.config.server';
 
 
 
-bootstrapApplication(AppComponent, appConfig)
-  .catch((err) => console.error(err));
+// Bootstrap the app with the routes
+bootstrapApplication(AppComponent, config);
