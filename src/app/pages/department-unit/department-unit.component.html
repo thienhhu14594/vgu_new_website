@@ -1,15 +1,15 @@
 <div class="PB-page">
   <div class="wrapper">
     <a routerLink="/organization">Organization/ </a>
-    <span>{{ depsName.name }}</span>
+    <span>{{ depsName?.name }}</span>
   </div>
 
   <div class="header1">
-    <h1>{{ depsName.name }}</h1>
+    <h1>{{ depsName?.name }}</h1>
   </div>
   <div class="pb-content">
     <p>
-      {{ depsName.content }}
+      {{ depsName?.content }}
     </p>
     <ng-container *ngFor="let staff of staffs; let i = index">
       <app-card1-l

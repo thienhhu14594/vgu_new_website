@@ -41,7 +41,7 @@ export class ProgramDetailComponent {
         richTextFields.forEach(field => {
           if (this.programDetail[field]) {
             this.safeHtmlContent[field] = this.sanitizer.bypassSecurityTrustHtml(
-              this.programDetail[field]
+              this.transformDirectusUrls(this.programDetail[field],'172.16.2.212')
             );
           }
         });
@@ -55,5 +55,25 @@ export class ProgramDetailComponent {
     } else {
       console.error(`Element with ID "${el}" not found.`);
     }
+  }
+
+  transformDirectusUrls(htmlContent: string, serverDomain: string): string {
+    if (!htmlContent) return htmlContent;
+    
+    // Create regex patterns to match different URL formats
+    // This handles http://, https://, and domain-only formats
+    const patterns = [
+      new RegExp(`https?://${serverDomain}/directus/`, 'g'),
+      new RegExp(`${serverDomain}/directus/`, 'g')
+    ];
+    
+    let transformedContent = htmlContent;
+    
+    // Apply each pattern replacement
+    patterns.forEach(pattern => {
+      transformedContent = transformedContent.replace(pattern, '/directus/');
+    });
+    
+    return transformedContent;
   }
 }
