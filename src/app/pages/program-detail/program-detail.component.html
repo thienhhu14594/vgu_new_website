@@ -1,26 +1,96 @@
 <div class="program-detail-page">
   <img src="programs.png" />
   <div class="link">
-    <a routerLink="/programs">Programs/ </a><span>{{ this.a }}</span>
+    <a routerLink="/programs">Programs/ </a><span>{{ a }}</span>
   </div>
   <div class="header1">
-    <h1>{{ programDetail.programFullName }}</h1>
+    <h1>{{ programDetail?.programFullName }}</h1>
   </div>
-  <img [src]="directus.getImageUrl(programDetail.image)" class="programImg" />
+  <img
+    *ngIf="programDetail?.image"
+    [src]="directus.getImageUrl(programDetail.image)"
+    class="programImg"
+  />
   <div class="wrapper">
-    <!-- Apply ngbAccordion here, wrapping all items -->
     <div ngbAccordion [closeOthers]="true">
-      <div
-        ngbAccordionItem
-        *ngFor="let section of sections"
-        [collapsed]="section.title !== 'Section 1'"
-      >
-        <h2 ngbAccordionHeader>
-          <button ngbAccordionButton>{{ section.title }}</button>
+      <!-- Target Group -->
+      <div ngbAccordionItem [collapsed]="false">
+        <h2 ngbAccordionHeader id="section1">
+          <button ngbAccordionButton>Target Group</button>
         </h2>
         <div ngbAccordionCollapse>
           <div ngbAccordionBody>
-            <ng-template>{{ section.content }}</ng-template>
+            <div [innerHTML]="safeHtmlContent['Target_Group']"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Description -->
+      <div ngbAccordionItem [collapsed]="true">
+        <h2 ngbAccordionHeader id="section2">
+          <button ngbAccordionButton (click)="scroll('section1')">
+            Program Structure
+          </button>
+        </h2>
+        <div ngbAccordionCollapse>
+          <div ngbAccordionBody>
+            <div [innerHTML]="safeHtmlContent['Program_Structure']"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Eligibility -->
+      <div ngbAccordionItem [collapsed]="true">
+        <h2 ngbAccordionHeader id="section3">
+          <button ngbAccordionButton (click)="scroll('section2')">
+            Laboratories
+          </button>
+        </h2>
+        <div ngbAccordionCollapse>
+          <div ngbAccordionBody>
+            <div [innerHTML]="safeHtmlContent['Laboratories']"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Resources -->
+      <div ngbAccordionItem [collapsed]="true">
+        <h2 ngbAccordionHeader id="section4">
+          <button ngbAccordionButton (click)="scroll('section3')">
+            Study Subjects
+          </button>
+        </h2>
+        <div ngbAccordionCollapse>
+          <div ngbAccordionBody>
+            <div [innerHTML]="safeHtmlContent['Study_Subjects']"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Process -->
+      <div ngbAccordionItem [collapsed]="true">
+        <h2 ngbAccordionHeader id="section5">
+          <button ngbAccordionButton (click)="scroll('section4')">
+            Learning Experience
+          </button>
+        </h2>
+        <div ngbAccordionCollapse>
+          <div ngbAccordionBody>
+            <div [innerHTML]="safeHtmlContent['Learning_Experience']"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Additional Info -->
+      <div ngbAccordionItem [collapsed]="true">
+        <h2 ngbAccordionHeader id="section6">
+          <button ngbAccordionButton (click)="scroll('section5')">
+            Faculty
+          </button>
+        </h2>
+        <div ngbAccordionCollapse>
+          <div ngbAccordionBody>
+            <div [innerHTML]="safeHtmlContent['Faculty']"></div>
           </div>
         </div>
       </div>

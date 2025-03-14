@@ -1,15 +1,17 @@
 import { CommonModule } from '@angular/common';
-import { RouterLink, RouterModule } from '@angular/router';
+import { RouterLink, RouterModule, Router, NavigationEnd } from '@angular/router';
 import {
   ChangeDetectionStrategy,
   Component,
   HostListener,
   Input,
+  ChangeDetectorRef,
 } from '@angular/core';
 import { HeaderCollapseComponent } from '../header-collapse/header-collapse.component';
 import { DirectusService } from '../../../../directus.service';
 import { ClickOutsideDirective } from '../../click-outside.directive';
 import { HeaderMobileComponent } from '../../global-components-mobile/header-mobile/header-mobile.component';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-header',
@@ -32,13 +34,31 @@ export class HeaderComponent {
   navButtons: any[] = [];
   navbarTree: any[] = [];
   lv1: any[] = [];
-  openedId: any = null; // Null if ;
+  openedId: any = null;
 
-  constructor(public services: DirectusService) {}
+  constructor(
+    public services: DirectusService,
+    private router: Router,
+    private cdr: ChangeDetectorRef
+  ) {}
+
   ngOnInit(): void {
     this.services.getNavButtons().subscribe((data) => {
       this.navButtons = data.data;
       this.navbarTree = this.buildTree(this.navButtons);
+    });
+
+    // Subscribe to router events to detect navigation changes
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd)
+    ).subscribe(() => {
+      // Reset collapsed state when navigation occurs
+      this.collapsed = false;
+      this.openedId = null;
+      
+      // Since you're using OnPush change detection, you need to
+      // manually trigger change detection after updating properties
+      this.cdr.markForCheck();
     });
   }
 

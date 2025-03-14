@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { DirectusService } from '../../../../directus.service';
 import { ActivatedRoute, RouterLink } from '@angular/router';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-staff-info',
@@ -12,9 +13,11 @@ import { ActivatedRoute, RouterLink } from '@angular/router';
 export class StaffInfoComponent {
   constructor(public directus: DirectusService) {}
   private route = inject(ActivatedRoute); // ✅ Correct usage of `inject()`
+  private sanitizer = inject(DomSanitizer);
   c: string | null = null;
   b: string | null = null; // ✅ Declare `a` properly
   staffInfo: any;
+  safeStaffInfo: SafeHtml = '';
 
   ngOnInit() {
     this.b = this.route.snapshot.paramMap.get('departmentId');
@@ -22,6 +25,11 @@ export class StaffInfoComponent {
     console.log(this.c);
     this.directus.getStaffInfo(this.c).subscribe((data) => {
       this.staffInfo = data.data[0];
+      if (this.staffInfo && this.staffInfo.Info) {
+      this.safeStaffInfo = this.sanitizer.bypassSecurityTrustHtml(
+        this.staffInfo.Info
+      );}
     });
+  
   }
 }

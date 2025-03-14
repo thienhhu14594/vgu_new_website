@@ -3,6 +3,7 @@ import { Component, inject } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
 import { DirectusService } from '../../../../directus.service';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-program-detail',
@@ -12,49 +13,47 @@ import { DirectusService } from '../../../../directus.service';
   styleUrls: ['./program-detail.component.css'], // ✅ Fixed `styleUrls`
 })
 export class ProgramDetailComponent {
-  sections = [
-    {
-      title: 'Section 1',
-      content:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ligula felis, facilisis vel hendrerit ac, molestie sit amet purus. Mauris eu varius orci, eget malesuada sapien. Morbi venenatis porta erat eu bibendum. Mauris viverra eu velit et posuere. Nullam mattis iaculis purus sit amet dapibus. Aliquam erat volutpat. Fusce ac porttitor enim, vitae volutpat quam. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus',
-    },
-    {
-      title: 'Section 2',
-      content:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ligula felis, facilisis vel hendrerit ac, molestie sit amet purus. Mauris eu varius orci, eget malesuada sapien. Morbi venenatis porta erat eu bibendum. Mauris viverra eu velit et posuere. Nullam mattis iaculis purus sit amet dapibus. Aliquam erat volutpat. Fusce ac porttitor enim, vitae volutpat quam. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus',
-    },
-    {
-      title: 'Section 3',
-      content:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ligula felis, facilisis vel hendrerit ac, molestie sit amet purus. Mauris eu varius orci, eget malesuada sapien. Morbi venenatis porta erat eu bibendum. Mauris viverra eu velit et posuere. Nullam mattis iaculis purus sit amet dapibus. Aliquam erat volutpat. Fusce ac porttitor enim, vitae volutpat quam. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus',
-    },
-    {
-      title: 'Section 4',
-      content:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ligula felis, facilisis vel hendrerit ac, molestie sit amet purus. Mauris eu varius orci, eget malesuada sapien. Morbi venenatis porta erat eu bibendum. Mauris viverra eu velit et posuere. Nullam mattis iaculis purus sit amet dapibus. Aliquam erat volutpat. Fusce ac porttitor enim, vitae volutpat quam. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus',
-    },
-    {
-      title: 'Section 5',
-      content:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ligula felis, facilisis vel hendrerit ac, molestie sit amet purus. Mauris eu varius orci, eget malesuada sapien. Morbi venenatis porta erat eu bibendum. Mauris viverra eu velit et posuere. Nullam mattis iaculis purus sit amet dapibus. Aliquam erat volutpat. Fusce ac porttitor enim, vitae volutpat quam. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus',
-    },
-    {
-      title: 'Section 6',
-      content:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ligula felis, facilisis vel hendrerit ac, molestie sit amet purus. Mauris eu varius orci, eget malesuada sapien. Morbi venenatis porta erat eu bibendum. Mauris viverra eu velit et posuere. Nullam mattis iaculis purus sit amet dapibus. Aliquam erat volutpat. Fusce ac porttitor enim, vitae volutpat quam. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus',
-    },
-  ];
-
-  private route = inject(ActivatedRoute); // ✅ Correct usage of `inject()`
-  a: string | null = null; // ✅ Declare `a` properly
+  private route = inject(ActivatedRoute);
+  private sanitizer = inject(DomSanitizer);
+  a: string | null = null;
   programDetail: any;
+  safeHtmlContent: { [key: string]: SafeHtml } = {};
+
   constructor(public directus: DirectusService) {}
+  
   ngOnInit() {
-    this.a = this.route.snapshot.paramMap.get('program'); // ✅ Get route param safely
-    console.log(this.a);
+    this.a = this.route.snapshot.paramMap.get('program');
     this.directus.getProgramDetail(this.a).subscribe((data) => {
       this.programDetail = data.data[0];
+      
+      // Sanitize all rich text fields
+      if (this.programDetail) {
+        // Assuming these are your 6 rich text field names
+        const richTextFields = [
+          'Target_Group', 
+          'Program_Structure', 
+          'Laboratories', 
+          'Study_Subjects', 
+          'Learning_Experience', 
+          'Faculty'
+        ];
+        
+        richTextFields.forEach(field => {
+          if (this.programDetail[field]) {
+            this.safeHtmlContent[field] = this.sanitizer.bypassSecurityTrustHtml(
+              this.programDetail[field]
+            );
+          }
+        });
+      }
     });
-    console.log(this.programDetail);
+  }
+  public scroll(el: string) {
+    const element = document.getElementById(el);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+      console.error(`Element with ID "${el}" not found.`);
+    }
   }
 }
