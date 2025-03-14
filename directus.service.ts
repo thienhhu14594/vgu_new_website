@@ -2,7 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Observable, catchError, retry, throwError } from 'rxjs';
 
-const apiUrl = 'http://172.16.2.212:8055';
+// const apiUrl = 'http://172.16.2.212:8055';
+const apiUrl = '/directus';
 // const apiUrl = 'http://localhost:8055';a
 
 export interface Test {
