@@ -23,7 +23,7 @@
       <app-card3-m
         *ngFor="let program of programId"
         [class.non-actived]="
-          !(bachelor === (program.Levels == '1')) || program.id == 12
+          !(bachelor === (program.Levels == '1')) || program.title === 'FY'
         "
         [title]="program.title"
         [image]="directus.getImageUrl(program.image)"
