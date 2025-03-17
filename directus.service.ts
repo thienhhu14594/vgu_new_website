@@ -93,7 +93,7 @@ export class DirectusService {
   }
   getPrograms(): Observable<any> {
     return this.http.get(
-      `${apiUrl}/items/program_detail?fields=title,content,image,Levels,name`
+      `${apiUrl}/items/program_detail?fields=title,content,image,Levels,programFullName`
     );
   }
   getProgramDetail(program_name: string): Observable<any> {
