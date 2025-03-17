@@ -10,19 +10,21 @@
       </p>
     </div>
     <div *ngIf="bachelor" class="FY">
-      <h1>Foundation year</h1>
+      <h1>{{ programId[11]?.name }}</h1>
       <div class="FY-wrapper">
-        <p>
-          The Foundation Year at VGU is a mandatory preparation course for all
-          Bachelor programs, with a duration of one year.
-        </p>
-        <app-primary-button text="Learn more" />
+        <p>{{ programId[11]?.content }}</p>
+        <app-primary-button
+          text="Learn more"
+          [routerLink]="['/programs', programId[11].title]"
+        />
       </div>
     </div>
     <div class="test">
       <app-card3-m
         *ngFor="let program of programId"
-        [class.non-actived]="!(bachelor === (program.Levels == '1'))"
+        [class.non-actived]="
+          !(bachelor === (program.Levels == '1')) || program.id == 12
+        "
         [title]="program.title"
         [image]="directus.getImageUrl(program.image)"
         [content]="program.content"
