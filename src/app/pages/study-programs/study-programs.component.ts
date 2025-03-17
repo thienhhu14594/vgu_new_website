@@ -21,6 +21,7 @@ import { DirectusService } from '../../../../directus.service';
 })
 export class StudyProgramsComponent implements OnInit {
   constructor(public directus: DirectusService) {}
+  bachelor: boolean = true;
   programId: any[] = [];
   private router = inject(Router);
   ngOnInit(): void {

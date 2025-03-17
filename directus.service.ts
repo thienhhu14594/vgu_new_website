@@ -4,7 +4,7 @@ import { Observable, catchError, retry, throwError } from 'rxjs';
 
 // const apiUrl = 'http://172.16.2.212:8055';
 const apiUrl = '/directus';
-// const apiUrl = 'http://localhost:8055';a
+// const apiUrl = 'http://localhost:8055';
 
 export interface Test {
   slug: string;
@@ -93,7 +93,7 @@ export class DirectusService {
   }
   getPrograms(): Observable<any> {
     return this.http.get(
-      `${apiUrl}/items/program_detail?fields=title,content,image`
+      `${apiUrl}/items/program_detail?fields=title,content,image,Levels`
     );
   }
   getProgramDetail(program_name: string): Observable<any> {

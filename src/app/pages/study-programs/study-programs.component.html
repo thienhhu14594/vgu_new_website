@@ -2,10 +2,14 @@
   <img src="programs.png" />
   <div class="programs">
     <div class="levels">
-      <p class="actived">Bachelor Programs</p>
-      <p>Master Programs</p>
+      <p [class.actived]="bachelor" (click)="bachelor = true">
+        Bachelor Programs
+      </p>
+      <p [class.actived]="!bachelor" (click)="bachelor = false">
+        Master Programs
+      </p>
     </div>
-    <div class="FY">
+    <div *ngIf="bachelor" class="FY">
       <h1>Foundation year</h1>
       <div class="FY-wrapper">
         <p>
@@ -18,6 +22,7 @@
     <div class="test">
       <app-card3-m
         *ngFor="let program of programId"
+        [class.non-actived]="!(bachelor === (program.Levels == '1'))"
         [title]="program.title"
         [image]="directus.getImageUrl(program.image)"
         [content]="program.content"

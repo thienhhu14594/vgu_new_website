@@ -9,21 +9,21 @@
 </div>
 <div class="card3-s-display" *ngIf="type === 'card3-s'">
   <app-card3-s
-    *ngFor="let data of datas | slice:0:3"
+    *ngFor="let data of datas | slice : 0 : 3"
     [title]="data.title"
     [content]="this.stripHtml(data.content)"
   />
 </div>
 <div class="card4-m-display" *ngIf="type === 'card4-m'">
   <app-card4-m
-    *ngFor="let data of datas | slice:0:4"
+    *ngFor="let data of datas | slice : 0 : 4"
     [image]="directus.getImageUrl(data.image)"
     [title]="data.title"
   />
 </div>
 <div class="card2-m-display" *ngIf="type === 'card2-m'">
   <app-card2-m
-    *ngFor="let data of datas | slice:0:2"
+    *ngFor="let data of datas | slice : 0 : 2"
     [image]="directus.getImageUrl(data.image)"
     [title]="data.title"
     [content]="this.stripHtml(data.content)"
@@ -31,19 +31,30 @@
 </div>
 <div class="card1-l-display" *ngIf="type === 'card1-l'">
   <app-card1-l
-  *ngFor="let data of datas | slice:0:1"
-  [image]="directus.getImageUrl(data.image)"
-  [title]="data.title"
-  [content]="this.stripHtml(data.content)"
+    *ngFor="let data of datas | slice : 0 : 1"
+    [image]="directus.getImageUrl(data.image)"
+    [title]="data.title"
+    [content]="this.stripHtml(data.content)"
   />
 </div>
 <div class="card1-s-display" *ngIf="type === 'card1-s'">
   <app-card1-s
-    *ngFor="let data of datas | slice:0:4"
+    *ngFor="let data of datas | slice : 0 : 4"
     [title]="data.title"
     [content]="this.stripHtml(data.content)"
     [subcontent1]="data.publish_date"
     [subcontent2]="data.author.name"
   />
 </div>
+<!-- to add another card, use ng g c pages/landing-page/components/card-name, (including title, content, subcontent1, subcontent2, image) HTML and CSS. then add card as following format -->
+<!-- <div class="card-name-to-css" *ngIf="type === 'the-same-card-name-you-put-on-directus'">
+  <app-card-name
+    *ngFor="let data of datas | slice:0:(the number of cards you want to show)"
+    [title]="data.title"
+    [content]="this.stripHtml(data.content)"
+    [subcontent1]="data.publish_date"
+    [subcontent2]="data.author.name"
+    [image]="directus.getImageUrl(data.image)"
+  />
+</div> -->
 <app-primary-button [text]="'Show more'" />

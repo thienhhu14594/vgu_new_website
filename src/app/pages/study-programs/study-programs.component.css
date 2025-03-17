@@ -22,7 +22,7 @@
   color: var(--primary-color);
   padding: 10px 42px 10px 42px;
 }
-.levels .actived {
+.levels p.actived {
   background-color: var(--primary-color);
   color: white;
 }
@@ -57,4 +57,7 @@
 }
 .program {
   width: 100%;
+}
+.program.non-actived {
+  display: none;
 }
