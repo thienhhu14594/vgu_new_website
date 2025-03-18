@@ -69,7 +69,9 @@
   display: flex;
   height: 60vh;
   width: 1300px;
-  aspect-ratio: 1300 / 627;
+  /* aspect-ratio: 1300 / 627; */
+  margin: auto;
+  object-fit: cover;
 }
 
 .carousel-item {
