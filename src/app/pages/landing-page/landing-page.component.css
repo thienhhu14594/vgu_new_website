@@ -18,14 +18,14 @@
 h1 {
   width: 100%;
   height: fit-content;
-  margin-top: 40px;
+  /* margin-top: 40px; */
   font-style: normal;
   font-weight: 750;
   font-size: 40px;
   line-height: 52px;
   text-align: start;
   color: var(--primary-text);
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
 }
 .wrapper {
   width: 1300px;
