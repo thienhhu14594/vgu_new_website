@@ -67,7 +67,7 @@
 .heroSection img {
   position: relative;
   display: flex;
-  height: auto;
+  height: 60vh;
   width: 1300px;
   aspect-ratio: 1300 / 627;
 }
