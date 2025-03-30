@@ -18,15 +18,12 @@
   position: sticky;
   top: 0;
   z-index: 100;
-
   box-sizing: border-box;
 }
-
 .upperline {
   height: 8px;
   width: 100%;
 }
-
 .upperline.black {
   background-color: #000000;
 }
