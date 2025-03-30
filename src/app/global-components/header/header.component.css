@@ -14,19 +14,29 @@
 }
 
 .tophead {
-  box-sizing: border-box;
-  border-bottom: 2px solid black;
-  background-color: white;
   width: 100%;
-  height: fit-content;
-  padding-bottom: 5px;
-  z-index: 100;
   position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: white;
+  box-sizing: border-box;
 }
 
 .upperline {
-  background: var(--primary-color);
   height: 8px;
+  width: 100%;
+}
+
+.black {
+  background-color: #000000; /* Đen */
+}
+
+.red {
+  background-color: #DD0000; /* Đỏ */
+}
+
+.yellow {
+  background-color: #FFCE00; /* Vàng */
 }
 
 .header-logo {
